@@ -14,5 +14,5 @@ jobs:
       - checkout
       - aws-s3/copy:
           from: dist/
-          to: s3://leesjensen.com
+          to: s3://leesjensen.com/public/
           arguments: --recursive
