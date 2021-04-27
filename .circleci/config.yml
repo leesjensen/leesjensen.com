@@ -13,6 +13,7 @@ jobs:
     resource_class: small
     steps:
       - checkout
+      # At some point this needs to be changed to generate the entire /dist directory. Then we will no longer check it in.
       - run: cp src/index.html dist/index.html
       - aws-s3/copy:
           from: dist/
