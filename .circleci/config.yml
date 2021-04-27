@@ -13,6 +13,7 @@ jobs:
     resource_class: small
     steps:
       - checkout
+      - run: cp src/index.html dist/index.html
       - aws-s3/copy:
           from: dist/
           to: s3://leesjensen.com/public/
