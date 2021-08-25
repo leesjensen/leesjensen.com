@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div>
       <br />
-      how many times have you visited here?
+      Here is a button to click
       <br />
       <button onClick={() => setCount(count + 1)}>{count}</button>
     </div>
