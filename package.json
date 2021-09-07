@@ -5,6 +5,7 @@
   "main": "reactTest.js",
   "scripts": {
     "test": "jest",
+    "build": "cp src/index.html dist/index.html; cp src/main.css dist/main.css",
     "dev:server": "nodemon --exec babel-node src/server/server.js --ignore dist/",
     "dev:bundler": "webpack -w --mode=development"
   },
