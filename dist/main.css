@@ -1,0 +1,17 @@
+body {
+    background-color: #000000;
+    color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:link,
+a:visited {
+  color: antiquewhite;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover,
+a:active {
+  color: antiquewhite;
+}
