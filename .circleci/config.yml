@@ -15,6 +15,7 @@ jobs:
       - checkout
       # At some point this needs to be changed to generate the entire /dist directory. Then we will no longer check it in.
       - run: cp src/index.html dist/index.html
+      - run: cp src/main.css dist/main.css
       - aws-s3/copy:
           from: dist/
           to: s3://leesjensen.com/public/
