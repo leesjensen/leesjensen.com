@@ -13,7 +13,7 @@ jobs:
     resource_class: small
     steps:
       - checkout
-      # At some point this needs to be changed to generate the entire /dist directory. Then we will no longer check it in.
+      # We need to build the react app (index.js from npm run dev:bundler) as part of this build. For now, we just us the static files.
       - run: rm -r dist
       - run: mkdir dist
       - run: cp src/index.html dist/
