@@ -14,8 +14,11 @@ jobs:
     steps:
       - checkout
       # At some point this needs to be changed to generate the entire /dist directory. Then we will no longer check it in.
-      - run: cp src/index.html dist/index.html
-      - run: cp src/main.css dist/main.css
+      - run: rm -r dist
+      - run: mkdir dist
+      - run: cp src/index.html dist/
+      - run: cp src/favicon.ico dist/
+      - run: cp src/main.css dist/
       - run: cp -r src/learning dist
       - aws-s3/copy:
           from: dist/
