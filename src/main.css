@@ -44,6 +44,7 @@ h3 {
 }
 .brand-title {
     text-transform: uppercase;
+    margin: .5em 0;
 }
 .brand-tagline {
     font-weight: 300;
@@ -75,18 +76,15 @@ h3 {
     text-decoration: none;
 }
 
-.content-subhead {
-    text-transform: uppercase;
-    color: #aaa;
-    border-bottom: 1px solid #eee;
-    padding: 0.4em 0;
-    font-size: 80%;
-    font-weight: 500;
-    letter-spacing: 0.1em;
+.hero-img {
+  background:hsl(206deg 11% 35%);
 }
 
-.content {
-    padding: 2em 1em 0;
+.welcome {
+  padding: .25em 2em;
+  color: hsl(210deg 21% 91%);
+  background:hsl(206deg 11% 35%);
+  font-size: larger;
 }
 
 .post {
@@ -98,20 +96,10 @@ h3 {
     color: #222;
     margin-bottom: 0.2em;
 }
-.post-avatar {
-    border-radius: 50px;
-    float: right;
-    margin-left: 1em;
-}
 .post-description {
     font-family: Georgia, "Cambria", serif;
     color: #444;
     line-height: 1.8em;
-}
-.post-meta {
-    color: #999;
-    font-size: 90%;
-    margin: 0;
 }
 
 .post-category {
@@ -144,18 +132,6 @@ h3 {
     text-shadow: 0 1px 1px #333;
 }
 
-.footer {
-    padding: 1em 0;
-}
-.footer a {
-    color: #ccc;
-    font-size: 80%;
-}
-.footer .pure-menu a:hover,
-.footer .pure-menu a:focus {
-    background: none;
-}
-
 .post:hover {
 border:solid thin rgb(213, 159, 44);
 }
@@ -165,23 +141,8 @@ li {
 }
 
 @media (min-width: 48em) {
-    .content {
-        padding: 2em 3em 0;
-        margin-left: 25%;
-    }
-
     .header {
         margin: 80% 2em 0;
         text-align: right;
-    }
-
-    .sidebar {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-    }
-
-    .footer {
-        line-height: 2em;
     }
 }

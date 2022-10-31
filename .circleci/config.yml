@@ -20,6 +20,7 @@ jobs:
       - run: cp src/favicon.ico dist/
       - run: cp src/main.css dist/
       - run: cp -r src/learning dist
+      - run: cp -r src/assets dist
       - aws-s3/copy:
           from: dist/
           to: s3://leesjensen.com/public/
