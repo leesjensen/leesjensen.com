@@ -129,6 +129,7 @@ body {
 
 .post:hover {
   border: solid thin rgb(213, 159, 44);
+  background-color: hsl(43deg 90% 88%);
 }
 
 a {
