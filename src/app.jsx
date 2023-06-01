@@ -1,9 +1,10 @@
 import React from 'react';
 //import ReactDOM from 'react-dom';
+import './app.css';
 
 export default function App() {
   return (
-    <div>
+    <main>
       <div id='layout' className='pure-g'>
         <div className='sidebar pure-u-1 pure-u-md-1-4'>
           <div className='header'>
@@ -313,6 +314,6 @@ export default function App() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
