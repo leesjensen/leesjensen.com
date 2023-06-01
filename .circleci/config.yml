@@ -13,14 +13,8 @@ jobs:
     resource_class: small
     steps:
       - checkout
-      # We need to build the react app (index.js from npm run dev:bundler) as part of this build. For now, we just us the static files.
-      - run: rm -r dist
-      - run: mkdir dist
-      - run: cp src/index.html dist/
-      - run: cp src/favicon.ico dist/
-      - run: cp src/main.css dist/
-      - run: cp -r src/learning dist
-      - run: cp -r src/assets dist
+      # We need to build using vite. For now, we just us the static files.
+      - run: echo "npm run build"
       - aws-s3/copy:
           from: dist/
           to: s3://leesjensen.com/public/
