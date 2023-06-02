@@ -287,5 +287,55 @@
         "title": "Buna - Set up React environment without create-react-app"
       }
     ]
+  },
+  {
+    "name": "Rock stars",
+    "entries": [
+      {
+        "link": "https://en.wikipedia.org/wiki/Tim_Berners-Lee",
+        "title": "Tim Berners-Lee",
+        "tags": ["HTML", "HTTP"]
+      },
+      {
+        "link": "https://en.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie",
+        "title": "Håkon Wium Lie",
+        "tags": ["CSS"]
+      },
+      {
+        "link": "https://brendaneich.com/",
+        "title": "Brendan Eich",
+        "tags": ["JavaScript"]
+      },
+      {
+        "link": "https://en.wikipedia.org/wiki/Linus_Torvalds",
+        "title": "Linus Torvalds",
+        "tags": ["Linux", "Git"]
+      },
+      {
+        "link": "https://en.wikipedia.org/wiki/Ryan_Dahl",
+        "title": "Ryan Dahl",
+        "tags": ["Node.js"]
+      },
+      {
+        "link": "https://github.com/tj",
+        "title": "TJ Holowaychuk",
+        "tags": ["Express"]
+      },
+      {
+        "link": "https://evanyou.me/",
+        "title": "Evan You",
+        "tags": ["Vite", "Vue"]
+      },
+      {
+        "link": "https://github.com/jordwalke",
+        "title": "Jordan Walke",
+        "tags": ["React"]
+      },
+      {
+        "link": "https://github.com/mholt",
+        "title": "Matt Holt",
+        "tags": ["Caddy"]
+      }
+    ]
   }
 ]
