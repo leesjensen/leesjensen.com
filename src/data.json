@@ -35,6 +35,18 @@
     "name": "Programmerish things",
     "entries": [
       {
+        "link": "https://adamwathan.me/css-utility-classes-and-separation-of-concerns/",
+        "title": "CSS Utility Classes and 'Separation of Concerns'"
+      },
+      {
+        "link": "https://www.ditdot.hr/en/dark-mode-website-tutorial",
+        "title": "Dark Mode - The prefers-color-scheme Website Tutorial"
+      },
+      {
+        "link": "https://blog.logrocket.com/write-scalable-openapi-specification-node-js/",
+        "title": "Write a scalable OpenAPI specification for a Node.js API"
+      },
+      {
         "link": "https://babelstone.co.uk/Unicode/unicode.html",
         "title": "Unicode slideshow"
       },
@@ -255,8 +267,17 @@
   },
 
   {
-    "name": "React",
+    "name": "Web Frameworks",
     "entries": [
+      {
+        "link": "https://blog.webdevsimplified.com/2022-07/react-router/",
+        "title": "Ultimate React Router v6 Guide"
+      },
+      {
+        "link": "https://m.youtube.com/watch?v=DkGV5F4XnfQ",
+        "title": "Learn Vite with Evan You"
+      },
+
       {
         "link": "https://www.taniarascia.com/getting-started-with-react/",
         "title": "Tania - Basic React Tutorial"
