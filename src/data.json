@@ -1,0 +1,270 @@
+[
+  {
+    "name": "Learning",
+    "entries": [
+      {
+        "link": "learning/manifesto.html",
+        "title": "A New Dawn of Learning"
+      },
+      {
+        "link": "https://docs.google.com/presentation/d/1x6Sa2y6PDXJcRRCIi7Dt2jTmtaX1B5WXGP7tF1xog7k/edit?usp=share_link",
+        "title": "Learning in the Globally Connected World"
+      }
+    ]
+  },
+
+  {
+    "name": "Teaching",
+    "entries": [
+      {
+        "link": "https://winter2022.cs260.click/",
+        "title": "Winter 2022 - CS 260"
+      },
+      {
+        "link": "https://github.com/webprogramming260",
+        "title": "Winter 2023 - CS 260"
+      },
+      {
+        "link": "https://learn.cs260.click",
+        "title": "Spring 2023 - CS 260"
+      }
+    ]
+  },
+
+  {
+    "name": "Programmerish things",
+    "entries": [
+      {
+        "link": "https://babelstone.co.uk/Unicode/unicode.html",
+        "title": "Unicode slideshow"
+      },
+
+      {
+        "link": "https://uxdesign.cc/the-age-of-agile-must-end-bc89c0f084b7",
+        "title": "The age of Agile must end"
+      },
+      {
+        "link": "https://thenewstack.io/our-2023-site-reliability-engineering-wish-list/",
+        "title": "2023 Site Reliability Engineering Wish List"
+      },
+      {
+        "link": "https://requestmetrics.com/web-performance/http3-is-fast",
+        "title": "HTTP/3 performance"
+      },
+      {
+        "link": "https://levelup.gitconnected.com/10-awesome-github-repos-every-developer-must-know-c0b0839a17d3",
+        "title": "Repos every developer should know"
+      },
+      {
+        "link": "https://12factor.net/",
+        "title": "The 12-Factor App"
+      },
+      {
+        "link": "https://insights.stackoverflow.com/survey/2021",
+        "title": "Stack Overflow 2021 survey"
+      },
+      {
+        "link": "https://stateofcss.com",
+        "title": "State of CSS",
+        "tags": ["CSS"]
+      },
+      {
+        "link": "https://stateofjs.com",
+        "title": "State of JS",
+        "tags": ["JS"]
+      },
+      {
+        "link": "https://arxiv.org/abs/2103.07487",
+        "title": "How developers choose names"
+      },
+      {
+        "link": "https://devops.com/7-popular-open-source-ci-cd-tools/",
+        "title": "7 Popular open source CI/CD tools"
+      },
+      {
+        "link": "https://click.linksynergy.com/deeplink?id=kXQk6%2AivFEQ&mid=46128&u1=trd-us-2061085037600953600&murl=https%3A%2F%2Fwww.microsoft.com%2Fen-gb%2Fsoftware-download%2Fwindows10",
+        "title": "Windows 10 media creation tool"
+      },
+      {
+        "link": "https://ahoyo.to/lee",
+        "title": "Single page websites"
+      },
+      {
+        "link": "https://anthonynsimon.com/blog/one-man-saas-architecture/",
+        "title": "Stack behind a one person startup"
+      },
+      {
+        "link": "https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF",
+        "title": "Color scheme designer"
+      },
+      {
+        "link": "https://regex101.com/",
+        "title": "Regex 101"
+      },
+      {
+        "link": "https://www.freecodecamp.org/",
+        "title": "freeCodeCamp"
+      },
+      {
+        "link": "https://www.freecodecamp.org/news/freecodecamp-math-computer-science-degree-update",
+        "title": "BS in CS"
+      },
+      {
+        "link": "https://research.google/pubs/pub334/",
+        "title": "Original Google paper"
+      },
+      {
+        "link": "https://ogp.me/",
+        "title": "Open Graph protocol"
+      },
+      {
+        "link": "https://commoncrawl.org/",
+        "title": "Common Crawl"
+      },
+      {
+        "link": "https://refactoring.guru/smells/feature-envy",
+        "title": "Refactoring"
+      },
+      {
+        "link": "https://www.techrepublic.com/article/the-way-we-teach-coding-is-all-wrong-heres-how-it-needs-to-change/",
+        "title": "We teach coding wrong"
+      },
+      {
+        "link": "https://gist.github.com/nckroy/dd2d4dfc86f7d13045ad715377b6a48f",
+        "title": "Eran Hammer on OAuth2"
+      },
+      {
+        "link": "https://github.com/doctorray117/minecraft-ondemand",
+        "title": "Hosting a minecraft server on AWS for almost nothing"
+      },
+      {
+        "link": "https://refspecs.linuxfoundation.org/FHS_2.3/fhs-2.3.html",
+        "title": "Standard Linux filesystem structure"
+      },
+      {
+        "link": "https://api.congress.gov/",
+        "title": "Congress API"
+      }
+    ]
+  },
+
+  {
+    "name": "Interesting stuff",
+    "entries": [
+      {
+        "link": "https://www.cold-takes.com/the-gloves-are-off-the-pants-are-on/",
+        "title": "When stats go wrong"
+      },
+      {
+        "link": "https://fs.blog/stop-reading-news/",
+        "title": "Why you should stop reading news"
+      },
+      {
+        "link": "https://perell.com/essay/how-learning-happens/",
+        "title": "How Learning Happens"
+      }
+    ]
+  },
+
+  {
+    "name": "Blogs",
+    "entries": [
+      {
+        "link": "https://www.youtube.com/@CodingWithJohn/videos",
+        "title": "Coding with John",
+        "tags": ["Java"]
+      },
+
+      {
+        "link": "https://apisyouwonthate.com/blog",
+        "title": "APIs you won't hate"
+      },
+      {
+        "link": "https://2ality.com/",
+        "title": "2ality",
+        "tags": ["JS"]
+      },
+      {
+        "link": "http://raganwald.com/",
+        "title": "Reginald Braithwaite",
+        "tags": ["JS"]
+      },
+      {
+        "link": "https://medium.com/@addyosmani",
+        "title": "Addy Osmani",
+        "tags": ["Performance", "PWA"]
+      },
+      {
+        "link": "https://ponyfoo.com/",
+        "title": "Phony Foo",
+        "tags": ["JS"]
+      }
+    ]
+  },
+
+  {
+    "name": "Podcasts",
+    "entries": [
+      {
+        "link": "https://rpb3r.app.goo.gl/3zxy",
+        "title": "How I Built This"
+      },
+      {
+        "link": "https://podcasts.google.com/feed/aHR0cHM6Ly9yc3MuYXJ0MTkuY29tL21hc3RlcnMtb2Ytc2NhbGU?sa=X&ved=0CAMQ4aUDahcKEwjwy7Dnu8fvAhUAAAAAHQAAAAAQAQ&hl=en-GH",
+        "title": "The Masters of Scale"
+      },
+      {
+        "link": "https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5wYWNpZmljLWNvbnRlbnQuY29tL2NvbW1hbmRsaW5laGVyb2Vz",
+        "title": "Command Line Heroes"
+      },
+      {
+        "link": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zaW1wbGVjYXN0LmNvbS9YQV84NTFrMw==",
+        "title": "The Stack Overflow"
+      },
+      {
+        "link": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIxNTc0MDQ1MC9zb3VuZHMucnNz",
+        "title": "InfoQ"
+      },
+      {
+        "link": "https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuc2VpLmNtdS5lZHUvcG9kY2FzdHMvZmlsZXNfcG9kY2FzdHMvaXR1bmVzRmVlZC54bWw=?nord=0",
+        "title": "Software Engineering Radio"
+      },
+      {
+        "link": "https://podcasts.apple.com/gh/podcast/full-stack-radio/id931714873",
+        "title": "Full Stack Radio"
+      },
+      {
+        "link": "https://perell.com/essay/against-3x-speed/",
+        "title": "Against 3X Speed"
+      }
+    ]
+  },
+
+  {
+    "name": "Playing around",
+    "entries": [
+      {
+        "link": "mazejs/maze.html",
+        "title": "Maze-JS"
+      },
+      {
+        "link": "cuidado/index.html",
+        "title": "¡Cuidado!"
+      }
+    ]
+  },
+
+  {
+    "name": "React",
+    "entries": [
+      {
+        "link": "https://www.taniarascia.com/getting-started-with-react/",
+        "title": "Tania - Basic React Tutorial"
+      },
+      {
+        "link": "https://jscomplete.com/reactful",
+        "title": "Buna - Set up React environment without create-react-app"
+      }
+    ]
+  }
+]
