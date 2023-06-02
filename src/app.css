@@ -51,7 +51,6 @@ main {
 }
 .nav-item {
   display: inline-block;
-  *display: inline;
   zoom: 1;
 }
 .nav-item a {
