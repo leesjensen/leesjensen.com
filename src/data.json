@@ -12,7 +12,6 @@
       }
     ]
   },
-
   {
     "name": "Teaching",
     "entries": [
@@ -30,7 +29,6 @@
       }
     ]
   },
-
   {
     "name": "Programmerish things",
     "entries": [
@@ -50,7 +48,6 @@
         "link": "https://babelstone.co.uk/Unicode/unicode.html",
         "title": "Unicode slideshow"
       },
-
       {
         "link": "https://uxdesign.cc/the-age-of-agile-must-end-bc89c0f084b7",
         "title": "The age of Agile must end"
@@ -78,12 +75,16 @@
       {
         "link": "https://stateofcss.com",
         "title": "State of CSS",
-        "tags": ["CSS"]
+        "tags": [
+          "CSS"
+        ]
       },
       {
         "link": "https://stateofjs.com",
         "title": "State of JS",
-        "tags": ["JS"]
+        "tags": [
+          "JS"
+        ]
       },
       {
         "link": "https://arxiv.org/abs/2103.07487",
@@ -156,10 +157,29 @@
       {
         "link": "https://api.congress.gov/",
         "title": "Congress API"
+      },
+      {
+        "link": "https://dev.to/jarrodhroberson/go-is-not-java-1bd8",
+        "title": "Go is not Java"
+      },
+      {
+        "link": "https://dev.to/med_code/12-websites-youll-love-as-a-developer-m0n",
+        "title": "6 websites you'll love as a developer"
+      },
+      {
+        "link": "https://blog.bitsrc.io/domain-driven-design-with-react-building-scalable-and-maintainable-applications-8aa854f18a69",
+        "title": "Domain driven design with React"
+      },
+      {
+        "link": "https://thenewstack.io/bad-by-design-the-world-of-intentionally-awful-user-interfaces/",
+        "title": "Bad by design"
+      },
+      {
+        "link": "https://stackoverflow.blog/2023/06/26/the-hardest-part-of-building-software-is-not-coding-its-requirements/",
+        "title": "The hardest part of software is the requirements"
       }
     ]
   },
-
   {
     "name": "Interesting stuff",
     "entries": [
@@ -177,16 +197,16 @@
       }
     ]
   },
-
   {
     "name": "Blogs",
     "entries": [
       {
         "link": "https://www.youtube.com/@CodingWithJohn/videos",
         "title": "Coding with John",
-        "tags": ["Java"]
+        "tags": [
+          "Java"
+        ]
       },
-
       {
         "link": "https://apisyouwonthate.com/blog",
         "title": "APIs you won't hate"
@@ -194,26 +214,34 @@
       {
         "link": "https://2ality.com/",
         "title": "2ality",
-        "tags": ["JS"]
+        "tags": [
+          "JS"
+        ]
       },
       {
         "link": "http://raganwald.com/",
         "title": "Reginald Braithwaite",
-        "tags": ["JS"]
+        "tags": [
+          "JS"
+        ]
       },
       {
         "link": "https://medium.com/@addyosmani",
         "title": "Addy Osmani",
-        "tags": ["Performance", "PWA"]
+        "tags": [
+          "Performance",
+          "PWA"
+        ]
       },
       {
         "link": "https://ponyfoo.com/",
         "title": "Phony Foo",
-        "tags": ["JS"]
+        "tags": [
+          "JS"
+        ]
       }
     ]
   },
-
   {
     "name": "Podcasts",
     "entries": [
@@ -251,7 +279,6 @@
       }
     ]
   },
-
   {
     "name": "Playing around",
     "entries": [
@@ -273,7 +300,6 @@
       }
     ]
   },
-
   {
     "name": "Web Frameworks",
     "entries": [
@@ -285,7 +311,6 @@
         "link": "https://m.youtube.com/watch?v=DkGV5F4XnfQ",
         "title": "Learn Vite with Evan You"
       },
-
       {
         "link": "https://www.taniarascia.com/getting-started-with-react/",
         "title": "Tania - Basic React Tutorial"
@@ -302,47 +327,68 @@
       {
         "link": "https://en.wikipedia.org/wiki/Tim_Berners-Lee",
         "title": "Tim Berners-Lee",
-        "tags": ["HTML", "HTTP"]
+        "tags": [
+          "HTML",
+          "HTTP"
+        ]
       },
       {
         "link": "https://en.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie",
         "title": "Håkon Wium Lie",
-        "tags": ["CSS"]
+        "tags": [
+          "CSS"
+        ]
       },
       {
         "link": "https://brendaneich.com/",
         "title": "Brendan Eich",
-        "tags": ["JavaScript"]
+        "tags": [
+          "JavaScript"
+        ]
       },
       {
         "link": "https://en.wikipedia.org/wiki/Linus_Torvalds",
         "title": "Linus Torvalds",
-        "tags": ["Linux", "Git"]
+        "tags": [
+          "Linux",
+          "Git"
+        ]
       },
       {
         "link": "https://en.wikipedia.org/wiki/Ryan_Dahl",
         "title": "Ryan Dahl",
-        "tags": ["Node.js"]
+        "tags": [
+          "Node.js"
+        ]
       },
       {
         "link": "https://github.com/tj",
         "title": "TJ Holowaychuk",
-        "tags": ["Express"]
+        "tags": [
+          "Express"
+        ]
       },
       {
         "link": "https://evanyou.me/",
         "title": "Evan You",
-        "tags": ["Vite", "Vue"]
+        "tags": [
+          "Vite",
+          "Vue"
+        ]
       },
       {
         "link": "https://github.com/jordwalke",
         "title": "Jordan Walke",
-        "tags": ["React"]
+        "tags": [
+          "React"
+        ]
       },
       {
         "link": "https://github.com/mholt",
         "title": "Matt Holt",
-        "tags": ["Caddy"]
+        "tags": [
+          "Caddy"
+        ]
       }
     ]
   }
