@@ -33,6 +33,32 @@
     "name": "Programmerish things",
     "entries": [
       {
+        "link": "https://mvsp.dev/mvsp.en/",
+        "title": "Minimum Viable Secure Product",
+        "tags": ["Security"]
+      },
+      {
+        "link": "https://erikbern.com/2019/04/15/why-software-projects-take-longer-than-you-think-a-statistical-model.html",
+        "title": "Why software projects take longer than you think"
+      },
+      {
+        "link": "https://www.getlocalcert.net/",
+        "title": "Easy HTTPS for your private networks"
+      },
+      {
+        "link": "https://dev.to/link2twenty/future-of-css-scroll-animations-52ia",
+        "title": "Future of CSS: Scroll Animations",
+        "tags": ["CSS"]
+      },
+      {
+        "link": "https://rust-lang.github.io/mdBook/index.html",
+        "title": "mdBook"
+      },
+      {
+        "link": "https://www.freecodecamp.org/news/how-to-dockerize-a-react-application/",
+        "title": "How to Dockerize a React Application"
+      },
+      {
         "link": "https://adamwathan.me/css-utility-classes-and-separation-of-concerns/",
         "title": "CSS Utility Classes and 'Separation of Concerns'"
       },
@@ -75,16 +101,12 @@
       {
         "link": "https://stateofcss.com",
         "title": "State of CSS",
-        "tags": [
-          "CSS"
-        ]
+        "tags": ["CSS"]
       },
       {
         "link": "https://stateofjs.com",
         "title": "State of JS",
-        "tags": [
-          "JS"
-        ]
+        "tags": ["JS"]
       },
       {
         "link": "https://arxiv.org/abs/2103.07487",
@@ -203,9 +225,7 @@
       {
         "link": "https://www.youtube.com/@CodingWithJohn/videos",
         "title": "Coding with John",
-        "tags": [
-          "Java"
-        ]
+        "tags": ["Java"]
       },
       {
         "link": "https://apisyouwonthate.com/blog",
@@ -214,31 +234,22 @@
       {
         "link": "https://2ality.com/",
         "title": "2ality",
-        "tags": [
-          "JS"
-        ]
+        "tags": ["JS"]
       },
       {
         "link": "http://raganwald.com/",
         "title": "Reginald Braithwaite",
-        "tags": [
-          "JS"
-        ]
+        "tags": ["JS"]
       },
       {
         "link": "https://medium.com/@addyosmani",
         "title": "Addy Osmani",
-        "tags": [
-          "Performance",
-          "PWA"
-        ]
+        "tags": ["Performance", "PWA"]
       },
       {
         "link": "https://ponyfoo.com/",
         "title": "Phony Foo",
-        "tags": [
-          "JS"
-        ]
+        "tags": ["JS"]
       }
     ]
   },
@@ -327,68 +338,47 @@
       {
         "link": "https://en.wikipedia.org/wiki/Tim_Berners-Lee",
         "title": "Tim Berners-Lee",
-        "tags": [
-          "HTML",
-          "HTTP"
-        ]
+        "tags": ["HTML", "HTTP"]
       },
       {
         "link": "https://en.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie",
         "title": "Håkon Wium Lie",
-        "tags": [
-          "CSS"
-        ]
+        "tags": ["CSS"]
       },
       {
         "link": "https://brendaneich.com/",
         "title": "Brendan Eich",
-        "tags": [
-          "JavaScript"
-        ]
+        "tags": ["JavaScript"]
       },
       {
         "link": "https://en.wikipedia.org/wiki/Linus_Torvalds",
         "title": "Linus Torvalds",
-        "tags": [
-          "Linux",
-          "Git"
-        ]
+        "tags": ["Linux", "Git"]
       },
       {
         "link": "https://en.wikipedia.org/wiki/Ryan_Dahl",
         "title": "Ryan Dahl",
-        "tags": [
-          "Node.js"
-        ]
+        "tags": ["Node.js"]
       },
       {
         "link": "https://github.com/tj",
         "title": "TJ Holowaychuk",
-        "tags": [
-          "Express"
-        ]
+        "tags": ["Express"]
       },
       {
         "link": "https://evanyou.me/",
         "title": "Evan You",
-        "tags": [
-          "Vite",
-          "Vue"
-        ]
+        "tags": ["Vite", "Vue"]
       },
       {
         "link": "https://github.com/jordwalke",
         "title": "Jordan Walke",
-        "tags": [
-          "React"
-        ]
+        "tags": ["React"]
       },
       {
         "link": "https://github.com/mholt",
         "title": "Matt Holt",
-        "tags": [
-          "Caddy"
-        ]
+        "tags": ["Caddy"]
       }
     ]
   }
