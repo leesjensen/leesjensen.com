@@ -30,3 +30,5 @@ jobs:
           aws-region: us-east-1
       - name: Sync files to S3 bucket
         run: aws s3 cp dist/ s3://leesjensen.com/public/ --recursive
+      - name: Invalidate distribution
+        run: aws cloudfront create-invalidation --distribution-id E1S9OJ1QWFB61Z --paths "/"
