@@ -16,16 +16,20 @@
     "name": "Teaching",
     "entries": [
       {
-        "link": "https://winter2022.cs260.click/",
-        "title": "Winter 2022 - CS 260"
+        "link": "https://github.com/softwareconstruction240",
+        "title": "Fall 2023 - CS 240"
+      },
+      {
+        "link": "https://learn.cs260.click",
+        "title": "Spring 2023 - CS 260"
       },
       {
         "link": "https://github.com/webprogramming260",
         "title": "Winter 2023 - CS 260"
       },
       {
-        "link": "https://learn.cs260.click",
-        "title": "Spring 2023 - CS 260"
+        "link": "https://winter2022.cs260.click/",
+        "title": "Winter 2022 - CS 260"
       }
     ]
   },
