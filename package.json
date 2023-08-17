@@ -5,7 +5,8 @@
   "main": "reactTest.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "test": "echo running tests"
   },
   "keywords": [],
   "author": "",
