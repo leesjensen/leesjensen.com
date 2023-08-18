@@ -39,7 +39,7 @@
       {
         "link": "https://eloquentjavascript.net/",
         "title": "Eloquent JavaScript",
-        "tags": ["JavaScript"]
+        "tags": ["JS"]
       },
       {
         "link": "https://mvsp.dev/mvsp.en/",
@@ -383,7 +383,7 @@
       {
         "link": "https://brendaneich.com/",
         "title": "Brendan Eich",
-        "tags": ["JavaScript"]
+        "tags": ["JS"]
       },
       {
         "link": "https://en.wikipedia.org/wiki/Linus_Torvalds",
