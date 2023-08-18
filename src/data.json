@@ -206,6 +206,10 @@
         "title": "Bad by design"
       },
       {
+        "link": "https://vimeo.com/113707214",
+        "title": "Railway oriented programming"
+      },
+      {
         "link": "https://stackoverflow.blog/2023/06/26/the-hardest-part-of-building-software-is-not-coding-its-requirements/",
         "title": "The hardest part of software is the requirements"
       }
@@ -314,10 +318,6 @@
       {
         "link": "https://podcasts.apple.com/gh/podcast/full-stack-radio/id931714873",
         "title": "Full Stack Radio"
-      },
-      {
-        "link": "https://vimeo.com/113707214",
-        "title": "Railway oriented programming"
       },
       {
         "link": "https://perell.com/essay/against-3x-speed/",
