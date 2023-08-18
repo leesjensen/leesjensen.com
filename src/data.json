@@ -37,6 +37,11 @@
     "name": "Programmerish things",
     "entries": [
       {
+        "link": "https://eloquentjavascript.net/",
+        "title": "Eloquent JavaScript",
+        "tags": ["JavaScript"]
+      },
+      {
         "link": "https://mvsp.dev/mvsp.en/",
         "title": "Minimum Viable Secure Product",
         "tags": ["Security"]
@@ -206,6 +211,28 @@
       }
     ]
   },
+
+  {
+    "name": "Specifications",
+    "entries": [
+      {
+        "link": "https://www.w3.org/TR/2011/WD-html5-20110405/",
+        "title": "HTML 5"
+      },
+      {
+        "link": "https://www.w3.org/Style/CSS/current-work",
+        "title": "CSS"
+      },
+      {
+        "link": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_14th_edition_june_2023.pdf",
+        "title": "JavaScript 2023 (ECMA 262)"
+      },
+      {
+        "link": "https://www.ecma-international.org/wp-content/uploads/ECMA-404_2nd_edition_december_2017.pdf",
+        "title": "JSON (ECMA 404)"
+      }
+    ]
+  },
   {
     "name": "Interesting stuff",
     "entries": [
@@ -287,6 +314,10 @@
       {
         "link": "https://podcasts.apple.com/gh/podcast/full-stack-radio/id931714873",
         "title": "Full Stack Radio"
+      },
+      {
+        "link": "https://vimeo.com/113707214",
+        "title": "Railway oriented programming"
       },
       {
         "link": "https://perell.com/essay/against-3x-speed/",
