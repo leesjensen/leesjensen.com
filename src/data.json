@@ -9,6 +9,10 @@
       {
         "link": "https://docs.google.com/presentation/d/1x6Sa2y6PDXJcRRCIi7Dt2jTmtaX1B5WXGP7tF1xog7k/edit?usp=share_link",
         "title": "Learning in the Globally Connected World"
+      },
+      {
+        "link": "https://www.techrepublic.com/article/the-way-we-teach-coding-is-all-wrong-heres-how-it-needs-to-change/",
+        "title": "We teach coding wrong"
       }
     ]
   },
@@ -36,6 +40,22 @@
   {
     "name": "Programmerish things",
     "entries": [
+      {
+        "link": "https://en.wikipedia.org/wiki/List_of_software_development_philosophies",
+        "title": "Software Development Philosophies"
+      },
+      {
+        "link": "http://deliberate-software.com/ego-driven-development/",
+        "title": "Ego Driven Development"
+      },
+      {
+        "link": "https://blog.codinghorror.com/the-ten-commandments-of-egoless-programming/",
+        "title": "Egoless Programming"
+      },
+      {
+        "link": "https://www.uptech.team/blog/software-development-methodologies",
+        "title": "8 Software Development Methodologies"
+      },
       {
         "link": "https://eloquentjavascript.net/",
         "title": "Eloquent JavaScript",
@@ -110,8 +130,8 @@
         "title": "The 12-Factor App"
       },
       {
-        "link": "https://insights.stackoverflow.com/survey/2021",
-        "title": "Stack Overflow 2021 survey"
+        "link": "https://survey.stackoverflow.co/2023/",
+        "title": "Stack Overflow 2023 survey"
       },
       {
         "link": "https://stateofcss.com",
@@ -178,10 +198,6 @@
       {
         "link": "https://refactoring.guru/smells/feature-envy",
         "title": "Refactoring"
-      },
-      {
-        "link": "https://www.techrepublic.com/article/the-way-we-teach-coding-is-all-wrong-heres-how-it-needs-to-change/",
-        "title": "We teach coding wrong"
       },
       {
         "link": "https://gist.github.com/nckroy/dd2d4dfc86f7d13045ad715377b6a48f",
@@ -297,6 +313,13 @@
         "tags": [
           "Performance",
           "PWA"
+        ]
+      },
+      {
+        "link": "https://www.joelonsoftware.com/",
+        "title": "Joel Spolsky",
+        "tags": [
+          "Software Development"
         ]
       },
       {
