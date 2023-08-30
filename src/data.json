@@ -41,6 +41,10 @@
     "name": "Programmerish things",
     "entries": [
       {
+        "link": "https://www.joelonsoftware.com/2005/12/29/the-perils-of-javaschools-2/",
+        "title": "The Perils of JavaSchools"
+      },
+      {
         "link": "https://en.wikipedia.org/wiki/List_of_software_development_philosophies",
         "title": "Software Development Philosophies"
       },
