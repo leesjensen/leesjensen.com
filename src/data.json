@@ -41,6 +41,10 @@
     "name": "Programmerish things",
     "entries": [
       {
+        "link": "https://dodonut.com/blog/10-dark-patterns-in-ux-design/",
+        "title": "10 dark patterns in UX design"
+      },
+      {
         "link": "https://www.htmhell.dev/adventcalendar/2023/2/",
         "title": "You don't need JavaScript for that"
       },
