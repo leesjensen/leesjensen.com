@@ -442,6 +442,13 @@
     "name": "Blogs",
     "entries": [
       {
+        "link": "https://blog.cleancoder.com/",
+        "title": "Clean Code",
+        "tags": [
+          "Software Development"
+        ]
+      },
+      {
         "link": "https://www.youtube.com/@CodingWithJohn/videos",
         "title": "Coding with John",
         "tags": [
@@ -576,7 +583,7 @@
         "link": "https://blog.cleancoder.com/",
         "title": "Robert Martin (Uncle Bob)",
         "tags": [
-          "Design"
+          "Software Development"
         ]
       },
       {
