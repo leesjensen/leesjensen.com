@@ -256,8 +256,10 @@
   {
     "name": "Engineering principles",
     "entries": [
-
-      Abstraction
+      {
+        "title": "Abstraction",
+        "link": "https://en.wikipedia.org/wiki/Abstraction_(computer_science)"
+      },
       {
         "title": "Cohesion",
         "link": "https://en.wikipedia.org/wiki/Cohesion_(computer_science)"
