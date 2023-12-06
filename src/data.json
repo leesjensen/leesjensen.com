@@ -71,12 +71,16 @@
       {
         "link": "https://eloquentjavascript.net/",
         "title": "Eloquent JavaScript",
-        "tags": ["JS"]
+        "tags": [
+          "JS"
+        ]
       },
       {
         "link": "https://mvsp.dev/mvsp.en/",
         "title": "Minimum Viable Secure Product",
-        "tags": ["Security"]
+        "tags": [
+          "Security"
+        ]
       },
       {
         "link": "https://erikbern.com/2019/04/15/why-software-projects-take-longer-than-you-think-a-statistical-model.html",
@@ -89,7 +93,9 @@
       {
         "link": "https://dev.to/link2twenty/future-of-css-scroll-animations-52ia",
         "title": "Future of CSS: Scroll Animations",
-        "tags": ["CSS"]
+        "tags": [
+          "CSS"
+        ]
       },
       {
         "link": "https://rust-lang.github.io/mdBook/index.html",
@@ -142,12 +148,16 @@
       {
         "link": "https://stateofcss.com",
         "title": "State of CSS",
-        "tags": ["CSS"]
+        "tags": [
+          "CSS"
+        ]
       },
       {
         "link": "https://stateofjs.com",
         "title": "State of JS",
-        "tags": ["JS"]
+        "tags": [
+          "JS"
+        ]
       },
       {
         "link": "https://arxiv.org/abs/2103.07487",
@@ -244,6 +254,153 @@
     ]
   },
   {
+    "name": "Engineering principles",
+    "entries": [
+
+      Abstraction
+      {
+        "title": "Cohesion",
+        "link": "https://en.wikipedia.org/wiki/Cohesion_(computer_science)"
+      },
+      {
+        "title": "Command–query separation",
+        "link": "https://en.wikipedia.org/wiki/Command%E2%80%93query_separation"
+      },
+      {
+        "title": "Composition over inheritance",
+        "link": "https://en.wikipedia.org/wiki/Composition_over_inheritance"
+      },
+      {
+        "title": "Coupling",
+        "link": "https://en.wikipedia.org/wiki/Coupling_(computer_programming)"
+      },
+      {
+        "title": "Defensive programming",
+        "link": "https://en.wikipedia.org/wiki/Defensive_programming"
+      },
+      {
+        "title": "Dependency inversion principle",
+        "link": "https://en.wikipedia.org/wiki/Dependency_inversion_principle"
+      },
+      {
+        "title": "Discoverability",
+        "link": "https://en.wikipedia.org/wiki/Discoverability"
+      },
+      {
+        "title": "Don't repeat yourself",
+        "link": "https://en.wikipedia.org/wiki/Don%27t_repeat_yourself"
+      },
+      {
+        "title": "Encapsulation",
+        "link": "https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)"
+      },
+      {
+        "title": "Fail-fast",
+        "link": "https://en.wikipedia.org/wiki/Fail-fast"
+      },
+      {
+        "title": "Gall's law",
+        "link": "https://en.wikipedia.org/wiki/John_Gall_(author)#Gall's_law"
+      },
+      {
+        "title": "GRASP (object-oriented design)",
+        "link": "https://en.wikipedia.org/wiki/GRASP_(object-oriented_design)"
+      },
+      {
+        "title": "If it ain't broke, don't fix it",
+        "link": "https://en.wikipedia.org/wiki/Bert_Lance#If_it_ain't_broke,_don't_fix_it"
+      },
+      {
+        "title": "Information hiding",
+        "link": "https://en.wikipedia.org/wiki/Information_hiding"
+      },
+      {
+        "title": "Interface segregation principle",
+        "link": "https://en.wikipedia.org/wiki/Interface_segregation_principle"
+      },
+      {
+        "title": "Inversion of control",
+        "link": "https://en.wikipedia.org/wiki/Inversion_of_control"
+      },
+      {
+        "title": "KISS principle",
+        "link": "https://en.wikipedia.org/wiki/KISS_principle"
+      },
+      {
+        "title": "Law of Demeter",
+        "link": "https://en.wikipedia.org/wiki/Law_of_Demeter"
+      },
+      {
+        "title": "Liskov substitution principle",
+        "link": "https://en.wikipedia.org/wiki/Liskov_substitution_principle"
+      },
+      {
+        "title": "Loose coupling",
+        "link": "https://en.wikipedia.org/wiki/Loose_coupling"
+      },
+      {
+        "title": "Ninety–ninety rule",
+        "link": "https://en.wikipedia.org/wiki/Ninety%E2%80%93ninety_rule"
+      },
+      {
+        "title": "Offensive programming",
+        "link": "https://en.wikipedia.org/wiki/Offensive_programming"
+      },
+      {
+        "title": "Open–closed principle",
+        "link": "https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle"
+      },
+      {
+        "title": "The Power of 10: Rules for Developing Safety-Critical Code",
+        "link": "https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code"
+      },
+      {
+        "title": "Principle of least astonishment",
+        "link": "https://en.wikipedia.org/wiki/Principle_of_least_astonishment"
+      },
+      {
+        "title": "Rule of three",
+        "link": "https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)"
+      },
+      {
+        "title": "Separation of concerns",
+        "link": "https://en.wikipedia.org/wiki/Separation_of_concerns"
+      },
+      {
+        "title": "Separation of mechanism and policy",
+        "link": "https://en.wikipedia.org/wiki/Separation_of_mechanism_and_policy"
+      },
+      {
+        "title": "Single responsibility principle",
+        "link": "https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html"
+      },
+      {
+        "title": "SOLID",
+        "link": "https://en.wikipedia.org/wiki/SOLID"
+      },
+      {
+        "title": "Uniform access principle",
+        "link": "https://en.wikipedia.org/wiki/Uniform_access_principle"
+      },
+      {
+        "title": "Worse is better",
+        "link": "https://en.wikipedia.org/wiki/Worse_is_better"
+      },
+      {
+        "title": "You aren't gonna need it",
+        "link": "https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it"
+      },
+      {
+        "title": "Zen of Python",
+        "link": "https://en.wikipedia.org/wiki/Zen_of_Python"
+      },
+      {
+        "title": "Zero one infinity rule",
+        "link": "https://en.wikipedia.org/wiki/Zero_one_infinity_rule"
+      }
+    ]
+  },
+  {
     "name": "Specifications",
     "entries": [
       {
@@ -287,7 +444,9 @@
       {
         "link": "https://www.youtube.com/@CodingWithJohn/videos",
         "title": "Coding with John",
-        "tags": ["Java"]
+        "tags": [
+          "Java"
+        ]
       },
       {
         "link": "https://apisyouwonthate.com/blog",
@@ -296,27 +455,38 @@
       {
         "link": "https://2ality.com/",
         "title": "2ality",
-        "tags": ["JS"]
+        "tags": [
+          "JS"
+        ]
       },
       {
         "link": "http://raganwald.com/",
         "title": "Reginald Braithwaite",
-        "tags": ["JS"]
+        "tags": [
+          "JS"
+        ]
       },
       {
         "link": "https://medium.com/@addyosmani",
         "title": "Addy Osmani",
-        "tags": ["Performance", "PWA"]
+        "tags": [
+          "Performance",
+          "PWA"
+        ]
       },
       {
         "link": "https://www.joelonsoftware.com/",
         "title": "Joel Spolsky",
-        "tags": ["Software Development"]
+        "tags": [
+          "Software Development"
+        ]
       },
       {
         "link": "https://ponyfoo.com/",
         "title": "Phony Foo",
-        "tags": ["JS"]
+        "tags": [
+          "JS"
+        ]
       }
     ]
   },
@@ -403,49 +573,77 @@
     "name": "Rock stars",
     "entries": [
       {
+        "link": "https://blog.cleancoder.com/",
+        "title": "Robert Martin (Uncle Bob)",
+        "tags": [
+          "Design"
+        ]
+      },
+      {
         "link": "https://en.wikipedia.org/wiki/Tim_Berners-Lee",
         "title": "Tim Berners-Lee",
-        "tags": ["HTML", "HTTP"]
+        "tags": [
+          "HTML",
+          "HTTP"
+        ]
       },
       {
         "link": "https://en.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie",
         "title": "Håkon Wium Lie",
-        "tags": ["CSS"]
+        "tags": [
+          "CSS"
+        ]
       },
       {
         "link": "https://brendaneich.com/",
         "title": "Brendan Eich",
-        "tags": ["JS"]
+        "tags": [
+          "JS"
+        ]
       },
       {
         "link": "https://en.wikipedia.org/wiki/Linus_Torvalds",
         "title": "Linus Torvalds",
-        "tags": ["Linux", "Git"]
+        "tags": [
+          "Linux",
+          "Git"
+        ]
       },
       {
         "link": "https://en.wikipedia.org/wiki/Ryan_Dahl",
         "title": "Ryan Dahl",
-        "tags": ["Node.js"]
+        "tags": [
+          "Node.js"
+        ]
       },
       {
         "link": "https://github.com/tj",
         "title": "TJ Holowaychuk",
-        "tags": ["Express"]
+        "tags": [
+          "Express"
+        ]
       },
       {
         "link": "https://evanyou.me/",
         "title": "Evan You",
-        "tags": ["Vite", "Vue"]
+        "tags": [
+          "Vite",
+          "Vue"
+        ]
       },
       {
         "link": "https://github.com/jordwalke",
         "title": "Jordan Walke",
-        "tags": ["React"]
+        "tags": [
+          "React"
+        ]
       },
       {
         "link": "https://github.com/mholt",
         "title": "Matt Holt",
-        "tags": ["Caddy"]
+        "tags": [
+          "Caddy"
+        ]
       }
     ]
   }
