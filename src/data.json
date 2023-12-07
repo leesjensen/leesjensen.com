@@ -38,6 +38,27 @@
     ]
   },
   {
+    "name": "Interesting stuff",
+    "entries": [
+      {
+        "link": "https://agilemanifesto.org/",
+        "title": "Agile Manifesto"
+      },
+      {
+        "link": "https://www.cold-takes.com/the-gloves-are-off-the-pants-are-on/",
+        "title": "When stats go wrong"
+      },
+      {
+        "link": "https://fs.blog/stop-reading-news/",
+        "title": "Why you should stop reading news"
+      },
+      {
+        "link": "https://perell.com/essay/how-learning-happens/",
+        "title": "How Learning Happens"
+      }
+    ]
+  },
+  {
     "name": "Programmerish things",
     "entries": [
       {
@@ -420,23 +441,6 @@
       {
         "link": "https://www.ecma-international.org/wp-content/uploads/ECMA-404_2nd_edition_december_2017.pdf",
         "title": "JSON (ECMA 404)"
-      }
-    ]
-  },
-  {
-    "name": "Interesting stuff",
-    "entries": [
-      {
-        "link": "https://www.cold-takes.com/the-gloves-are-off-the-pants-are-on/",
-        "title": "When stats go wrong"
-      },
-      {
-        "link": "https://fs.blog/stop-reading-news/",
-        "title": "Why you should stop reading news"
-      },
-      {
-        "link": "https://perell.com/essay/how-learning-happens/",
-        "title": "How Learning Happens"
       }
     ]
   },
