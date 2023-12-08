@@ -62,6 +62,10 @@
     "name": "Programmerish things",
     "entries": [
       {
+        "link": "https://lizkeogh.com/behaviour-driven-development/",
+        "title": "Behavior Driven Development (Liz Keogh)"
+      },
+      {
         "link": "https://dodonut.com/blog/10-dark-patterns-in-ux-design/",
         "title": "10 dark patterns in UX design"
       },
