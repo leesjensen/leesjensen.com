@@ -45,6 +45,10 @@
     "name": "Interesting stuff",
     "entries": [
       {
+        "link": "https://books.google.com/books?id=V3TTDwAAQBAJ&printsec=frontcover",
+        "title": "Software Engineering at Google"
+      },
+      {
         "link": "https://agilemanifesto.org/",
         "title": "Agile Manifesto"
       },
