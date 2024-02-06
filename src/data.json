@@ -17,6 +17,14 @@
       {
         "link": "https://www.techrepublic.com/article/the-way-we-teach-coding-is-all-wrong-heres-how-it-needs-to-change/",
         "title": "We teach coding wrong"
+      },
+      {
+        "link": "https://turnaroundusa.org/wp-content/uploads/2016/03/Turnaround-for-Children-Building-Blocks-for-Learningx-2.pdf",
+        "title": "Building blocks for learning"
+      },
+      {
+        "link": "https://www.youtube.com/watch?v=k0fgtvbMT7k",
+        "title": "What if we trusted you?"
       }
     ]
   },
@@ -25,15 +33,11 @@
     "entries": [
       {
         "link": "https://github.com/softwareconstruction240",
-        "title": "Fall 2023 - CS 240"
+        "title": "2023,2024 - CS 240"
       },
       {
         "link": "https://learn.cs260.click",
-        "title": "Spring 2023 - CS 260"
-      },
-      {
-        "link": "https://github.com/webprogramming260",
-        "title": "Winter 2023 - CS 260"
+        "title": "2023, 2024 - CS 260"
       },
       {
         "link": "https://winter2022.cs260.click/",
