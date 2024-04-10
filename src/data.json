@@ -7,6 +7,10 @@
         "title": "A New Dawn of Learning"
       },
       {
+        "link": "learning/lms3.html",
+        "title": "LMS 3.0"
+      },
+      {
         "link": "https://www.td.org/insights/how-long-does-it-take-to-develop-training-new-question-new-answers",
         "title": "How long does it take to develop training"
       },
@@ -36,6 +40,10 @@
         "title": "2023,2024 - CS 240"
       },
       {
+        "link": "https://github.com/devops329",
+        "title": "2024 - CS 329"
+      },
+      {
         "link": "https://learn.cs260.click",
         "title": "2023, 2024 - CS 260"
       },
@@ -48,6 +56,10 @@
   {
     "name": "Interesting stuff",
     "entries": [
+      {
+        "link": "https://www.webdesignmuseum.org/web-design-history",
+        "title": "History of Web Design"
+      },
       {
         "link": "https://books.google.com/books?id=V3TTDwAAQBAJ&printsec=frontcover",
         "title": "Software Engineering at Google"
