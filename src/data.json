@@ -11,6 +11,10 @@
         "title": "LMS 3.0"
       },
       {
+        "link": "learning/howToLearn.html",
+        "title": "How to learn"
+      },
+      {
         "link": "https://www.td.org/insights/how-long-does-it-take-to-develop-training-new-question-new-answers",
         "title": "How long does it take to develop training"
       },
@@ -37,19 +41,15 @@
     "entries": [
       {
         "link": "https://github.com/softwareconstruction240",
-        "title": "2023,2024 - CS 240"
+        "title": "CS 240"
       },
       {
         "link": "https://github.com/devops329",
-        "title": "2024 - CS 329"
+        "title": "CS 329"
       },
       {
-        "link": "https://learn.cs260.click",
-        "title": "2023, 2024 - CS 260"
-      },
-      {
-        "link": "https://winter2022.cs260.click/",
-        "title": "Winter 2022 - CS 260"
+        "link": "https://github.com/webprogramming260",
+        "title": "CS 260"
       }
     ]
   },
@@ -120,16 +120,12 @@
       {
         "link": "https://eloquentjavascript.net/",
         "title": "Eloquent JavaScript",
-        "tags": [
-          "JS"
-        ]
+        "tags": ["JS"]
       },
       {
         "link": "https://mvsp.dev/mvsp.en/",
         "title": "Minimum Viable Secure Product",
-        "tags": [
-          "Security"
-        ]
+        "tags": ["Security"]
       },
       {
         "link": "https://erikbern.com/2019/04/15/why-software-projects-take-longer-than-you-think-a-statistical-model.html",
@@ -142,9 +138,7 @@
       {
         "link": "https://dev.to/link2twenty/future-of-css-scroll-animations-52ia",
         "title": "Future of CSS: Scroll Animations",
-        "tags": [
-          "CSS"
-        ]
+        "tags": ["CSS"]
       },
       {
         "link": "https://rust-lang.github.io/mdBook/index.html",
@@ -197,16 +191,12 @@
       {
         "link": "https://stateofcss.com",
         "title": "State of CSS",
-        "tags": [
-          "CSS"
-        ]
+        "tags": ["CSS"]
       },
       {
         "link": "https://stateofjs.com",
         "title": "State of JS",
-        "tags": [
-          "JS"
-        ]
+        "tags": ["JS"]
       },
       {
         "link": "https://arxiv.org/abs/2103.07487",
@@ -478,16 +468,12 @@
       {
         "link": "https://blog.cleancoder.com/",
         "title": "Clean Code",
-        "tags": [
-          "Software Development"
-        ]
+        "tags": ["Software Development"]
       },
       {
         "link": "https://www.youtube.com/@CodingWithJohn/videos",
         "title": "Coding with John",
-        "tags": [
-          "Java"
-        ]
+        "tags": ["Java"]
       },
       {
         "link": "https://apisyouwonthate.com/blog",
@@ -496,38 +482,27 @@
       {
         "link": "https://2ality.com/",
         "title": "2ality",
-        "tags": [
-          "JS"
-        ]
+        "tags": ["JS"]
       },
       {
         "link": "http://raganwald.com/",
         "title": "Reginald Braithwaite",
-        "tags": [
-          "JS"
-        ]
+        "tags": ["JS"]
       },
       {
         "link": "https://medium.com/@addyosmani",
         "title": "Addy Osmani",
-        "tags": [
-          "Performance",
-          "PWA"
-        ]
+        "tags": ["Performance", "PWA"]
       },
       {
         "link": "https://www.joelonsoftware.com/",
         "title": "Joel Spolsky",
-        "tags": [
-          "Software Development"
-        ]
+        "tags": ["Software Development"]
       },
       {
         "link": "https://ponyfoo.com/",
         "title": "Phony Foo",
-        "tags": [
-          "JS"
-        ]
+        "tags": ["JS"]
       }
     ]
   },
@@ -616,89 +591,62 @@
       {
         "link": "https://blog.cleancoder.com/",
         "title": "Robert Martin (Uncle Bob)",
-        "tags": [
-          "Software Development"
-        ]
+        "tags": ["Software Development"]
       },
       {
         "link": "https://en.wikipedia.org/wiki/Tim_Berners-Lee",
         "title": "Tim Berners-Lee",
-        "tags": [
-          "HTML",
-          "HTTP"
-        ]
+        "tags": ["HTML", "HTTP"]
       },
       {
         "link": "https://en.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie",
         "title": "Håkon Wium Lie",
-        "tags": [
-          "CSS"
-        ]
+        "tags": ["CSS"]
       },
       {
         "link": "https://brendaneich.com/",
         "title": "Brendan Eich",
-        "tags": [
-          "JS"
-        ]
+        "tags": ["JS"]
       },
       {
         "link": "https://en.wikipedia.org/wiki/Linus_Torvalds",
         "title": "Linus Torvalds",
-        "tags": [
-          "Linux",
-          "Git"
-        ]
+        "tags": ["Linux", "Git"]
       },
       {
         "link": "https://en.wikipedia.org/wiki/Ryan_Dahl",
         "title": "Ryan Dahl",
-        "tags": [
-          "Node.js"
-        ]
+        "tags": ["Node.js"]
       },
       {
         "link": "https://github.com/tj",
         "title": "TJ Holowaychuk",
-        "tags": [
-          "Express"
-        ]
+        "tags": ["Express"]
       },
       {
         "link": "https://evanyou.me/",
         "title": "Evan You",
-        "tags": [
-          "Vite",
-          "Vue"
-        ]
+        "tags": ["Vite", "Vue"]
       },
       {
         "link": "https://github.com/jordwalke",
         "title": "Jordan Walke",
-        "tags": [
-          "React"
-        ]
+        "tags": ["React"]
       },
       {
         "link": "https://commandcenter.blogspot.com/",
         "title": "Rob Pike",
-        "tags": [
-          "Go"
-        ]
+        "tags": ["Go"]
       },
       {
         "link": "https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer)",
         "title": "Margaret Hamilton",
-        "tags": [
-          "Software Engineering"
-        ]
+        "tags": ["Software Engineering"]
       },
       {
         "link": "https://github.com/mholt",
         "title": "Matt Holt",
-        "tags": [
-          "Caddy"
-        ]
+        "tags": ["Caddy"]
       }
     ]
   }

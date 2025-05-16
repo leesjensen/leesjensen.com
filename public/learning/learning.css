@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css?family=Nunito:100,200,500,700,900);
 
 html {
   margin: 0px;
@@ -18,7 +18,7 @@ body {
 }
 
 h1 {
-    border-bottom: solid #bbbbbb 3px;
+  border-bottom: solid #bbbbbb 3px;
 }
 
 ol {
@@ -38,7 +38,7 @@ li::before {
   display: inline-block;
   line-height: 1.25rem;
   font-family: Arial;
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #efefef;
   text-align: center;
   margin-right: 0.25rem;
@@ -47,10 +47,20 @@ ol ol li::before {
   background: #667859;
 }
 
+li b {
+  color: rgb(51, 74, 91);
+  font-weight: 700;
+  font-style: italic;
+}
+
+cite {
+  font-size: smaller;
+  color: #bcbcbc;
+}
+
 .letter {
   color: #353535;
-  box-shadow: rgba(0, 0, 0, 0.42) 0px 2px 3px,
-    inset rgba(0, 0, 0, 0.42) 0px -1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.42) 0px 2px 3px, inset rgba(0, 0, 0, 0.42) 0px -1px 2px;
   border-radius: 20px;
   background: #ebecd8;
   max-width: 750px;
@@ -74,5 +84,5 @@ ol ol li::before {
 }
 
 .contact .name a {
-  color:inherit;
+  color: inherit;
 }
