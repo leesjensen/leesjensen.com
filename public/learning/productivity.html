@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Productivity</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="learning.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="letter">
+      <h1>Productivity</h1>
+      <p>How do you measure actual productivity? Most of the traditional developer metrics are easy to game and don't reflect the desired organization outcome.</p>
+
+      <h2>Things that don't work</h2>
+      <ol>
+        <li>Lines of Code</li>
+        <li>Number of commits</li>
+        <li>Hours worked</li>
+        <li>Number of pull requests</li>
+        <li>Number of emails/slack/text/LinkedIn messages sent</li>
+      </ol>
+
+      <h2>Things that work</h2>
+
+      <p>Instead, you want metrics that actually demonstrate value. The DevOps Research and Assessment (<a href="https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance">DORA</a>) metrics are a good approximation of the team delivering value within the scope that they can control.</p>
+
+      <ol>
+        <li><b>Deployment frequency: </b> How often there is a production deployment</li>
+        <li><b>Lead time for changes: </b> How long it takes to get something into production</li>
+        <li><b>Change failure rate: </b> The percentage of production failures</li>
+        <li><b>Time to restore service: </b> How long it takes to recover from a production failure</li>
+      </ol>
+
+      <img src="dora.png" alt="DORA metrics" />
+      <cite>- Google DevOps Blog</cite>
+
+      <p>Additionally, it is important to track the value of deployments. This includes metrics for the deployment of product sponsored tickets, customer reported issues, and removal of technical debt.</p>
+
+      <ol>
+        <li><b>Deployed features/fixes/cleanup frequency: </b> Number of improvements to the application</li>
+      </ol>
+
+      <div class="contact">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false">
+          <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+        </svg>
+        <div class="name">
+          <a href="https://linkedin.com/in/leesjensen">leesjensen</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
