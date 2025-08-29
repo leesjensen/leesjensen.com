@@ -94,6 +94,10 @@
     "name": "Programmerish things",
     "entries": [
       {
+        "link": "https://www.seangoedecke.com/the-simplest-thing-that-could-possibly-work/",
+        "title": "The simplest thing that could possibly work",
+        "tags": ["Software Development"]
+      {
         "link": "https://lizkeogh.com/behaviour-driven-development/",
         "title": "Behavior Driven Development (Liz Keogh)"
       },
