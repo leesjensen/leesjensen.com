@@ -99,631 +99,632 @@
         "tags": [
           "Software Development"
         ]
+      },
       {
-          "link": "https://lizkeogh.com/behaviour-driven-development/",
-          "title": "Behavior Driven Development (Liz Keogh)"
-        },
-        {
-          "link": "https://dodonut.com/blog/10-dark-patterns-in-ux-design/",
-          "title": "10 dark patterns in UX design"
-        },
-        {
-          "link": "https://www.htmhell.dev/adventcalendar/2023/2/",
-          "title": "You don't need JavaScript for that"
-        },
-        {
-          "link": "https://www.joelonsoftware.com/2005/12/29/the-perils-of-javaschools-2/",
-          "title": "The Perils of JavaSchools"
-        },
-        {
-          "link": "https://en.wikipedia.org/wiki/List_of_software_development_philosophies",
-          "title": "Software Development Philosophies"
-        },
-        {
-          "link": "http://deliberate-software.com/ego-driven-development/",
-          "title": "Ego Driven Development"
-        },
-        {
-          "link": "https://blog.codinghorror.com/the-ten-commandments-of-egoless-programming/",
-          "title": "Egoless Programming"
-        },
-        {
-          "link": "https://www.uptech.team/blog/software-development-methodologies",
-          "title": "8 Software Development Methodologies",
-          "tags": [
-            "Software Development"
-          ]
-        },
-        {
-          "link": "https://eloquentjavascript.net/",
-          "title": "Eloquent JavaScript",
-          "tags": [
-            "JS"
-          ]
-        },
-        {
-          "link": "https://reports.weforum.org/docs/WEF_Global_Cybersecurity_Outlook_2025.pdf",
-          "title": "WEF 2025 report on Cybersecurity",
-          "tags": [
-            "Security"
-          ]
-        },
-        {
-          "link": "https://mvsp.dev/mvsp.en/",
-          "title": "Minimum Viable Secure Product",
-          "tags": [
-            "Security"
-          ]
-        },
-        {
-          "link": "https://erikbern.com/2019/04/15/why-software-projects-take-longer-than-you-think-a-statistical-model.html",
-          "title": "Why software projects take longer than you think"
-        },
-        {
-          "link": "https://www.getlocalcert.net/",
-          "title": "Easy HTTPS for your private networks"
-        },
-        {
-          "link": "https://dev.to/link2twenty/future-of-css-scroll-animations-52ia",
-          "title": "Future of CSS: Scroll Animations",
-          "tags": [
-            "CSS"
-          ]
-        },
-        {
-          "link": "https://rust-lang.github.io/mdBook/index.html",
-          "title": "mdBook"
-        },
-        {
-          "link": "https://www.freecodecamp.org/news/how-to-dockerize-a-react-application/",
-          "title": "How to Dockerize a React Application"
-        },
-        {
-          "link": "https://adamwathan.me/css-utility-classes-and-separation-of-concerns/",
-          "title": "CSS Utility Classes and 'Separation of Concerns'"
-        },
-        {
-          "link": "https://www.ditdot.hr/en/dark-mode-website-tutorial",
-          "title": "Dark Mode - The prefers-color-scheme Website Tutorial"
-        },
-        {
-          "link": "https://blog.logrocket.com/write-scalable-openapi-specification-node-js/",
-          "title": "Write a scalable OpenAPI specification for a Node.js API"
-        },
-        {
-          "link": "https://babelstone.co.uk/Unicode/unicode.html",
-          "title": "Unicode slideshow"
-        },
-        {
-          "link": "https://uxdesign.cc/the-age-of-agile-must-end-bc89c0f084b7",
-          "title": "The age of Agile must end"
-        },
-        {
-          "link": "https://thenewstack.io/our-2023-site-reliability-engineering-wish-list/",
-          "title": "2023 Site Reliability Engineering Wish List"
-        },
-        {
-          "link": "https://requestmetrics.com/web-performance/http3-is-fast",
-          "title": "HTTP/3 performance"
-        },
-        {
-          "link": "https://levelup.gitconnected.com/10-awesome-github-repos-every-developer-must-know-c0b0839a17d3",
-          "title": "Repos every developer should know"
-        },
-        {
-          "link": "https://12factor.net/",
-          "title": "The 12-Factor App"
-        },
-        {
-          "link": "https://survey.stackoverflow.co/2023/",
-          "title": "Stack Overflow 2023 survey"
-        },
-        {
-          "link": "https://stateofcss.com",
-          "title": "State of CSS",
-          "tags": [
-            "CSS"
-          ]
-        },
-        {
-          "link": "https://stateofjs.com",
-          "title": "State of JS",
-          "tags": [
-            "JS"
-          ]
-        },
-        {
-          "link": "https://arxiv.org/abs/2103.07487",
-          "title": "How developers choose names"
-        },
-        {
-          "link": "https://devops.com/7-popular-open-source-ci-cd-tools/",
-          "title": "7 Popular open source CI/CD tools"
-        },
-        {
-          "link": "https://click.linksynergy.com/deeplink?id=kXQk6%2AivFEQ&mid=46128&u1=trd-us-2061085037600953600&murl=https%3A%2F%2Fwww.microsoft.com%2Fen-gb%2Fsoftware-download%2Fwindows10",
-          "title": "Windows 10 media creation tool"
-        },
-        {
-          "link": "https://ahoyo.to/lee",
-          "title": "Single page websites"
-        },
-        {
-          "link": "https://anthonynsimon.com/blog/one-man-saas-architecture/",
-          "title": "Stack behind a one person startup"
-        },
-        {
-          "link": "https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF",
-          "title": "Color scheme designer"
-        },
-        {
-          "link": "https://regex101.com/",
-          "title": "Regex 101"
-        },
-        {
-          "link": "https://www.freecodecamp.org/",
-          "title": "freeCodeCamp"
-        },
-        {
-          "link": "https://www.freecodecamp.org/news/freecodecamp-math-computer-science-degree-update",
-          "title": "BS in CS"
-        },
-        {
-          "link": "https://research.google/pubs/pub334/",
-          "title": "Original Google paper"
-        },
-        {
-          "link": "https://ogp.me/",
-          "title": "Open Graph protocol"
-        },
-        {
-          "link": "https://commoncrawl.org/",
-          "title": "Common Crawl"
-        },
-        {
-          "link": "https://refactoring.guru/smells/feature-envy",
-          "title": "Refactoring"
-        },
-        {
-          "link": "https://gist.github.com/nckroy/dd2d4dfc86f7d13045ad715377b6a48f",
-          "title": "Eran Hammer on OAuth2"
-        },
-        {
-          "link": "https://github.com/doctorray117/minecraft-ondemand",
-          "title": "Hosting a minecraft server on AWS for almost nothing"
-        },
-        {
-          "link": "https://refspecs.linuxfoundation.org/FHS_2.3/fhs-2.3.html",
-          "title": "Standard Linux filesystem structure"
-        },
-        {
-          "link": "https://api.congress.gov/",
-          "title": "Congress API"
-        },
-        {
-          "link": "https://dev.to/jarrodhroberson/go-is-not-java-1bd8",
-          "title": "Go is not Java"
-        },
-        {
-          "link": "https://dev.to/med_code/12-websites-youll-love-as-a-developer-m0n",
-          "title": "6 websites you'll love as a developer"
-        },
-        {
-          "link": "https://blog.bitsrc.io/domain-driven-design-with-react-building-scalable-and-maintainable-applications-8aa854f18a69",
-          "title": "Domain driven design with React"
-        },
-        {
-          "link": "https://thenewstack.io/bad-by-design-the-world-of-intentionally-awful-user-interfaces/",
-          "title": "Bad by design"
-        },
-        {
-          "link": "https://vimeo.com/113707214",
-          "title": "Railway oriented programming"
-        },
-        {
-          "link": "https://stackoverflow.blog/2023/06/26/the-hardest-part-of-building-software-is-not-coding-its-requirements/",
-          "title": "The hardest part of software is the requirements"
-        }
-      ]
-    },
-    {
-      "name": "Engineering principles",
-      "entries": [
-        {
-          "title": "Abstraction",
-          "link": "https://en.wikipedia.org/wiki/Abstraction_(computer_science)"
-        },
-        {
-          "title": "Cohesion",
-          "link": "https://en.wikipedia.org/wiki/Cohesion_(computer_science)"
-        },
-        {
-          "title": "Command–query separation",
-          "link": "https://en.wikipedia.org/wiki/Command%E2%80%93query_separation"
-        },
-        {
-          "title": "Composition over inheritance",
-          "link": "https://en.wikipedia.org/wiki/Composition_over_inheritance"
-        },
-        {
-          "title": "Coupling",
-          "link": "https://en.wikipedia.org/wiki/Coupling_(computer_programming)"
-        },
-        {
-          "title": "Defensive programming",
-          "link": "https://en.wikipedia.org/wiki/Defensive_programming"
-        },
-        {
-          "title": "Dependency inversion principle",
-          "link": "https://en.wikipedia.org/wiki/Dependency_inversion_principle"
-        },
-        {
-          "title": "Discoverability",
-          "link": "https://en.wikipedia.org/wiki/Discoverability"
-        },
-        {
-          "title": "Don't repeat yourself",
-          "link": "https://en.wikipedia.org/wiki/Don%27t_repeat_yourself"
-        },
-        {
-          "title": "Encapsulation",
-          "link": "https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)"
-        },
-        {
-          "title": "Fail-fast",
-          "link": "https://en.wikipedia.org/wiki/Fail-fast"
-        },
-        {
-          "title": "Gall's law",
-          "link": "https://en.wikipedia.org/wiki/John_Gall_(author)#Gall's_law"
-        },
-        {
-          "title": "GRASP (object-oriented design)",
-          "link": "https://en.wikipedia.org/wiki/GRASP_(object-oriented_design)"
-        },
-        {
-          "title": "If it ain't broke, don't fix it",
-          "link": "https://en.wikipedia.org/wiki/Bert_Lance#If_it_ain't_broke,_don't_fix_it"
-        },
-        {
-          "title": "Information hiding",
-          "link": "https://en.wikipedia.org/wiki/Information_hiding"
-        },
-        {
-          "title": "Interface segregation principle",
-          "link": "https://en.wikipedia.org/wiki/Interface_segregation_principle"
-        },
-        {
-          "title": "Inversion of control",
-          "link": "https://en.wikipedia.org/wiki/Inversion_of_control"
-        },
-        {
-          "title": "KISS principle",
-          "link": "https://en.wikipedia.org/wiki/KISS_principle"
-        },
-        {
-          "title": "Law of Demeter",
-          "link": "https://en.wikipedia.org/wiki/Law_of_Demeter"
-        },
-        {
-          "title": "Liskov substitution principle",
-          "link": "https://en.wikipedia.org/wiki/Liskov_substitution_principle"
-        },
-        {
-          "title": "Loose coupling",
-          "link": "https://en.wikipedia.org/wiki/Loose_coupling"
-        },
-        {
-          "title": "Ninety–ninety rule",
-          "link": "https://en.wikipedia.org/wiki/Ninety%E2%80%93ninety_rule"
-        },
-        {
-          "title": "Offensive programming",
-          "link": "https://en.wikipedia.org/wiki/Offensive_programming"
-        },
-        {
-          "title": "Open–closed principle",
-          "link": "https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle"
-        },
-        {
-          "title": "The Power of 10: Rules for Developing Safety-Critical Code",
-          "link": "https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code"
-        },
-        {
-          "title": "Principle of least astonishment",
-          "link": "https://en.wikipedia.org/wiki/Principle_of_least_astonishment"
-        },
-        {
-          "title": "Rule of three",
-          "link": "https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)"
-        },
-        {
-          "title": "Separation of concerns",
-          "link": "https://en.wikipedia.org/wiki/Separation_of_concerns"
-        },
-        {
-          "title": "Separation of mechanism and policy",
-          "link": "https://en.wikipedia.org/wiki/Separation_of_mechanism_and_policy"
-        },
-        {
-          "title": "Single responsibility principle",
-          "link": "https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html"
-        },
-        {
-          "title": "SOLID",
-          "link": "https://en.wikipedia.org/wiki/SOLID"
-        },
-        {
-          "title": "Uniform access principle",
-          "link": "https://en.wikipedia.org/wiki/Uniform_access_principle"
-        },
-        {
-          "title": "Worse is better",
-          "link": "https://en.wikipedia.org/wiki/Worse_is_better"
-        },
-        {
-          "title": "You aren't gonna need it",
-          "link": "https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it"
-        },
-        {
-          "title": "Zen of Python",
-          "link": "https://en.wikipedia.org/wiki/Zen_of_Python"
-        },
-        {
-          "title": "Zero one infinity rule",
-          "link": "https://en.wikipedia.org/wiki/Zero_one_infinity_rule"
-        }
-      ]
-    },
-    {
-      "name": "Specifications",
-      "entries": [
-        {
-          "link": "https://www.w3.org/TR/2011/WD-html5-20110405/",
-          "title": "HTML 5"
-        },
-        {
-          "link": "https://www.w3.org/Style/CSS/current-work",
-          "title": "CSS"
-        },
-        {
-          "link": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_14th_edition_june_2023.pdf",
-          "title": "JavaScript 2023 (ECMA 262)"
-        },
-        {
-          "link": "https://www.ecma-international.org/wp-content/uploads/ECMA-404_2nd_edition_december_2017.pdf",
-          "title": "JSON (ECMA 404)"
-        }
-      ]
-    },
-    {
-      "name": "Blogs",
-      "entries": [
-        {
-          "link": "https://blog.cleancoder.com/",
-          "title": "Clean Code",
-          "tags": [
-            "Software Development"
-          ]
-        },
-        {
-          "link": "https://www.youtube.com/@CodingWithJohn/videos",
-          "title": "Coding with John",
-          "tags": [
-            "Java"
-          ]
-        },
-        {
-          "link": "https://apisyouwonthate.com/blog",
-          "title": "APIs you won't hate"
-        },
-        {
-          "link": "https://2ality.com/",
-          "title": "2ality",
-          "tags": [
-            "JS"
-          ]
-        },
-        {
-          "link": "http://raganwald.com/",
-          "title": "Reginald Braithwaite",
-          "tags": [
-            "JS"
-          ]
-        },
-        {
-          "link": "https://medium.com/@addyosmani",
-          "title": "Addy Osmani",
-          "tags": [
-            "Performance",
-            "PWA"
-          ]
-        },
-        {
-          "link": "https://www.joelonsoftware.com/",
-          "title": "Joel Spolsky",
-          "tags": [
-            "Software Development"
-          ]
-        },
-        {
-          "link": "https://ponyfoo.com/",
-          "title": "Phony Foo",
-          "tags": [
-            "JS"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Podcasts",
-      "entries": [
-        {
-          "link": "https://rpb3r.app.goo.gl/3zxy",
-          "title": "How I Built This"
-        },
-        {
-          "link": "https://podcasts.google.com/feed/aHR0cHM6Ly9yc3MuYXJ0MTkuY29tL21hc3RlcnMtb2Ytc2NhbGU?sa=X&ved=0CAMQ4aUDahcKEwjwy7Dnu8fvAhUAAAAAHQAAAAAQAQ&hl=en-GH",
-          "title": "The Masters of Scale"
-        },
-        {
-          "link": "https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5wYWNpZmljLWNvbnRlbnQuY29tL2NvbW1hbmRsaW5laGVyb2Vz",
-          "title": "Command Line Heroes"
-        },
-        {
-          "link": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zaW1wbGVjYXN0LmNvbS9YQV84NTFrMw==",
-          "title": "The Stack Overflow"
-        },
-        {
-          "link": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIxNTc0MDQ1MC9zb3VuZHMucnNz",
-          "title": "InfoQ"
-        },
-        {
-          "link": "https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuc2VpLmNtdS5lZHUvcG9kY2FzdHMvZmlsZXNfcG9kY2FzdHMvaXR1bmVzRmVlZC54bWw=?nord=0",
-          "title": "Software Engineering Radio"
-        },
-        {
-          "link": "https://podcasts.apple.com/gh/podcast/full-stack-radio/id931714873",
-          "title": "Full Stack Radio"
-        },
-        {
-          "link": "https://perell.com/essay/against-3x-speed/",
-          "title": "Against 3X Speed"
-        }
-      ]
-    },
-    {
-      "name": "Playing around",
-      "entries": [
-        {
-          "link": "https://class.cs260.click",
-          "title": "Toys"
-        },
-        {
-          "link": "https://startup.cs260.click",
-          "title": "Voter"
-        },
-        {
-          "link": "mazejs/maze.html",
-          "title": "Maze-JS"
-        },
-        {
-          "link": "cuidado/index.html",
-          "title": "¡Cuidado!"
-        }
-      ]
-    },
-    {
-      "name": "Web Frameworks",
-      "entries": [
-        {
-          "link": "https://blog.webdevsimplified.com/2022-07/react-router/",
-          "title": "Ultimate React Router v6 Guide"
-        },
-        {
-          "link": "https://m.youtube.com/watch?v=DkGV5F4XnfQ",
-          "title": "Learn Vite with Evan You"
-        },
-        {
-          "link": "https://www.taniarascia.com/getting-started-with-react/",
-          "title": "Tania - Basic React Tutorial"
-        },
-        {
-          "link": "https://jscomplete.com/reactful",
-          "title": "Buna - Set up React environment without create-react-app"
-        }
-      ]
-    },
-    {
-      "name": "Rock stars",
-      "entries": [
-        {
-          "link": "https://blog.cleancoder.com/",
-          "title": "Robert Martin (Uncle Bob)",
-          "tags": [
-            "Software Development"
-          ]
-        },
-        {
-          "link": "https://en.wikipedia.org/wiki/Tim_Berners-Lee",
-          "title": "Tim Berners-Lee",
-          "tags": [
-            "HTML",
-            "HTTP"
-          ]
-        },
-        {
-          "link": "https://en.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie",
-          "title": "Håkon Wium Lie",
-          "tags": [
-            "CSS"
-          ]
-        },
-        {
-          "link": "https://brendaneich.com/",
-          "title": "Brendan Eich",
-          "tags": [
-            "JS"
-          ]
-        },
-        {
-          "link": "https://en.wikipedia.org/wiki/Linus_Torvalds",
-          "title": "Linus Torvalds",
-          "tags": [
-            "Linux",
-            "Git"
-          ]
-        },
-        {
-          "link": "https://en.wikipedia.org/wiki/Ryan_Dahl",
-          "title": "Ryan Dahl",
-          "tags": [
-            "Node.js"
-          ]
-        },
-        {
-          "link": "https://github.com/tj",
-          "title": "TJ Holowaychuk",
-          "tags": [
-            "Express"
-          ]
-        },
-        {
-          "link": "https://evanyou.me/",
-          "title": "Evan You",
-          "tags": [
-            "Vite",
-            "Vue"
-          ]
-        },
-        {
-          "link": "https://github.com/jordwalke",
-          "title": "Jordan Walke",
-          "tags": [
-            "React"
-          ]
-        },
-        {
-          "link": "https://commandcenter.blogspot.com/",
-          "title": "Rob Pike",
-          "tags": [
-            "Go"
-          ]
-        },
-        {
-          "link": "https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer)",
-          "title": "Margaret Hamilton",
-          "tags": [
-            "Software Engineering"
-          ]
-        },
-        {
-          "link": "https://github.com/mholt",
-          "title": "Matt Holt",
-          "tags": [
-            "Caddy"
-          ]
-        }
-      ]
-    }
-  ]
+        "link": "https://lizkeogh.com/behaviour-driven-development/",
+        "title": "Behavior Driven Development (Liz Keogh)"
+      },
+      {
+        "link": "https://dodonut.com/blog/10-dark-patterns-in-ux-design/",
+        "title": "10 dark patterns in UX design"
+      },
+      {
+        "link": "https://www.htmhell.dev/adventcalendar/2023/2/",
+        "title": "You don't need JavaScript for that"
+      },
+      {
+        "link": "https://www.joelonsoftware.com/2005/12/29/the-perils-of-javaschools-2/",
+        "title": "The Perils of JavaSchools"
+      },
+      {
+        "link": "https://en.wikipedia.org/wiki/List_of_software_development_philosophies",
+        "title": "Software Development Philosophies"
+      },
+      {
+        "link": "http://deliberate-software.com/ego-driven-development/",
+        "title": "Ego Driven Development"
+      },
+      {
+        "link": "https://blog.codinghorror.com/the-ten-commandments-of-egoless-programming/",
+        "title": "Egoless Programming"
+      },
+      {
+        "link": "https://www.uptech.team/blog/software-development-methodologies",
+        "title": "8 Software Development Methodologies",
+        "tags": [
+          "Software Development"
+        ]
+      },
+      {
+        "link": "https://eloquentjavascript.net/",
+        "title": "Eloquent JavaScript",
+        "tags": [
+          "JS"
+        ]
+      },
+      {
+        "link": "https://reports.weforum.org/docs/WEF_Global_Cybersecurity_Outlook_2025.pdf",
+        "title": "WEF 2025 report on Cybersecurity",
+        "tags": [
+          "Security"
+        ]
+      },
+      {
+        "link": "https://mvsp.dev/mvsp.en/",
+        "title": "Minimum Viable Secure Product",
+        "tags": [
+          "Security"
+        ]
+      },
+      {
+        "link": "https://erikbern.com/2019/04/15/why-software-projects-take-longer-than-you-think-a-statistical-model.html",
+        "title": "Why software projects take longer than you think"
+      },
+      {
+        "link": "https://www.getlocalcert.net/",
+        "title": "Easy HTTPS for your private networks"
+      },
+      {
+        "link": "https://dev.to/link2twenty/future-of-css-scroll-animations-52ia",
+        "title": "Future of CSS: Scroll Animations",
+        "tags": [
+          "CSS"
+        ]
+      },
+      {
+        "link": "https://rust-lang.github.io/mdBook/index.html",
+        "title": "mdBook"
+      },
+      {
+        "link": "https://www.freecodecamp.org/news/how-to-dockerize-a-react-application/",
+        "title": "How to Dockerize a React Application"
+      },
+      {
+        "link": "https://adamwathan.me/css-utility-classes-and-separation-of-concerns/",
+        "title": "CSS Utility Classes and 'Separation of Concerns'"
+      },
+      {
+        "link": "https://www.ditdot.hr/en/dark-mode-website-tutorial",
+        "title": "Dark Mode - The prefers-color-scheme Website Tutorial"
+      },
+      {
+        "link": "https://blog.logrocket.com/write-scalable-openapi-specification-node-js/",
+        "title": "Write a scalable OpenAPI specification for a Node.js API"
+      },
+      {
+        "link": "https://babelstone.co.uk/Unicode/unicode.html",
+        "title": "Unicode slideshow"
+      },
+      {
+        "link": "https://uxdesign.cc/the-age-of-agile-must-end-bc89c0f084b7",
+        "title": "The age of Agile must end"
+      },
+      {
+        "link": "https://thenewstack.io/our-2023-site-reliability-engineering-wish-list/",
+        "title": "2023 Site Reliability Engineering Wish List"
+      },
+      {
+        "link": "https://requestmetrics.com/web-performance/http3-is-fast",
+        "title": "HTTP/3 performance"
+      },
+      {
+        "link": "https://levelup.gitconnected.com/10-awesome-github-repos-every-developer-must-know-c0b0839a17d3",
+        "title": "Repos every developer should know"
+      },
+      {
+        "link": "https://12factor.net/",
+        "title": "The 12-Factor App"
+      },
+      {
+        "link": "https://survey.stackoverflow.co/2023/",
+        "title": "Stack Overflow 2023 survey"
+      },
+      {
+        "link": "https://stateofcss.com",
+        "title": "State of CSS",
+        "tags": [
+          "CSS"
+        ]
+      },
+      {
+        "link": "https://stateofjs.com",
+        "title": "State of JS",
+        "tags": [
+          "JS"
+        ]
+      },
+      {
+        "link": "https://arxiv.org/abs/2103.07487",
+        "title": "How developers choose names"
+      },
+      {
+        "link": "https://devops.com/7-popular-open-source-ci-cd-tools/",
+        "title": "7 Popular open source CI/CD tools"
+      },
+      {
+        "link": "https://click.linksynergy.com/deeplink?id=kXQk6%2AivFEQ&mid=46128&u1=trd-us-2061085037600953600&murl=https%3A%2F%2Fwww.microsoft.com%2Fen-gb%2Fsoftware-download%2Fwindows10",
+        "title": "Windows 10 media creation tool"
+      },
+      {
+        "link": "https://ahoyo.to/lee",
+        "title": "Single page websites"
+      },
+      {
+        "link": "https://anthonynsimon.com/blog/one-man-saas-architecture/",
+        "title": "Stack behind a one person startup"
+      },
+      {
+        "link": "https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF",
+        "title": "Color scheme designer"
+      },
+      {
+        "link": "https://regex101.com/",
+        "title": "Regex 101"
+      },
+      {
+        "link": "https://www.freecodecamp.org/",
+        "title": "freeCodeCamp"
+      },
+      {
+        "link": "https://www.freecodecamp.org/news/freecodecamp-math-computer-science-degree-update",
+        "title": "BS in CS"
+      },
+      {
+        "link": "https://research.google/pubs/pub334/",
+        "title": "Original Google paper"
+      },
+      {
+        "link": "https://ogp.me/",
+        "title": "Open Graph protocol"
+      },
+      {
+        "link": "https://commoncrawl.org/",
+        "title": "Common Crawl"
+      },
+      {
+        "link": "https://refactoring.guru/smells/feature-envy",
+        "title": "Refactoring"
+      },
+      {
+        "link": "https://gist.github.com/nckroy/dd2d4dfc86f7d13045ad715377b6a48f",
+        "title": "Eran Hammer on OAuth2"
+      },
+      {
+        "link": "https://github.com/doctorray117/minecraft-ondemand",
+        "title": "Hosting a minecraft server on AWS for almost nothing"
+      },
+      {
+        "link": "https://refspecs.linuxfoundation.org/FHS_2.3/fhs-2.3.html",
+        "title": "Standard Linux filesystem structure"
+      },
+      {
+        "link": "https://api.congress.gov/",
+        "title": "Congress API"
+      },
+      {
+        "link": "https://dev.to/jarrodhroberson/go-is-not-java-1bd8",
+        "title": "Go is not Java"
+      },
+      {
+        "link": "https://dev.to/med_code/12-websites-youll-love-as-a-developer-m0n",
+        "title": "6 websites you'll love as a developer"
+      },
+      {
+        "link": "https://blog.bitsrc.io/domain-driven-design-with-react-building-scalable-and-maintainable-applications-8aa854f18a69",
+        "title": "Domain driven design with React"
+      },
+      {
+        "link": "https://thenewstack.io/bad-by-design-the-world-of-intentionally-awful-user-interfaces/",
+        "title": "Bad by design"
+      },
+      {
+        "link": "https://vimeo.com/113707214",
+        "title": "Railway oriented programming"
+      },
+      {
+        "link": "https://stackoverflow.blog/2023/06/26/the-hardest-part-of-building-software-is-not-coding-its-requirements/",
+        "title": "The hardest part of software is the requirements"
+      }
+    ]
+  },
+  {
+    "name": "Engineering principles",
+    "entries": [
+      {
+        "title": "Abstraction",
+        "link": "https://en.wikipedia.org/wiki/Abstraction_(computer_science)"
+      },
+      {
+        "title": "Cohesion",
+        "link": "https://en.wikipedia.org/wiki/Cohesion_(computer_science)"
+      },
+      {
+        "title": "Command–query separation",
+        "link": "https://en.wikipedia.org/wiki/Command%E2%80%93query_separation"
+      },
+      {
+        "title": "Composition over inheritance",
+        "link": "https://en.wikipedia.org/wiki/Composition_over_inheritance"
+      },
+      {
+        "title": "Coupling",
+        "link": "https://en.wikipedia.org/wiki/Coupling_(computer_programming)"
+      },
+      {
+        "title": "Defensive programming",
+        "link": "https://en.wikipedia.org/wiki/Defensive_programming"
+      },
+      {
+        "title": "Dependency inversion principle",
+        "link": "https://en.wikipedia.org/wiki/Dependency_inversion_principle"
+      },
+      {
+        "title": "Discoverability",
+        "link": "https://en.wikipedia.org/wiki/Discoverability"
+      },
+      {
+        "title": "Don't repeat yourself",
+        "link": "https://en.wikipedia.org/wiki/Don%27t_repeat_yourself"
+      },
+      {
+        "title": "Encapsulation",
+        "link": "https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)"
+      },
+      {
+        "title": "Fail-fast",
+        "link": "https://en.wikipedia.org/wiki/Fail-fast"
+      },
+      {
+        "title": "Gall's law",
+        "link": "https://en.wikipedia.org/wiki/John_Gall_(author)#Gall's_law"
+      },
+      {
+        "title": "GRASP (object-oriented design)",
+        "link": "https://en.wikipedia.org/wiki/GRASP_(object-oriented_design)"
+      },
+      {
+        "title": "If it ain't broke, don't fix it",
+        "link": "https://en.wikipedia.org/wiki/Bert_Lance#If_it_ain't_broke,_don't_fix_it"
+      },
+      {
+        "title": "Information hiding",
+        "link": "https://en.wikipedia.org/wiki/Information_hiding"
+      },
+      {
+        "title": "Interface segregation principle",
+        "link": "https://en.wikipedia.org/wiki/Interface_segregation_principle"
+      },
+      {
+        "title": "Inversion of control",
+        "link": "https://en.wikipedia.org/wiki/Inversion_of_control"
+      },
+      {
+        "title": "KISS principle",
+        "link": "https://en.wikipedia.org/wiki/KISS_principle"
+      },
+      {
+        "title": "Law of Demeter",
+        "link": "https://en.wikipedia.org/wiki/Law_of_Demeter"
+      },
+      {
+        "title": "Liskov substitution principle",
+        "link": "https://en.wikipedia.org/wiki/Liskov_substitution_principle"
+      },
+      {
+        "title": "Loose coupling",
+        "link": "https://en.wikipedia.org/wiki/Loose_coupling"
+      },
+      {
+        "title": "Ninety–ninety rule",
+        "link": "https://en.wikipedia.org/wiki/Ninety%E2%80%93ninety_rule"
+      },
+      {
+        "title": "Offensive programming",
+        "link": "https://en.wikipedia.org/wiki/Offensive_programming"
+      },
+      {
+        "title": "Open–closed principle",
+        "link": "https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle"
+      },
+      {
+        "title": "The Power of 10: Rules for Developing Safety-Critical Code",
+        "link": "https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code"
+      },
+      {
+        "title": "Principle of least astonishment",
+        "link": "https://en.wikipedia.org/wiki/Principle_of_least_astonishment"
+      },
+      {
+        "title": "Rule of three",
+        "link": "https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)"
+      },
+      {
+        "title": "Separation of concerns",
+        "link": "https://en.wikipedia.org/wiki/Separation_of_concerns"
+      },
+      {
+        "title": "Separation of mechanism and policy",
+        "link": "https://en.wikipedia.org/wiki/Separation_of_mechanism_and_policy"
+      },
+      {
+        "title": "Single responsibility principle",
+        "link": "https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html"
+      },
+      {
+        "title": "SOLID",
+        "link": "https://en.wikipedia.org/wiki/SOLID"
+      },
+      {
+        "title": "Uniform access principle",
+        "link": "https://en.wikipedia.org/wiki/Uniform_access_principle"
+      },
+      {
+        "title": "Worse is better",
+        "link": "https://en.wikipedia.org/wiki/Worse_is_better"
+      },
+      {
+        "title": "You aren't gonna need it",
+        "link": "https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it"
+      },
+      {
+        "title": "Zen of Python",
+        "link": "https://en.wikipedia.org/wiki/Zen_of_Python"
+      },
+      {
+        "title": "Zero one infinity rule",
+        "link": "https://en.wikipedia.org/wiki/Zero_one_infinity_rule"
+      }
+    ]
+  },
+  {
+    "name": "Specifications",
+    "entries": [
+      {
+        "link": "https://www.w3.org/TR/2011/WD-html5-20110405/",
+        "title": "HTML 5"
+      },
+      {
+        "link": "https://www.w3.org/Style/CSS/current-work",
+        "title": "CSS"
+      },
+      {
+        "link": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_14th_edition_june_2023.pdf",
+        "title": "JavaScript 2023 (ECMA 262)"
+      },
+      {
+        "link": "https://www.ecma-international.org/wp-content/uploads/ECMA-404_2nd_edition_december_2017.pdf",
+        "title": "JSON (ECMA 404)"
+      }
+    ]
+  },
+  {
+    "name": "Blogs",
+    "entries": [
+      {
+        "link": "https://blog.cleancoder.com/",
+        "title": "Clean Code",
+        "tags": [
+          "Software Development"
+        ]
+      },
+      {
+        "link": "https://www.youtube.com/@CodingWithJohn/videos",
+        "title": "Coding with John",
+        "tags": [
+          "Java"
+        ]
+      },
+      {
+        "link": "https://apisyouwonthate.com/blog",
+        "title": "APIs you won't hate"
+      },
+      {
+        "link": "https://2ality.com/",
+        "title": "2ality",
+        "tags": [
+          "JS"
+        ]
+      },
+      {
+        "link": "http://raganwald.com/",
+        "title": "Reginald Braithwaite",
+        "tags": [
+          "JS"
+        ]
+      },
+      {
+        "link": "https://medium.com/@addyosmani",
+        "title": "Addy Osmani",
+        "tags": [
+          "Performance",
+          "PWA"
+        ]
+      },
+      {
+        "link": "https://www.joelonsoftware.com/",
+        "title": "Joel Spolsky",
+        "tags": [
+          "Software Development"
+        ]
+      },
+      {
+        "link": "https://ponyfoo.com/",
+        "title": "Phony Foo",
+        "tags": [
+          "JS"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Podcasts",
+    "entries": [
+      {
+        "link": "https://rpb3r.app.goo.gl/3zxy",
+        "title": "How I Built This"
+      },
+      {
+        "link": "https://podcasts.google.com/feed/aHR0cHM6Ly9yc3MuYXJ0MTkuY29tL21hc3RlcnMtb2Ytc2NhbGU?sa=X&ved=0CAMQ4aUDahcKEwjwy7Dnu8fvAhUAAAAAHQAAAAAQAQ&hl=en-GH",
+        "title": "The Masters of Scale"
+      },
+      {
+        "link": "https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5wYWNpZmljLWNvbnRlbnQuY29tL2NvbW1hbmRsaW5laGVyb2Vz",
+        "title": "Command Line Heroes"
+      },
+      {
+        "link": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zaW1wbGVjYXN0LmNvbS9YQV84NTFrMw==",
+        "title": "The Stack Overflow"
+      },
+      {
+        "link": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIxNTc0MDQ1MC9zb3VuZHMucnNz",
+        "title": "InfoQ"
+      },
+      {
+        "link": "https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuc2VpLmNtdS5lZHUvcG9kY2FzdHMvZmlsZXNfcG9kY2FzdHMvaXR1bmVzRmVlZC54bWw=?nord=0",
+        "title": "Software Engineering Radio"
+      },
+      {
+        "link": "https://podcasts.apple.com/gh/podcast/full-stack-radio/id931714873",
+        "title": "Full Stack Radio"
+      },
+      {
+        "link": "https://perell.com/essay/against-3x-speed/",
+        "title": "Against 3X Speed"
+      }
+    ]
+  },
+  {
+    "name": "Playing around",
+    "entries": [
+      {
+        "link": "https://class.cs260.click",
+        "title": "Toys"
+      },
+      {
+        "link": "https://startup.cs260.click",
+        "title": "Voter"
+      },
+      {
+        "link": "mazejs/maze.html",
+        "title": "Maze-JS"
+      },
+      {
+        "link": "cuidado/index.html",
+        "title": "¡Cuidado!"
+      }
+    ]
+  },
+  {
+    "name": "Web Frameworks",
+    "entries": [
+      {
+        "link": "https://blog.webdevsimplified.com/2022-07/react-router/",
+        "title": "Ultimate React Router v6 Guide"
+      },
+      {
+        "link": "https://m.youtube.com/watch?v=DkGV5F4XnfQ",
+        "title": "Learn Vite with Evan You"
+      },
+      {
+        "link": "https://www.taniarascia.com/getting-started-with-react/",
+        "title": "Tania - Basic React Tutorial"
+      },
+      {
+        "link": "https://jscomplete.com/reactful",
+        "title": "Buna - Set up React environment without create-react-app"
+      }
+    ]
+  },
+  {
+    "name": "Rock stars",
+    "entries": [
+      {
+        "link": "https://blog.cleancoder.com/",
+        "title": "Robert Martin (Uncle Bob)",
+        "tags": [
+          "Software Development"
+        ]
+      },
+      {
+        "link": "https://en.wikipedia.org/wiki/Tim_Berners-Lee",
+        "title": "Tim Berners-Lee",
+        "tags": [
+          "HTML",
+          "HTTP"
+        ]
+      },
+      {
+        "link": "https://en.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie",
+        "title": "Håkon Wium Lie",
+        "tags": [
+          "CSS"
+        ]
+      },
+      {
+        "link": "https://brendaneich.com/",
+        "title": "Brendan Eich",
+        "tags": [
+          "JS"
+        ]
+      },
+      {
+        "link": "https://en.wikipedia.org/wiki/Linus_Torvalds",
+        "title": "Linus Torvalds",
+        "tags": [
+          "Linux",
+          "Git"
+        ]
+      },
+      {
+        "link": "https://en.wikipedia.org/wiki/Ryan_Dahl",
+        "title": "Ryan Dahl",
+        "tags": [
+          "Node.js"
+        ]
+      },
+      {
+        "link": "https://github.com/tj",
+        "title": "TJ Holowaychuk",
+        "tags": [
+          "Express"
+        ]
+      },
+      {
+        "link": "https://evanyou.me/",
+        "title": "Evan You",
+        "tags": [
+          "Vite",
+          "Vue"
+        ]
+      },
+      {
+        "link": "https://github.com/jordwalke",
+        "title": "Jordan Walke",
+        "tags": [
+          "React"
+        ]
+      },
+      {
+        "link": "https://commandcenter.blogspot.com/",
+        "title": "Rob Pike",
+        "tags": [
+          "Go"
+        ]
+      },
+      {
+        "link": "https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer)",
+        "title": "Margaret Hamilton",
+        "tags": [
+          "Software Engineering"
+        ]
+      },
+      {
+        "link": "https://github.com/mholt",
+        "title": "Matt Holt",
+        "tags": [
+          "Caddy"
+        ]
+      }
+    ]
+  }
+]
