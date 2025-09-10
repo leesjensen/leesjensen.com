@@ -12,7 +12,7 @@ export default function App() {
       for (let i in entry.tags) {
         const tag = entry.tags[i];
         tags.push(
-          <span key={i} className={'post-category post-category-' + tag.toLowerCase()}>
+          <span key={i} className={'post-category post-category-' + tag.toLowerCase().replace(/\s+/g, '-')}>
             {tag}
           </span>
         );

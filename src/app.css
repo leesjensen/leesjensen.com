@@ -97,21 +97,48 @@ main {
 .post-category {
   margin: 0 0.1em;
   padding: 0.3em 0.5em;
-  color: #fff;
-  background: #999;
+  color: #797979;
+  background: white;
+  border-radius: 3px;
+  border: solid 1px #777;
   font-size: 60%;
+  margin-left: 0.5em;
+}
+.post-category-byu {
+  color: #eeeeee;
+  background: #1979ff;
 }
 .post-category-performance {
+  color: #eeeeee;
   background: #4d85d1;
 }
 .post-category-pwa {
+  color: #eeeeee;
   background: #60417b;
 }
 .post-category-js {
+  color: #eeeeee;
   background: #454f77;
 }
 .post-category-css {
+  color: #eeeeee;
   background: #45774e;
+}
+.post-category-security {
+  color: #eeeeee;
+  background: #b04629;
+}
+.post-category-design {
+  color: #eeeeee;
+  background: #90b029;
+}
+.post-category-learning {
+  color: #666666;
+  background: #ffffb6;
+}
+.post-category-software-engineering {
+  color: #eeeeee;
+  background: #614d75;
 }
 
 .post-images {
