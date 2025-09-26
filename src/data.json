@@ -25,7 +25,7 @@
       {
         "link": "learning/masteryls.html",
         "title": "Mastery LS",
-        "tags": []
+        "tags": ["Learning", "AI"]
       },
       {
         "link": "https://www.td.org/insights/how-long-does-it-take-to-develop-training-new-question-new-answers",
@@ -48,8 +48,33 @@
         "tags": ["Learning"]
       },
       {
+        "link": "https://en.wikipedia.org/wiki/Bloom%27s_taxonomy",
+        "title": "Bloom's Taxonomy",
+        "tags": ["Learning", "Bloom"]
+      },
+      {
+        "link": "https://en.wikipedia.org/wiki/Bloom%27s_2_sigma_problem",
+        "title": "Bloom's 2 Sigma Problem",
+        "tags": ["Learning", "Bloom"]
+      },
+      {
+        "link": "https://fs.blog/mental-models/",
+        "title": "Mental Models",
+        "tags": ["Learning"]
+      },
+      {
+        "link": "https://psychosocialinfo.medium.com/the-dunning-kruger-effect-a-journey-from-ignorance-to-expertise-9d945e4fc486",
+        "title": "The Dunning-Kruger effect",
+        "tags": ["Learning"]
+      },
+      {
         "link": "https://www.youtube.com/watch?v=k0fgtvbMT7k",
         "title": "What if we trusted you?",
+        "tags": ["Learning"]
+      },
+      {
+        "link": "https://en.wikipedia.org/wiki/Four_stages_of_competence",
+        "title": "Four stages of competence",
         "tags": ["Learning"]
       }
     ]
