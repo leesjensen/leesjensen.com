@@ -420,21 +420,21 @@
       {
         "title": "Composition over inheritance",
         "link": "https://en.wikipedia.org/wiki/Composition_over_inheritance",
-        "tags": ["Engineering Principle"]
+        "tags": ["Engineering Principle", "Inheritance", "Composition"]
+      },
+      {
+        "title": "Why Go chose Composition over Inheritance (and you should too)",
+        "link": "https://medium.com/@harshithgowdakt/why-go-chose-composition-over-inheritance-and-you-should-too-ac1a89524202",
+        "tags": ["Engineering Principle", "Inheritance", "Composition", "GO"]
       },
       {
         "title": "Coupling",
         "link": "https://en.wikipedia.org/wiki/Coupling_(computer_programming)",
-        "tags": ["Engineering Principle"]
+        "tags": ["Engineering Principle", "Coupling"]
       },
       {
         "title": "Defensive programming",
         "link": "https://en.wikipedia.org/wiki/Defensive_programming",
-        "tags": ["Engineering Principle"]
-      },
-      {
-        "title": "Dependency inversion principle",
-        "link": "https://en.wikipedia.org/wiki/Dependency_inversion_principle",
         "tags": ["Engineering Principle"]
       },
       {
@@ -445,12 +445,12 @@
       {
         "title": "Don't repeat yourself",
         "link": "https://en.wikipedia.org/wiki/Don%27t_repeat_yourself",
-        "tags": ["Engineering Principle"]
+        "tags": ["Engineering Principle", "DRY"]
       },
       {
         "title": "Encapsulation",
         "link": "https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)",
-        "tags": ["Engineering Principle"]
+        "tags": ["Engineering Principle", "Encapsulation"]
       },
       {
         "title": "Fail-fast",
@@ -478,11 +478,6 @@
         "tags": ["Engineering Principle"]
       },
       {
-        "title": "Interface segregation principle",
-        "link": "https://en.wikipedia.org/wiki/Interface_segregation_principle",
-        "tags": ["Engineering Principle"]
-      },
-      {
         "title": "Inversion of control",
         "link": "https://en.wikipedia.org/wiki/Inversion_of_control",
         "tags": ["Engineering Principle"]
@@ -498,11 +493,6 @@
         "tags": ["Engineering Principle"]
       },
       {
-        "title": "Liskov substitution principle",
-        "link": "https://en.wikipedia.org/wiki/Liskov_substitution_principle",
-        "tags": ["Engineering Principle"]
-      },
-      {
         "title": "Loose coupling",
         "link": "https://en.wikipedia.org/wiki/Loose_coupling",
         "tags": ["Engineering Principle"]
@@ -515,11 +505,6 @@
       {
         "title": "Offensive programming",
         "link": "https://en.wikipedia.org/wiki/Offensive_programming",
-        "tags": ["Engineering Principle"]
-      },
-      {
-        "title": "Open–closed principle",
-        "link": "https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle",
         "tags": ["Engineering Principle"]
       },
       {
@@ -548,14 +533,34 @@
         "tags": ["Engineering Principle"]
       },
       {
+        "title": "SOLID",
+        "link": "https://en.wikipedia.org/wiki/SOLID",
+        "tags": ["Engineering Principle"]
+      },
+      {
         "title": "Single responsibility principle",
         "link": "https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html",
         "tags": ["Engineering Principle"]
       },
       {
-        "title": "SOLID",
-        "link": "https://en.wikipedia.org/wiki/SOLID",
+        "title": "Open–closed principle",
+        "link": "https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle",
         "tags": ["Engineering Principle"]
+      },
+      {
+        "title": "Liskov substitution principle",
+        "link": "https://en.wikipedia.org/wiki/Liskov_substitution_principle",
+        "tags": ["Engineering Principle"]
+      },
+      {
+        "title": "Interface segregation principle",
+        "link": "https://en.wikipedia.org/wiki/Interface_segregation_principle",
+        "tags": ["Engineering Principle"]
+      },
+      {
+        "title": "Dependency inversion principle",
+        "link": "https://en.wikipedia.org/wiki/Dependency_inversion_principle",
+        "tags": ["Engineering Principle", "Dependency inversion"]
       },
       {
         "title": "Uniform access principle",
