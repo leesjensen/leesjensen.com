@@ -128,6 +128,11 @@
         "tags": ["News"]
       },
       {
+        "link": "https://www.jmeiners.com/think-in-math/",
+        "title": "Think in Math",
+        "tags": ["Programming", "Math"]
+      },
+      {
         "link": "https://perell.com/essay/how-learning-happens/",
         "title": "How Learning Happens",
         "tags": ["Learning"]
