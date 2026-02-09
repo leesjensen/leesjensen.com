@@ -13,6 +13,11 @@
         "tags": ["LMS", "Learning"]
       },
       {
+        "link": "learning/lms4.html",
+        "title": "LMS 4.0",
+        "tags": ["LMS", "Learning"]
+      },
+      {
         "link": "learning/howToLearn.html",
         "title": "How to learn",
         "tags": ["Learning"]
@@ -142,6 +147,11 @@
   {
     "name": "Programmerish things",
     "entries": [
+      {
+        "link": "https://dora.dev/guides/dora-metrics",
+        "title": "DORA - Valuable metrics",
+        "tags": ["Software Engineering"]
+      },
       {
         "link": "https://www.seangoedecke.com/the-simplest-thing-that-could-possibly-work/",
         "title": "The simplest thing that could possibly work",
