@@ -105,6 +105,26 @@
     ]
   },
   {
+    "name": "AI",
+    "entries": [
+      {
+        "link": "https://www.nature.com/articles/d41586-026-00285-6",
+        "title": "Nature - Does AI already have human-level intelligence?",
+        "tags": ["AI", "AGI"]
+      },
+      {
+        "link": "https://www.youtube.com/watch?v=2ghhiPLg-jg",
+        "title": "Nate P. Jones - My 10-Year-Old Vibe Codes",
+        "tags": ["AI"]
+      },
+      {
+        "link": "https://www.youtube.com/watch?v=2ghhiPLg-jg",
+        "title": "Nate P. Jones - The AI Revolution: What it means for humanity",
+        "tags": ["AI"]
+      }
+    ]
+  },
+  {
     "name": "Interesting stuff",
     "entries": [
       {
