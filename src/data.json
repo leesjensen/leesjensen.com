@@ -653,6 +653,11 @@
     "name": "Blogs",
     "entries": [
       {
+        "link": "https://lucamezzalira.com/",
+        "title": "Luca Mezzalira",
+        "tags": ["Software Engineering"]
+      },
+      {
         "link": "https://blog.cleancoder.com/",
         "title": "Clean Code",
         "tags": ["Software Engineering"]
