@@ -758,6 +758,11 @@
         "tags": ["HCI"]
       },
       {
+        "link": "demo/millers.html",
+        "title": "Miller's Law",
+        "tags": ["HCI"]
+      },
+      {
         "link": "demo/hicks.html",
         "title": "Hick's Law",
         "tags": ["HCI"]
