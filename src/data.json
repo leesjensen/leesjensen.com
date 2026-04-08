@@ -748,6 +748,21 @@
     "name": "Playing around",
     "entries": [
       {
+        "link": "demo/affordance.html",
+        "title": "Affordance, Signifiers, and Feedback",
+        "tags": ["HCI"]
+      },
+      {
+        "link": "demo/fitts.html",
+        "title": "Fitts's Law",
+        "tags": ["HCI"]
+      },
+      {
+        "link": "demo/gestalt.html",
+        "title": "Gestalt",
+        "tags": ["HCI"]
+      },
+      {
         "link": "https://class.cs260.click",
         "title": "Toys",
         "tags": []
