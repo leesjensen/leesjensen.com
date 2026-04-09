@@ -748,6 +748,11 @@
     "name": "Playing around",
     "entries": [
       {
+        "link": "demo/responsive.html",
+        "title": "Responsive design",
+        "tags": ["HCI"]
+      },
+      {
         "link": "demo/affordance.html",
         "title": "Affordance, Signifiers, and Feedback",
         "tags": ["HCI"]
