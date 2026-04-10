@@ -778,6 +778,11 @@
         "tags": ["HCI"]
       },
       {
+        "link": "demo/wcag.html",
+        "title": "WCAG",
+        "tags": ["HCI"]
+      },
+      {
         "link": "https://class.cs260.click",
         "title": "Toys",
         "tags": []
