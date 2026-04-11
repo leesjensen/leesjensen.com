@@ -783,6 +783,11 @@
         "tags": ["HCI"]
       },
       {
+        "link": "demo/colorBlind.html ",
+        "title": "Color Blindness",
+        "tags": ["HCI"]
+      },
+      {
         "link": "https://class.cs260.click",
         "title": "Toys",
         "tags": []
