@@ -783,8 +783,13 @@
         "tags": ["HCI"]
       },
       {
-        "link": "demo/colorBlind.html ",
+        "link": "demo/colorBlind.html",
         "title": "Color Blindness",
+        "tags": ["HCI"]
+      },
+      {
+        "link": "demo/animation.html",
+        "title": "Animation and motion design",
         "tags": ["HCI"]
       },
       {
