@@ -748,6 +748,11 @@
     "name": "Playing around",
     "entries": [
       {
+        "link": "demo/asyncFlow.html",
+        "title": "Async flow",
+        "tags": ["JS"]
+      },
+      {
         "link": "demo/responsive.html",
         "title": "Responsive design",
         "tags": ["HCI"]
