@@ -183,12 +183,35 @@
       }
 
       .console {
-        border: 1px solid #cbe2d8;
+        border: 2.5px solid #24a887;
         border-radius: 10px;
         background: #fbfefd;
         min-height: 140px;
         max-height: 190px;
         overflow: auto;
+        transition:
+          box-shadow 0.3s,
+          background 0.3s;
+      }
+
+      .console.paint-flash {
+        box-shadow:
+          0 0 0 3px #24a887,
+          0 0 16px #24a88766;
+        animation: paintFlash 0.5s;
+        background: transparent;
+      }
+
+      @keyframes paintFlash {
+        0% {
+          background: #e2f4ee;
+        }
+        60% {
+          background: #b6f2d7;
+        }
+        100% {
+          background: #fbfefd;
+        }
       }
 
       .console-item {
@@ -211,7 +234,7 @@
         border: 2px dashed #b9cfd0;
         background: #f7fbf9;
         padding: 10px;
-        min-height: 620px;
+        min-height: 700px;
       }
 
       .stage {
@@ -219,7 +242,7 @@
         border: 1px solid #d1e2da;
         box-shadow: 0 2px 8px rgba(11, 65, 52, 0.08);
         border-radius: 8px;
-        min-height: 596px;
+        min-height: 676px;
         padding: 12px;
         display: grid;
         gap: 12px;
@@ -229,15 +252,18 @@
 
       .banner {
         grid-column: 1 / -1;
-        background: #f3faf7;
-        border: 2px solid #c7ddd2;
-        border-radius: 8px;
-        padding: 14px 16px;
-        color: #35584a;
-        font-size: 1.08rem;
-        font-weight: 700;
-        letter-spacing: 0.01em;
-        box-shadow: 0 3px 10px rgba(33, 73, 57, 0.12);
+        background: linear-gradient(120deg, #0f6b5a 0%, #189477 55%, #24a887 100%);
+        border: 2px solid #0b5a4b;
+        border-radius: 10px;
+        padding: 16px 18px;
+        color: #f5fffb;
+        font-size: 1.14rem;
+        font-weight: 800;
+        letter-spacing: 0.015em;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+        box-shadow:
+          inset 0 0 0 1px rgba(255, 255, 255, 0.2),
+          0 5px 16px rgba(8, 82, 66, 0.38);
       }
 
       .zone {
@@ -247,7 +273,8 @@
         padding: 10px;
         display: flex;
         flex-direction: column;
-        min-height: 170px;
+        min-height: 200px;
+        max-height: 200px;
       }
 
       .stack-zone,
@@ -300,8 +327,18 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 8px;
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+      }
+
+      .render-zone {
+        grid-column: 1 / -1;
+        min-height: 150px;
+        max-height: 150px;
       }
 
       .task {
@@ -412,7 +449,7 @@
       @media (max-width: 760px) {
         .stage {
           grid-template-columns: 1fr;
-          grid-template-rows: auto auto auto auto auto;
+          grid-template-rows: auto auto auto auto auto auto;
           min-height: 0;
         }
 
@@ -437,25 +474,26 @@
         <div class="chip-row">
           <div class="chip"><b>Virtual Time:</b> <span id="clock">0 ms</span></div>
           <div class="chip"><b>Status:</b> <span id="status">Ready</span></div>
+          <div class="chip"><b>Next frame in:</b> <span id="frameCountdown">—</span></div>
         </div>
 
         <div class="code">
           <div class="code-head">Program being simulated</div>
           <pre>
-<span class="line" data-line="1"><span class="tok-key">function</span> <span class="tok-fn">log</span>(m) {</span>
-<span class="line" data-line="2">  console.log(JSON.stringify(m));</span>
+<span class="line" data-line="1"><span class="tok-key">function</span> <span class="tok-fn">render</span>(m) {</span>
+<span class="line" data-line="2">  body.innerText = m;</span>
 <span class="line" data-line="3">}</span>
 <span class='break'></span>
-<span class="line" data-line="5"><span class="tok-fn">log</span>(<span class="tok-str">'start'</span>);</span>
+<span class="line" data-line="5"><span class="tok-fn">render</span>(<span class="tok-str">'start'</span>);</span>
 <span class='break'></span>
 <span class="line" data-line="7"><span class="tok-fn">setTimeout</span>(() =&gt; {</span>
-<span class="line" data-line="8">  <span class="tok-fn">log</span>(<span class="tok-str">'timout complete'</span>)</span>
+<span class="line" data-line="8">  <span class="tok-fn">render</span>(<span class="tok-str">'timeout complete'</span>)</span>
 <span class="line" data-line="9">}, <span class="tok-num">2000</span>);</span>
 <span class='break'></span>
 <span class="line" data-line="11"><span class="tok-com">// Promise request</span></span>
 <span class="line" data-line="12"><span class="tok-fn">fetch</span>(<span class="tok-str">'a.com'</span>).then((r) =&gt; {</span>
 <span class="line" data-line="13"> r.json().then((json) =&gt; {</span>
-<span class="line" data-line="14">    <span class="tok-fn">log</span>(json)</span>
+<span class="line" data-line="14">    <span class="tok-fn">render</span>(json)</span>
 <span class="line" data-line="15"> });</span>
 <span class="line" data-line="16">});</span>
 <span class='break'></span>
@@ -463,15 +501,15 @@
 <span class="line" data-line="19">(<span class="tok-key">async</span> () =&gt; {</span>
 <span class="line" data-line="20">  <span class="tok-key">const</span> r = <span class="tok-key">await</span> <span class="tok-fn">fetch</span>(<span class="tok-str">'b.com'</span>);</span>
 <span class="line" data-line="21">  <span class="tok-key">const</span> json = <span class="tok-key">await</span> r.json();</span>
-<span class="line" data-line="22">  <span class="tok-fn">log</span>(json);</span>
+<span class="line" data-line="22">  <span class="tok-fn">render</span>(json);</span>
 <span class='break'></span>
-<span class="line" data-line="24">  <span class="tok-fn">log</span>(<span class="tok-str">'end'</span>);</span>
+<span class="line" data-line="24">  <span class="tok-fn">render</span>(<span class="tok-str">'end'</span>);</span>
 <span class="line" data-line="25">})();</span>
           </pre>
         </div>
 
-        <h2>Console Output</h2>
-        <div class="console" id="consoleOutput"></div>
+        <h2>Painted Output</h2>
+        <div class="console" id="domOutput"></div>
       </aside>
 
       <section class="lab">
@@ -498,6 +536,11 @@
               <h3>Microtask Queue (promises)</h3>
               <ul class="zone-list" id="microtaskQueue"></ul>
             </section>
+
+            <section class="zone queue-zone render-zone">
+              <h3>Render Loop (frames)</h3>
+              <ul class="zone-list" id="renderQueue"></ul>
+            </section>
           </div>
         </div>
 
@@ -523,6 +566,11 @@
               <h3>Microtask Queue (promises)</h3>
               <p>This queue stores promise continuations from await and then/catch/finally. Microtasks run before the next task, immediately after current stack work finishes.</p>
             </article>
+
+            <article class="legend-item">
+              <h3>Render Loop (frames)</h3>
+              <p>DOM updates can queue during JS execution, but visual paint happens on frame ticks after stack and microtasks are clear.</p>
+            </article>
           </div>
         </section>
       </section>
@@ -535,11 +583,13 @@
       const clock = document.getElementById('clock');
       const statusEl = document.getElementById('status');
       const banner = document.getElementById('banner');
-      const consoleOutput = document.getElementById('consoleOutput');
+      const domOutput = document.getElementById('domOutput');
+      const frameCountdown = document.getElementById('frameCountdown');
       const stackEl = document.getElementById('stack');
       const webApisEl = document.getElementById('webApis');
       const callbackQueueEl = document.getElementById('callbackQueue');
       const microtaskQueueEl = document.getElementById('microtaskQueue');
+      const renderQueueEl = document.getElementById('renderQueue');
 
       const codeLines = Array.from(document.querySelectorAll('.line'));
       const state = {
@@ -547,7 +597,11 @@
         webApis: [],
         callbackQueue: [],
         microtaskQueue: [],
-        logs: [],
+        renderQueue: [],
+        renderHistory: [],
+        pendingDomText: [],
+        paintedDomText: '',
+        hasPendingPaint: false,
         time: 0,
         timeline: [],
         timelineIndex: 0,
@@ -559,6 +613,7 @@
         webApis: new Set(),
         callbackQueue: new Set(),
         microtaskQueue: new Set(),
+        renderQueue: new Set(),
       };
 
       function setStatus(text) {
@@ -625,41 +680,87 @@
         lastRenderedKeys[zoneName] = nextKeys;
       }
 
-      function renderConsole() {
-        consoleOutput.innerHTML = '';
-        if (!state.logs.length) {
+      function renderDomOutput() {
+        domOutput.innerHTML = '';
+        if (!state.renderHistory.length) {
           const empty = document.createElement('div');
           empty.className = 'console-item';
           empty.textContent = '';
-          consoleOutput.appendChild(empty);
+          domOutput.appendChild(empty);
           return;
         }
 
-        state.logs.forEach((entry) => {
+        state.renderHistory.forEach((entry) => {
           const row = document.createElement('div');
           row.className = 'console-item';
-          row.textContent = '[' + entry.time + ' ms] ' + entry.text;
-          consoleOutput.appendChild(row);
+          row.textContent = entry.text;
+          domOutput.appendChild(row);
         });
-        consoleOutput.scrollTop = consoleOutput.scrollHeight;
+        domOutput.scrollTop = domOutput.scrollHeight;
       }
 
-      function renderAll() {
+      function getNextFrameMs() {
+        // Find the next paintFrame event in the timeline after the current index
+        for (let i = state.timelineIndex; i < state.timeline.length; i++) {
+          const event = state.timeline[i];
+          if (!event) continue;
+          // Heuristic: paintFrame is called in events with setBanner containing 'Frame tick paints' or 'painted DOM update'
+          if (String(event.action).includes('paintFrame')) {
+            return event.at - state.time;
+          }
+        }
+        return null;
+      }
+
+      function renderAll(painted) {
         renderList('stack', stackEl, state.stack.slice().reverse(), 'Stack is empty');
         renderList('webApis', webApisEl, state.webApis, 'No active Web API work');
         renderList('callbackQueue', callbackQueueEl, state.callbackQueue, 'Queue is empty');
         renderList('microtaskQueue', microtaskQueueEl, state.microtaskQueue, 'Queue is empty');
-        renderConsole();
+        renderList('renderQueue', renderQueueEl, state.renderQueue, 'No frame scheduled');
+        renderDomOutput();
+        // Frame countdown
+        const ms = getNextFrameMs();
+        frameCountdown.textContent = ms !== null && ms >= 0 ? ms + ' ms' : '—';
+        // Animate DOM output if a paint just occurred
+        if (painted) {
+          domOutput.classList.remove('paint-flash');
+          // Force reflow for restart
+          void domOutput.offsetWidth;
+          domOutput.classList.add('paint-flash');
+        }
       }
 
-      function logLine(text) {
-        state.logs.push({ time: state.time, text });
+      function queueRender(text) {
+        const label = String(text);
+        state.pendingDomText.push(label);
+        state.hasPendingPaint = true;
+        addItem(state.renderQueue, label, 'Pending DOM update');
+      }
+
+      function paintFrame() {
+        if (!state.hasPendingPaint) {
+          renderAll(false);
+          return;
+        }
+        state.renderQueue = [];
+        state.pendingDomText.forEach((txt) => {
+          state.renderHistory.push({ text: txt });
+        });
+        state.paintedDomText = '';
+        state.pendingDomText = [];
+        state.hasPendingPaint = false;
+        renderAll(true);
       }
 
       function executeEvent(event) {
         setTime(event.at);
         event.action();
-        renderAll();
+        // If paintFrame was just called, renderAll(true) will already have run
+        // Otherwise, renderAll(false)
+        if (!String(event.action).includes('paintFrame')) {
+          renderAll(false);
+        }
       }
 
       function buildTimeline() {
@@ -675,23 +776,23 @@
             at: 1,
             action: () => {
               highlight(1);
-              setBanner('Register log function.');
+              setBanner('Register render function.');
             },
           },
           {
             at: 40,
             action: () => {
               highlight(5);
-              setBanner('Call log function.');
+              setBanner('Call render function.');
             },
           },
           {
             at: 60,
             action: () => {
               highlight(2);
-              addItem(state.stack, "log('start')");
-              logLine('start');
-              setBanner('Execute log function and return.');
+              addItem(state.stack, "render('start')");
+              queueRender('start');
+              setBanner('Render call queues a DOM update. Paint waits for a frame.');
             },
           },
           {
@@ -728,6 +829,13 @@
             },
           },
           {
+            at: 192,
+            action: () => {
+              paintFrame();
+              setBanner('Frame tick paints pending DOM updates.');
+            },
+          },
+          {
             at: 520,
             action: () => {
               state.webApis = state.webApis.filter((job) => job.label !== "fetch('a.com')");
@@ -743,7 +851,7 @@
               addItem(state.stack, "fetch('a.com') callback");
               highlight(13);
               addItem(state.webApis, "'a.com'.json()", 'Body parsing pending');
-              setBanner(`'a.com'.json() enters microtasks.`);
+              setBanner(`'a.com'.json() added to Web APIs.`);
             },
           },
           {
@@ -768,16 +876,16 @@
               state.microtaskQueue.shift();
               addItem(state.stack, "'a.com'.json() body parsing");
               highlight(14);
-              setBanner("'a.com'.json() callback runs, then logs result to console.");
+              setBanner("'a.com'.json() callback runs and queues a DOM update.");
             },
           },
           {
             at: 820,
             action: () => {
-              addItem(state.stack, `log('a.com')`);
+              addItem(state.stack, `render('a.com')`);
               highlight(2);
-              logLine(`{ origin: 'a.com' }`);
-              setBanner('Execute log function and return.');
+              queueRender(`{ origin: 'a.com' }`);
+              setBanner('Execute render function and return. Paint waits for next frame.');
             },
           },
           {
@@ -793,6 +901,13 @@
               clearHighlights();
               state.stack.pop();
               setBanner('Task completes.');
+            },
+          },
+          {
+            at: 872,
+            action: () => {
+              paintFrame();
+              setBanner('Frame tick paints pending DOM updates.');
             },
           },
           {
@@ -815,10 +930,9 @@
           {
             at: 1020,
             action: () => {
-              state.microtaskQueue.shift();
               highlight(21);
               addItem(state.webApis, `'b.com'.json()`, 'Body parsing pending');
-              setBanner(`'b.com'.json() enters microtasks.`);
+              setBanner(`'b.com'.json() enters Web APIs.`);
             },
           },
           {
@@ -850,16 +964,16 @@
             at: 1241,
             action: () => {
               highlight(22);
-              setBanner('Call log function.');
+              setBanner('Call render function.');
             },
           },
           {
             at: 1260,
             action: () => {
-              addItem(state.stack, `log('b.com')`);
+              addItem(state.stack, `render('b.com')`);
               highlight(2);
-              logLine(`{ origin: 'b.com' }`);
-              setBanner('Execute log function and return.');
+              queueRender(`{ origin: 'b.com' }`);
+              setBanner('Execute render function and return. Paint waits for next frame.');
             },
           },
           {
@@ -867,16 +981,16 @@
             action: () => {
               highlight(24);
               state.stack.pop();
-              setBanner('Call log function.');
+              setBanner('Call render function.');
             },
           },
           {
             at: 1320,
             action: () => {
-              addItem(state.stack, `log('end')`);
+              addItem(state.stack, `render('end')`);
               highlight(2);
-              logLine(`end`);
-              setBanner('Execute log function and return.');
+              queueRender(`end`);
+              setBanner('Second render call updates pending DOM before paint.');
             },
           },
           {
@@ -886,6 +1000,13 @@
               state.stack.pop();
               state.stack.pop();
               setBanner('Async flow finishes.');
+            },
+          },
+          {
+            at: 1380,
+            action: () => {
+              paintFrame();
+              setBanner('Frame tick paints latest pending DOM update.');
             },
           },
           {
@@ -908,17 +1029,17 @@
           {
             at: 2100,
             action: () => {
-              setBanner('Call log function.');
+              setBanner('Call render function.');
               highlight(8);
             },
           },
           {
             at: 2120,
             action: () => {
-              addItem(state.stack, `log('timeout complete')`);
+              addItem(state.stack, `render('timeout complete')`);
               highlight(2);
-              logLine('timeout complete');
-              setBanner('Execute log function and return.');
+              queueRender('timeout complete');
+              setBanner('Execute render function and return. Paint waits for next frame.');
             },
           },
           {
@@ -927,9 +1048,15 @@
               state.stack.pop();
               state.stack.pop();
               clearHighlights();
+              setBanner('Timer callback completes. Frame can paint now.');
+            },
+          },
+          {
+            at: 2150,
+            action: () => {
+              paintFrame();
               setStatus('Complete');
-              forwardBtn.disabled = false;
-              setBanner('Event loop complete: timer callback runs after stack is clear.');
+              setBanner('Event loop complete: paint committed after JS work finished.');
             },
           },
         ];
@@ -951,7 +1078,11 @@
         state.webApis = [];
         state.callbackQueue = [];
         state.microtaskQueue = [];
-        state.logs = [];
+        state.renderQueue = [];
+        state.renderHistory = [];
+        state.pendingDomText = [];
+        state.paintedDomText = '';
+        state.hasPendingPaint = false;
         state.nextItemId = 1;
         clearHighlights();
         setTime(0);
@@ -989,7 +1120,11 @@
         state.webApis = [];
         state.callbackQueue = [];
         state.microtaskQueue = [];
-        state.logs = [];
+        state.renderQueue = [];
+        state.renderHistory = [];
+        state.pendingDomText = [];
+        state.paintedDomText = '';
+        state.hasPendingPaint = false;
         state.nextItemId = 1;
         initializeTimeline();
         setTime(0);
