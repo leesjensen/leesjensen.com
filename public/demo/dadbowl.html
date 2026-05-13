@@ -1,0 +1,1161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bowling</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #0d1a2e;
+        font-family: 'Georgia', serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        color: #dce8f5;
+        user-select: none;
+        padding: 14px 16px;
+      }
+      h1 {
+        font-size: 1.4rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: #e8c84b;
+        margin-bottom: 10px;
+      }
+
+      /* ── SCORECARD ─────────────────────────────────────────── */
+      .scorecard {
+        width: 456px;
+        background: #060d18;
+        border: 1px solid #1e3a5a;
+        border-radius: 7px;
+        padding: 7px;
+        margin-bottom: 12px;
+      }
+      .sc-title {
+        font-size: 0.55rem;
+        letter-spacing: 2px;
+        color: #5a8aaa;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+      .sc-grid {
+        display: flex;
+        gap: 2px;
+      }
+      .fc {
+        flex: 1;
+        background: #0a1828;
+        border: 1px solid #1e3a5a;
+        border-radius: 3px;
+        text-align: center;
+        min-width: 0;
+      }
+      .fc.cur {
+        border-color: #e8c84b;
+        background: #0f2040;
+      }
+      .fc-num {
+        font-size: 0.5rem;
+        color: #3a5a7a;
+        padding: 2px 0;
+        border-bottom: 1px solid #1e3a5a;
+      }
+      .fc-rolls {
+        display: flex;
+        justify-content: center;
+        gap: 1px;
+        padding: 2px 1px;
+        min-height: 19px;
+        flex-wrap: wrap;
+      }
+      .rb {
+        width: 13px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.65rem;
+        font-weight: bold;
+        border-radius: 2px;
+        background: #111;
+        color: #fff;
+      }
+      .rb.X {
+        color: #00ff80;
+      }
+      .rb.sp {
+        color: #44bbff;
+      }
+      .rb.gutter {
+        color: #ee6622;
+      }
+      .fc-score {
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: #e8c84b;
+        padding: 2px 0;
+        min-height: 18px;
+        border-top: 1px solid #1e3a5a;
+      }
+      .total-row {
+        text-align: right;
+        font-size: 0.65rem;
+        color: #e8c84b;
+        margin-top: 4px;
+        letter-spacing: 1px;
+      }
+
+      /* ── MAIN LAYOUT ────────────────────────────────────────── */
+      .main {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+
+      /* ── LANE ───────────────────────────────────────────────── */
+      #lc {
+        position: relative;
+        width: 160px;
+        height: 560px;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 0 24px rgba(0, 0, 0, 0.8);
+        flex-shrink: 0;
+      }
+      #ball {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 35% 30%, #99aaff, #0a1a88);
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 10px rgba(100, 150, 255, 0.9);
+        transform: translate(-50%, -50%);
+        z-index: 12;
+        pointer-events: none;
+      }
+      #bhl {
+        position: absolute;
+        top: 0;
+        width: 5px;
+        height: 100%;
+        background: rgba(255, 240, 60, 0.22);
+        pointer-events: none;
+        z-index: 6;
+      }
+      #tsvg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 8;
+      }
+
+      /* ── METER PANEL ────────────────────────────────────────── */
+      .mp {
+        width: 280px;
+      }
+      .gc {
+        background: #080f1e;
+        border: 2px solid #1e3a5a;
+        border-radius: 12px;
+        padding: 16px 20px;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+      }
+      .ri {
+        text-align: center;
+        font-size: 0.58rem;
+        letter-spacing: 2px;
+        color: #5a8aaa;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+      .pl {
+        text-align: center;
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #e8c84b;
+        margin-bottom: 3px;
+        height: 18px;
+        transition: color 0.3s;
+      }
+      .bn {
+        text-align: center;
+        font-size: 2.8rem;
+        font-weight: bold;
+        color: #fff;
+        line-height: 1;
+        margin-bottom: 2px;
+        height: 46px;
+        transition: color 0.1s;
+      }
+      .ul {
+        text-align: center;
+        font-size: 0.58rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #5a8aaa;
+        margin-bottom: 7px;
+        height: 11px;
+      }
+      .mw {
+        position: relative;
+        width: 100%;
+        height: 28px;
+        border-radius: 14px;
+        background: #060d18;
+        border: 2px solid #1e3a5a;
+        overflow: hidden;
+        margin-bottom: 5px;
+      }
+      .mz {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+      }
+      .pz {
+        background: linear-gradient(to right, #8b0000 0%, #cc2200 8%, #dd5500 18%, #cc9900 30%, #228b22 42%, #00cc44 48%, #00ff55 51.3%, #00cc44 55%, #228b22 62%, #cc9900 74%, #dd5500 84%, #cc2200 94%, #8b0000 100%);
+      }
+      .sz {
+        background: linear-gradient(to right, #8b0000 0%, #cc3300 10%, #e06020 20%, #d4a020 35%, #228b22 45%, #00cc44 48%, #00ff55 50%, #00cc44 52%, #228b22 55%, #d4a020 65%, #e06020 80%, #cc3300 90%, #8b0000 100%);
+      }
+      .mf {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        border-radius: 14px;
+      }
+      .pf {
+        background: linear-gradient(to right, #8b0000 0%, #cc2200 8%, #dd5500 18%, #cc9900 30%, #228b22 42%, #00cc44 48%, #00ff55 51.3%, #00cc44 55%, #228b22 62%, #cc9900 74%, #dd5500 84%, #cc2200 94%, #8b0000 100%);
+        background-size: 280px 100%;
+      }
+      .sf {
+        background: linear-gradient(to right, #8b0000 0%, #cc3300 10%, #e06020 20%, #d4a020 35%, #228b22 45%, #00cc44 48%, #00ff55 50%, #00cc44 52%, #228b22 55%, #d4a020 65%, #e06020 80%, #cc3300 90%, #8b0000 100%);
+        background-size: 280px 100%;
+      }
+      .pm {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        border: 2px solid rgba(0, 255, 80, 0.7);
+        border-radius: 3px;
+        pointer-events: none;
+      }
+      .nd {
+        position: absolute;
+        top: 0;
+        width: 3px;
+        height: 100%;
+        background: #fff;
+        border-radius: 2px;
+        transform: translateX(-50%);
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+      }
+      .zt {
+        position: relative;
+        width: 100%;
+        height: 11px;
+        margin-bottom: 10px;
+      }
+      .tk {
+        position: absolute;
+        top: 0;
+        width: 1px;
+        height: 6px;
+        background: #2a4a6a;
+        transform: translateX(-50%);
+      }
+      .tl {
+        position: absolute;
+        top: 6px;
+        font-size: 0.5rem;
+        color: #3a5a7a;
+        transform: translateX(-50%);
+      }
+      .res {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+        min-height: 56px;
+        align-items: center;
+      }
+      .rb2 {
+        text-align: center;
+        width: 45%;
+        background: #060d18;
+        border: 1px solid #1e3a5a;
+        border-radius: 7px;
+        padding: 6px 8px;
+        opacity: 0;
+        transform: translateY(5px);
+        transition:
+          opacity 0.4s,
+          transform 0.4s;
+      }
+      .rb2.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .rb2 .lb {
+        font-size: 0.55rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #5a8aaa;
+        margin-bottom: 2px;
+      }
+      .rb2 .vl {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+      }
+      .rb2 .un {
+        font-size: 0.52rem;
+        letter-spacing: 1px;
+        color: #5a8aaa;
+      }
+      .rb2 .rt {
+        font-size: 0.58rem;
+        letter-spacing: 1px;
+        margin-top: 1px;
+      }
+      .pk {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        min-height: 34px;
+        margin-bottom: 4px;
+        opacity: 0;
+        transition: opacity 0.4s;
+      }
+      .pk.show {
+        opacity: 1;
+      }
+      .sr {
+        text-align: center;
+        font-size: 0.95rem;
+        letter-spacing: 2px;
+        font-weight: bold;
+        min-height: 24px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      .sr.show {
+        opacity: 1;
+      }
+      .ca {
+        width: 100%;
+        padding: 10px;
+        background: transparent;
+        border: 2px solid #e8c84b;
+        border-radius: 8px;
+        font-family: 'Georgia', serif;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #e8c84b;
+        cursor: pointer;
+        transition:
+          background 0.15s,
+          transform 0.05s;
+        text-align: center;
+        margin-bottom: 7px;
+      }
+      .ca:hover {
+        background: rgba(232, 200, 75, 0.08);
+      }
+      .ca:active {
+        transform: scale(0.98);
+      }
+      .ca:disabled {
+        opacity: 0.3;
+        cursor: default;
+      }
+      .nb {
+        display: none;
+        width: 100%;
+        padding: 8px;
+        background: #0a1828;
+        border: 2px solid #3a6a9a;
+        border-radius: 8px;
+        font-family: 'Georgia', serif;
+        font-size: 0.72rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #5a9aca;
+        cursor: pointer;
+        transition: background 0.15s;
+        text-align: center;
+      }
+      .nb:hover {
+        background: #0d2038;
+      }
+      .flash {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flash" id="flash"></div>
+    <h1>🎳 Bowling</h1>
+
+    <div class="scorecard">
+      <div class="sc-title">Scorecard</div>
+      <div class="sc-grid" id="scGrid"></div>
+      <div class="total-row" id="totalRow"></div>
+    </div>
+
+    <div class="main">
+      <div id="lc">
+        <div id="bhl"></div>
+        <div id="ball"></div>
+        <svg id="tsvg"></svg>
+      </div>
+      <div class="mp">
+        <div class="gc">
+          <div class="ri" id="ri">Frame 1 · Roll 1 · 10 pins</div>
+          <div class="pl" id="pl">Plank</div>
+          <div class="bn" id="bn">20</div>
+          <div class="ul" id="ul">Board</div>
+          <div class="mw">
+            <div class="mz pz" id="mz"></div>
+            <div class="mf pf" id="mf"></div>
+            <div class="pm" id="pm"></div>
+            <div class="nd" id="nd"></div>
+          </div>
+          <div class="zt" id="zt"></div>
+          <div class="res">
+            <div class="rb2" id="pb">
+              <div class="lb">Plank</div>
+              <div class="vl" id="pv">—</div>
+              <div class="un">Board</div>
+              <div class="rt" id="pr"></div>
+            </div>
+            <div class="rb2" id="sb">
+              <div class="lb">Spin</div>
+              <div class="vl" id="sv">—</div>
+              <div class="un">%</div>
+              <div class="rt" id="sr2"></div>
+            </div>
+          </div>
+          <div class="pk" id="pk"></div>
+          <div class="sr" id="sr"></div>
+          <button class="ca" id="ca">Click to Set Plank</button>
+          <button class="nb" id="nb"></button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ════════════════════════════════════════════════
+      //  LANE GEOMETRY  (ball at bottom → pins at top)
+      //  Real lane: 60ft foul-to-pins, 41.5" (39 boards) wide
+      // ════════════════════════════════════════════════
+      const LC_W = 160,
+        LC_H = 560;
+      const G = 11; // gutter px each side
+      const LW = LC_W - G * 2; // lane surface width = 138px
+      const BW = LW / 38; // ~3.63px per board
+
+      // Vertical positions (0=top)
+      const PIN_TOP = 12,
+        PIN_Y = 38; // pin deck
+      const LANE_TOP = 55; // lane surface starts
+      const FOUL_Y = 460; // foul line
+      const BALL_Y = 530; // ball starting y
+
+      const LANE_PX = FOUL_Y - LANE_TOP; // 405px = 60ft → 6.75px/ft
+      const PF = LANE_PX / 60;
+
+      const ARROWS_Y = Math.round(FOUL_Y - 15 * PF); // 15ft up
+      const DOTS_Y = Math.round(FOUL_Y - 7 * PF); // 7ft up
+      const DOTS2_Y = Math.round(FOUL_Y - 34 * PF); // 34ft (back end)
+
+      function bx(b) {
+        return G + ((b - 1) / 38) * LW;
+      }
+
+      // ════════════════════════════════════════════════
+      //  GAME STATE
+      // ════════════════════════════════════════════════
+      let GS;
+
+      function newGame() {
+        GS = {
+          frames: Array.from({ length: 10 }, () => ({ rolls: [], score: null })),
+          allRolls: [],
+          cur: 0,
+          rin: 0,
+          pins: 10,
+          over: false,
+          resetNext: false,
+          lp: 20,
+          ls: 50,
+        };
+      }
+
+      // Map meter quality → pins knocked (out of pinsUp)
+      function rollResult(plank, spin, pinsUp) {
+        const pd = Math.abs(plank - 20) / 19;
+        const sd = Math.abs(spin - 50) / 50;
+        const bad = pd * 0.55 + sd * 0.45;
+        let k = Math.round(pinsUp * Math.pow(1 - bad, 1.4));
+        if (Math.random() < 0.25) k += Math.random() < 0.5 ? 1 : -1;
+        return Math.max(0, Math.min(pinsUp, k));
+      }
+
+      function advanceRoll(knocked) {
+        const f = GS.cur,
+          frames = GS.frames;
+        frames[f].rolls.push(knocked);
+        GS.allRolls.push(knocked);
+        GS.pins -= knocked;
+        GS.resetNext = false;
+        const r = frames[f].rolls;
+
+        if (f < 9) {
+          if (r[0] === 10) {
+            // strike
+            GS.resetNext = true;
+            GS.cur++;
+            GS.rin = 0;
+            GS.pins = 10;
+          } else if (r.length === 2) {
+            // two balls done
+            GS.resetNext = true;
+            GS.cur++;
+            GS.rin = 0;
+            GS.pins = 10;
+          } else {
+            GS.rin = 1; // 2nd ball same frame
+          }
+        } else {
+          // 10th frame
+          if (r.length === 1) {
+            if (knocked === 10) {
+              GS.resetNext = true;
+              GS.pins = 10;
+            }
+            GS.rin = 1;
+          } else if (r.length === 2) {
+            if (r[0] === 10) {
+              // had strike on r1
+              GS.resetNext = true;
+              GS.pins = r[1] === 10 ? 10 : 10 - r[1];
+              GS.rin = 2;
+            } else if (r[0] + r[1] === 10) {
+              // spare
+              GS.resetNext = true;
+              GS.pins = 10;
+              GS.rin = 2;
+            } else {
+              GS.over = true; // open in 10th
+            }
+          } else if (r.length === 3) {
+            GS.over = true;
+          }
+        }
+        if (GS.cur >= 10) GS.over = true;
+        calcScores();
+      }
+
+      function calcScores() {
+        const R = GS.allRolls;
+        let ri = 0;
+        for (let f = 0; f < 10; f++) {
+          const fr = GS.frames[f];
+          if (ri >= R.length) {
+            fr.score = null;
+            continue;
+          }
+          const prev = f > 0 ? (GS.frames[f - 1].score ?? 0) : 0;
+          if (f === 9) {
+            const s = fr.rolls.reduce((a, b) => a + b, 0);
+            const done = (fr.rolls.length === 2 && fr.rolls[0] !== 10 && fr.rolls[0] + fr.rolls[1] < 10) || fr.rolls.length === 3 || GS.over;
+            fr.score = done ? prev + s : null;
+            ri += fr.rolls.length;
+          } else if (R[ri] === 10) {
+            fr.score = ri + 2 < R.length ? prev + 10 + R[ri + 1] + R[ri + 2] : null;
+            ri++;
+          } else if (ri + 1 < R.length && R[ri] + R[ri + 1] === 10) {
+            fr.score = ri + 2 < R.length ? prev + 10 + R[ri + 2] : null;
+            ri += 2;
+          } else {
+            if (ri + 1 < R.length) {
+              fr.score = prev + R[ri] + R[ri + 1];
+              ri += 2;
+            } else {
+              fr.score = null;
+              ri++;
+            }
+          }
+        }
+      }
+
+      // ════════════════════════════════════════════════
+      //  SCORECARD
+      // ════════════════════════════════════════════════
+      function buildSC() {
+        const g = document.getElementById('scGrid');
+        g.innerHTML = '';
+        for (let f = 0; f < 10; f++) {
+          const c = document.createElement('div');
+          c.className = 'fc';
+          c.id = 'fc' + f;
+          c.innerHTML = `<div class="fc-num">${f + 1}</div><div class="fc-rolls" id="fr${f}"></div><div class="fc-score" id="fs${f}"></div>`;
+          g.appendChild(c);
+        }
+      }
+
+      function updateSC() {
+        for (let f = 0; f < 10; f++) {
+          const fc = document.getElementById('fc' + f);
+          const rd = document.getElementById('fr' + f);
+          const sd = document.getElementById('fs' + f);
+          const fr = GS.frames[f].rolls;
+          fc.classList.toggle('cur', f === GS.cur && !GS.over);
+          rd.innerHTML = '';
+
+          if (f < 9) {
+            if (fr[0] === 10) {
+              rd.innerHTML = '<div class="rb X">X</div>';
+            } else {
+              if (fr.length > 0) rd.innerHTML += `<div class="rb${fr[0] === 0 ? ' gutter' : ''}">${fr[0] === 0 ? '-' : fr[0]}</div>`;
+              if (fr.length > 1) {
+                const sp = fr[0] + fr[1] === 10;
+                rd.innerHTML += `<div class="rb${sp ? ' sp' : fr[1] === 0 ? ' gutter' : ''}">${sp ? '/' : fr[1] === 0 ? '-' : fr[1]}</div>`;
+              }
+            }
+          } else {
+            for (let r = 0; r < fr.length; r++) {
+              let cls = 'rb',
+                txt;
+              if (fr[r] === 10) {
+                cls = 'rb X';
+                txt = 'X';
+              } else if (r > 0 && fr[r - 1] !== 10 && fr[r - 1] + fr[r] === 10) {
+                cls = 'rb sp';
+                txt = '/';
+              } else {
+                txt = fr[r] === 0 ? '-' : fr[r];
+                if (fr[r] === 0) cls = 'rb gutter';
+              }
+              rd.innerHTML += `<div class="${cls}">${txt}</div>`;
+            }
+          }
+          sd.textContent = GS.frames[f].score !== null ? GS.frames[f].score : '';
+        }
+        const tot = GS.frames[9].score;
+        document.getElementById('totalRow').textContent = GS.over && tot !== null ? `Final Score: ${tot}` : '';
+      }
+
+      // ════════════════════════════════════════════════
+      //  LANE DOM
+      // ════════════════════════════════════════════════
+      let pinEls = [];
+
+      function buildLane() {
+        const c = document.getElementById('lc');
+        const add = (css) => {
+          const d = document.createElement('div');
+          d.style.cssText = css;
+          c.appendChild(d);
+          return d;
+        };
+
+        add(`position:absolute;inset:0;background:#0e0e0e;`);
+        // Gutters
+        add(`position:absolute;left:0;top:0;width:${G}px;height:100%;background:linear-gradient(to right,#080808,#161616);`);
+        add(`position:absolute;right:0;top:0;width:${G}px;height:100%;background:linear-gradient(to left,#080808,#161616);`);
+        // Pin deck
+        add(`position:absolute;left:${G}px;top:${PIN_TOP}px;width:${LW}px;height:${LANE_TOP - PIN_TOP}px;background:#9a7040;`);
+        // Lane surface
+        add(`position:absolute;left:${G}px;top:${LANE_TOP}px;width:${LW}px;height:${FOUL_Y - LANE_TOP}px;background:linear-gradient(to bottom,#b88850,#c8a060);`);
+        // Board lines every 5 boards
+        for (let b = 5; b <= 35; b += 5) {
+          const x = bx(b);
+          add(`position:absolute;left:${x}px;top:${LANE_TOP}px;width:1px;height:${FOUL_Y - LANE_TOP}px;background:rgba(0,0,0,0.09);z-index:2;`);
+        }
+        // Foul line
+        add(`position:absolute;left:${G}px;top:${FOUL_Y}px;width:${LW}px;height:2px;background:#111;z-index:4;`);
+        // Approach
+        add(`position:absolute;left:${G}px;top:${FOUL_Y + 2}px;width:${LW}px;height:${LC_H - FOUL_Y - 2}px;background:linear-gradient(to bottom,#b07838,#9a6828);`);
+
+        // 5 evenly-spaced markers: boards 10,15,20(center),25,30
+        const markers = [10, 15, 20, 25, 30];
+        markers.forEach((b) => {
+          const x = bx(b);
+          // Lane dots ~7ft past foul line
+          add(`position:absolute;left:${x - 3}px;top:${DOTS_Y - 3}px;width:6px;height:6px;border-radius:50%;background:#7a4e14;z-index:5;`);
+          // Approach dots just below foul line
+          add(`position:absolute;left:${x - 3}px;top:${FOUL_Y + 12}px;width:6px;height:6px;border-radius:50%;background:#6a3e10;z-index:5;`);
+          // Arrows at 15ft pointing toward pins (upward triangle)
+          const arr = document.createElement('div');
+          arr.style.cssText = `position:absolute;left:${x - 4}px;top:${ARROWS_Y - 9}px;width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:9px solid rgba(0,0,0,0.45);z-index:5;`;
+          c.appendChild(arr);
+        });
+
+        // Board number labels
+        [1, 10, 20, 30, 39].forEach((b) => {
+          const x = bx(b);
+          const l = document.createElement('div');
+          l.style.cssText = `position:absolute;left:${x - 5}px;top:${ARROWS_Y + 4}px;font-size:6px;color:rgba(0,0,0,0.28);z-index:6;font-family:sans-serif;font-weight:bold;`;
+          l.textContent = b;
+          c.appendChild(l);
+        });
+
+        // "FOUL LINE" micro-label
+        const fl = document.createElement('div');
+        fl.style.cssText = `position:absolute;left:${G}px;top:${FOUL_Y + 3}px;font-size:5px;color:rgba(255,255,255,0.3);z-index:6;font-family:sans-serif;letter-spacing:1px;`;
+        fl.textContent = 'FOUL LINE';
+        c.appendChild(fl);
+
+        drawPins(false, null);
+      }
+
+      // Pin layout: ball arrives from BOTTOM, so headpin (1) is nearest the ball = largest y.
+      // Row 3 (7-8-9-10) is at TOP of cluster (smallest y, farthest from ball).
+      // py = PIN_Y + (3 - row) * PS  →  row 3 = PIN_Y, row 0 = PIN_Y + 3*PS
+      const PLAYOUT = [
+        { r: 0, c: 0 }, // pin 1  (headpin)
+        { r: 1, c: -1 },
+        { r: 1, c: 1 }, // pins 2,3
+        { r: 2, c: -2 },
+        { r: 2, c: 0 },
+        { r: 2, c: 2 }, // pins 4,5,6
+        { r: 3, c: -3 },
+        { r: 3, c: -1 },
+        { r: 3, c: 1 },
+        { r: 3, c: 3 }, // pins 7,8,9,10
+      ];
+      const PS = 9; // pin spacing px
+
+      function drawPins(update, states) {
+        const c = document.getElementById('lc');
+        const cx = G + LW / 2;
+        if (update) {
+          pinEls.forEach((e, i) => {
+            // Knocked pins go fully invisible
+            e.style.opacity = states[i] ? '1' : '0';
+          });
+          return;
+        }
+        pinEls = [];
+        PLAYOUT.forEach((p) => {
+          const px = cx + p.c * PS;
+          const py = PIN_Y + (3 - p.r) * PS; // row 3 at top, row 0 (headpin) at bottom
+          const el = document.createElement('div');
+          el.style.cssText = `position:absolute;left:${px - 4}px;top:${py - 4}px;width:8px;height:8px;border-radius:50%;background:radial-gradient(circle at 35% 28%,#fff,#ccc);border:1px solid #999;z-index:9;transition:opacity .2s;`;
+          c.appendChild(el);
+          pinEls.push(el);
+        });
+      }
+
+      // Track which pins are currently standing across rolls within a frame
+      let pinStates = Array(10).fill(true);
+
+      // Knock order: headpin first, then spread naturally (1→5→2→3→4→6→8→9→7→10)
+      const KNOCK_ORDER = [0, 4, 1, 2, 3, 5, 7, 8, 6, 9];
+      function applyKnockdown(knocked) {
+        let n = knocked;
+        const ns = [...pinStates];
+        for (let i = 0; i < KNOCK_ORDER.length && n > 0; i++) {
+          if (ns[KNOCK_ORDER[i]]) {
+            ns[KNOCK_ORDER[i]] = false;
+            n--;
+          }
+        }
+        pinStates = ns;
+        drawPins(true, pinStates);
+      }
+
+      function resetPins() {
+        pinStates = Array(10).fill(true);
+        drawPins(true, pinStates);
+      }
+
+      // ════════════════════════════════════════════════
+      //  BALL & TRAJECTORY
+      // ════════════════════════════════════════════════
+      function moveBall(x, y) {
+        const b = document.getElementById('ball');
+        b.style.left = x + 'px';
+        b.style.top = y + 'px';
+      }
+
+      function setBallAtPlank(board) {
+        const x = bx(board);
+        moveBall(x, BALL_Y);
+        const h = document.getElementById('bhl');
+        h.style.left = x - 2.5 + 'px';
+        h.style.opacity = '1';
+      }
+
+      function rollBall(plank, spin, cb) {
+        const svg = document.getElementById('tsvg');
+        svg.innerHTML = '';
+
+        const sx = bx(plank),
+          sy = BALL_Y;
+        const pocket = G + LW / 2;
+        const plankOff = (plank - 20) * BW * 0.42;
+        const hook = (spin - 50) * 0.85;
+        const ex = Math.max(G + 3, Math.min(G + LW - 3, pocket + plankOff - hook));
+        const ey = PIN_Y + 3 * PS + 4; // aim at headpin (row 0 = bottom of cluster)
+
+        // Hook control point (ball goes mostly straight, curves at ~60% down lane)
+        const cpx = sx + (ex - sx) * 0.12;
+        const cpy = sy + (ey - sy) * 0.62;
+
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', `M ${sx} ${sy} Q ${cpx} ${cpy} ${ex} ${ey}`);
+        path.setAttribute('stroke', 'rgba(140,200,255,0.5)');
+        path.setAttribute('stroke-width', '2');
+        path.setAttribute('fill', 'none');
+        path.setAttribute('stroke-dasharray', '4,3');
+        svg.appendChild(path);
+
+        document.getElementById('bhl').style.opacity = '0';
+        let t = 0;
+        function step() {
+          t += 0.024;
+          if (t > 1) t = 1;
+          const x = (1 - t) * (1 - t) * sx + 2 * (1 - t) * t * cpx + t * t * ex;
+          const y = (1 - t) * (1 - t) * sy + 2 * (1 - t) * t * cpy + t * t * ey;
+          moveBall(x, y);
+          if (t < 1) requestAnimationFrame(step);
+          else if (cb) cb();
+        }
+        requestAnimationFrame(step);
+      }
+
+      // ════════════════════════════════════════════════
+      //  METER
+      // ════════════════════════════════════════════════
+      const PMIN = 1,
+        PMAX = 39,
+        PC = 20;
+      const PSPD = 0.72,
+        SSPD = 1.18;
+      let mph = 'plank',
+        aId = null,
+        rv = 0,
+        dir = 1,
+        spd = PSPD;
+
+      const nd = document.getElementById('nd');
+      const mf = document.getElementById('mf');
+      const mz = document.getElementById('mz');
+      const pm = document.getElementById('pm');
+      const bn = document.getElementById('bn');
+      const ul = document.getElementById('ul');
+      const pl = document.getElementById('pl');
+      const ca = document.getElementById('ca');
+      const nb = document.getElementById('nb');
+      const pb = document.getElementById('pb');
+      const sb = document.getElementById('sb');
+      const pv = document.getElementById('pv');
+      const pr = document.getElementById('pr');
+      const sv = document.getElementById('sv');
+      const sr2 = document.getElementById('sr2');
+      const pk = document.getElementById('pk');
+      const sr = document.getElementById('sr');
+      const zt = document.getElementById('zt');
+      const fl2 = document.getElementById('flash');
+
+      function rtp(r) {
+        return Math.round(PMIN + (r / 100) * (PMAX - PMIN));
+      }
+      function ptp(p) {
+        return ((p - PMIN) / (PMAX - PMIN)) * 100;
+      }
+
+      function bTicks(data) {
+        zt.innerHTML = '';
+        data.forEach(({ p, l }) => {
+          const t = document.createElement('div');
+          t.className = 'tk';
+          t.style.left = p + '%';
+          zt.appendChild(t);
+          const lb = document.createElement('div');
+          lb.className = 'tl';
+          lb.style.left = p + '%';
+          lb.textContent = l;
+          zt.appendChild(lb);
+        });
+      }
+      const plankTicks = () => bTicks([1, 5, 10, 15, 20, 25, 30, 35, 39].map((b) => ({ p: ptp(b), l: b })));
+      const spinTicks = () => bTicks([0, 25, 50, 75, 100].map((v) => ({ p: v, l: v })));
+
+      function setPPZ() {
+        const l = ptp(18),
+          r = ptp(22);
+        pm.style.left = l + '%';
+        pm.style.width = r - l + '%';
+        pm.style.borderColor = 'rgba(0,255,80,.7)';
+      }
+      function setSPZ() {
+        pm.style.left = '47%';
+        pm.style.width = '6%';
+        pm.style.borderColor = 'rgba(0,200,255,.7)';
+      }
+
+      function pRat(b) {
+        const d = Math.abs(b - PC);
+        if (d <= 1) return { l: '★ Dead Center', c: '#00ff80' };
+        if (d <= 3) return { l: '✦ Excellent', c: '#66ff66' };
+        if (d <= 5) return { l: '● Good', c: '#aadd44' };
+        if (d <= 8) return { l: '◌ OK', c: '#ddaa22' };
+        if (d <= 12) return { l: '✗ Off Line', c: '#ee6622' };
+        return { l: '✗✗ Gutter', c: '#cc2222' };
+      }
+      function sRat(v) {
+        const d = Math.abs(v - 50);
+        if (d <= 3) return { l: '★ Perfect', c: '#00ccff' };
+        if (d <= 8) return { l: '✦ Great', c: '#44bbff' };
+        if (d <= 15) return { l: '● Good', c: '#66aaee' };
+        if (d <= 25) return { l: '◌ Some', c: '#ddaa22' };
+        if (d <= 38) return { l: '✗ Off', c: '#ee6622' };
+        return { l: '✗✗ Wild', c: '#cc2222' };
+      }
+      function pCol(b) {
+        const d = Math.abs(b - PC);
+        if (d <= 1) return '#00ff80';
+        if (d <= 3) return '#66ff66';
+        if (d <= 5) return '#aadd44';
+        if (d <= 8) return '#ddcc22';
+        if (d <= 12) return '#ee6622';
+        return '#cc2222';
+      }
+      function sCol(v) {
+        const d = Math.abs(v - 50);
+        if (d <= 3) return '#00ccff';
+        if (d <= 8) return '#44bbff';
+        if (d <= 15) return '#66aaee';
+        if (d <= 25) return '#ddcc22';
+        if (d <= 38) return '#ee6622';
+        return '#cc2222';
+      }
+
+      function mAnimate() {
+        rv += dir * spd;
+        if (rv >= 100) {
+          rv = 100;
+          dir = -1;
+        }
+        if (rv <= 0) {
+          rv = 0;
+          dir = 1;
+        }
+        if (mph === 'plank') {
+          const b = rtp(rv),
+            p = ptp(b);
+          nd.style.left = p + '%';
+          mf.style.width = p + '%';
+          bn.textContent = b;
+          bn.style.color = pCol(b);
+          setBallAtPlank(b);
+        } else {
+          const v = Math.round(rv);
+          nd.style.left = v + '%';
+          mf.style.width = v + '%';
+          bn.textContent = v;
+          bn.style.color = sCol(v);
+        }
+        aId = requestAnimationFrame(mAnimate);
+      }
+
+      // ════════════════════════════════════════════════
+      //  ROLL SETUP
+      // ════════════════════════════════════════════════
+      function startRoll() {
+        mph = 'plank';
+        rv = 0;
+        dir = 1;
+        spd = PSPD;
+        const f = GS.cur,
+          rin = GS.rin;
+        document.getElementById('ri').textContent = `Frame ${f + 1} · Roll ${rin + 1} · ${GS.pins} pin${GS.pins === 1 ? '' : 's'}`;
+        mz.className = 'mz pz';
+        mf.className = 'mf pf';
+        setPPZ();
+        plankTicks();
+        pl.textContent = 'Plank';
+        pl.style.color = '#e8c84b';
+        ul.textContent = 'Board';
+        bn.textContent = '20';
+        bn.style.color = '#fff';
+        ca.textContent = 'Click to Set Plank';
+        ca.disabled = false;
+        ca.style.borderColor = '#e8c84b';
+        ca.style.color = '#e8c84b';
+        pb.classList.remove('show');
+        sb.classList.remove('show');
+        pk.classList.remove('show');
+        sr.classList.remove('show');
+        pk.textContent = '';
+        sr.textContent = '';
+        nb.style.display = 'none';
+        document.getElementById('bhl').style.opacity = '1';
+        document.getElementById('tsvg').innerHTML = '';
+        setBallAtPlank(20);
+        updateSC();
+        cancelAnimationFrame(aId);
+        aId = requestAnimationFrame(mAnimate);
+      }
+
+      // ════════════════════════════════════════════════
+      //  CLICK
+      // ════════════════════════════════════════════════
+      function handleClick() {
+        if (mph === 'plank') {
+          GS.lp = rtp(rv);
+          mph = 'spin';
+          const r = pRat(GS.lp);
+          pv.textContent = GS.lp;
+          pv.style.color = r.c;
+          pr.textContent = r.l;
+          pr.style.color = r.c;
+          pb.classList.add('show');
+          flashFn(r.c);
+          rv = 0;
+          dir = 1;
+          spd = SSPD;
+          mz.className = 'mz sz';
+          mf.className = 'mf sf';
+          setSPZ();
+          spinTicks();
+          pl.textContent = 'Spin';
+          pl.style.color = '#5acaff';
+          ul.textContent = '% Spin';
+          ca.textContent = 'Click to Set Spin';
+          ca.style.borderColor = '#5acaff';
+          ca.style.color = '#5acaff';
+        } else if (mph === 'spin') {
+          GS.ls = Math.round(rv);
+          mph = 'rolling';
+          cancelAnimationFrame(aId);
+          ca.disabled = true;
+          nd.style.left = GS.ls + '%';
+          mf.style.width = GS.ls + '%';
+          bn.textContent = GS.ls;
+          const sr3 = sRat(GS.ls);
+          bn.style.color = sr3.c;
+          sv.textContent = GS.ls;
+          sv.style.color = sr3.c;
+          sr2.textContent = sr3.l;
+          sr2.style.color = sr3.c;
+          sb.classList.add('show');
+          flashFn(sr3.c);
+
+          const knocked = rollResult(GS.lp, GS.ls, GS.pins);
+          const prevFrame = GS.cur,
+            prevRin = GS.rin,
+            prevPins = GS.pins;
+
+          rollBall(GS.lp, GS.ls, () => {
+            applyKnockdown(knocked);
+
+            // Pin count display
+            const isStrike = knocked === 10 && prevRin === 0 && prevFrame < 9;
+            const isSpare10 = prevFrame < 9 && prevRin === 1 && knocked === prevPins;
+            pk.textContent = isStrike ? '🎳  STRIKE!' : isSpare10 ? '✦  SPARE!' : `${knocked} pin${knocked === 1 ? '' : 's'}`;
+            pk.style.color = knocked >= prevPins * 0.8 ? '#00ff80' : knocked >= prevPins * 0.5 ? '#aadd44' : '#ee6622';
+            pk.classList.add('show');
+
+            advanceRoll(knocked);
+            updateSC();
+
+            // Result label
+            if (isStrike) {
+              sr.textContent = '🎳 STRIKE!';
+              sr.style.color = '#00ff80';
+              sr.classList.add('show');
+            } else if (isSpare10) {
+              sr.textContent = '✦ SPARE!';
+              sr.style.color = '#44bbff';
+              sr.classList.add('show');
+            }
+
+            setTimeout(() => {
+              if (GS.over) {
+                const tot = GS.frames[9].score ?? GS.frames.reduce((a, f) => a + (f.score ?? 0), 0);
+                nb.textContent = `Game Over — ${tot} pts · New Game`;
+              } else {
+                nb.textContent = GS.rin === 0 ? `→ Frame ${GS.cur + 1}` : `→ Roll 2 (${GS.pins} pins left)`;
+              }
+              nb.style.display = 'block';
+            }, 700);
+          });
+        }
+      }
+
+      nb.addEventListener('click', () => {
+        if (GS.over) {
+          newGame();
+          buildSC();
+          resetPins();
+          startRoll();
+          return;
+        }
+        if (GS.resetNext) resetPins();
+        startRoll();
+      });
+
+      function flashFn(c) {
+        fl2.style.background = c;
+        fl2.style.opacity = '0.12';
+        fl2.style.transition = '';
+        setTimeout(() => {
+          fl2.style.transition = 'opacity .4s';
+          fl2.style.opacity = '0';
+        }, 80);
+        setTimeout(() => {
+          fl2.style.transition = '';
+        }, 500);
+      }
+
+      ca.addEventListener('click', () => {
+        if (mph !== 'rolling') handleClick();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.code === 'Space' || e.code === 'Enter') {
+          e.preventDefault();
+          if (mph === 'rolling') {
+            if (nb.style.display !== 'none') nb.click();
+          } else handleClick();
+        }
+      });
+
+      // ════════════════════════════════════════════════
+      //  INIT
+      // ════════════════════════════════════════════════
+      newGame();
+      buildLane();
+      buildSC();
+      startRoll();
+    </script>
+  </body>
+</html>
