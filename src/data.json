@@ -3,6 +3,11 @@
     "name": "Learning",
     "entries": [
       {
+        "link": "sestudio/SE Studio Program Outline.html",
+        "title": "SE Studio",
+        "tags": ["Learning"]
+      },
+      {
         "link": "learning/manifesto.html",
         "title": "A New Dawn of Learning",
         "tags": ["Learning"]

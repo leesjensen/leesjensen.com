@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A three-course Software Engineering program that moves junior developers from framing a meaningful problem to building, verifying, and stewarding a production-ready open-source system.">
+  <title>SE Studio Program · SE Studio</title>
+  <style>
+:root {
+  --ink: #102a43;
+  --muted: #5b7083;
+  --paper: #f7fafc;
+  --surface: #ffffff;
+  --line: #d9e2ec;
+  --blue: #0b6e99;
+  --blue-deep: #082f49;
+  --teal: #0e9f9a;
+  --coral: #ed6a5a;
+  --gold: #f2c94c;
+  --shadow: 0 18px 45px rgba(16, 42, 67, .10);
+  --radius: 22px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+a { color: var(--blue); }
+a:hover { color: var(--coral); }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(217, 226, 236, .9);
+  background: rgba(247, 250, 252, .90);
+  backdrop-filter: blur(18px);
+}
+.topbar {
+  width: min(1180px, calc(100% - 40px));
+  min-height: 68px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.brand {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: .84rem;
+  font-weight: 850;
+  letter-spacing: .12em;
+}
+.brand span {
+  display: block;
+  color: var(--teal);
+  font-size: .62rem;
+  letter-spacing: .18em;
+  line-height: 1.1;
+}
+.topbar-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: .86rem;
+  font-weight: 700;
+}
+.topbar-link:hover { color: var(--coral); }
+.hero {
+  position: relative;
+  overflow: hidden;
+  width: min(1180px, calc(100% - 40px));
+  margin: 48px auto 28px;
+  padding: clamp(28px, 5vw, 72px);
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: clamp(28px, 5vw, 72px);
+  border-radius: 32px;
+  background: linear-gradient(135deg, #082f49 0%, #0b6e99 55%, #0e9f9a 100%);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  right: -130px;
+  bottom: -180px;
+  border: 1px solid rgba(255,255,255,.30);
+  border-radius: 50%;
+  box-shadow: 0 0 0 28px rgba(255,255,255,.05), 0 0 0 58px rgba(255,255,255,.04);
+}
+.hero-copy, .hero-media { position: relative; z-index: 1; }
+.eyebrow {
+  margin-bottom: 12px;
+  color: #baf3ee;
+  font-size: .74rem;
+  font-weight: 850;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.hero h1 {
+  max-width: 720px;
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 5.7rem);
+  letter-spacing: -.065em;
+  line-height: .98;
+}
+.hero-lede {
+  max-width: 650px;
+  margin: 22px 0 0;
+  color: rgba(255,255,255,.87);
+  font-size: clamp(1rem, 1.7vw, 1.22rem);
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 17px;
+  border-radius: 999px;
+  font-size: .88rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+.button-primary { color: var(--blue-deep); background: #fff; }
+.button-secondary { color: #fff; border: 1px solid rgba(255,255,255,.35); }
+.hero-media { margin: 0; }
+.hero-media img {
+  display: block;
+  width: 100%;
+  max-height: 440px;
+  object-fit: cover;
+  border: 8px solid rgba(255,255,255,.16);
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.22);
+}
+.hero-media figcaption { margin-top: 10px; color: rgba(255,255,255,.72); font-size: .77rem; }
+.metrics {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto 42px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.metric {
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(16,42,67,.04);
+}
+.metric-value { color: var(--coral); font-size: 1.9rem; font-weight: 900; letter-spacing: -.04em; line-height: 1; }
+.metric-label { margin-top: 7px; color: var(--muted); font-size: .9rem; font-weight: 700; }
+.content-shell {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto 80px;
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  align-items: start;
+  gap: 42px;
+}
+.toc {
+  position: sticky;
+  top: 92px;
+  padding: 20px 0;
+}
+.toc-label { margin-bottom: 12px; color: var(--muted); font-size: .7rem; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+.toc a { display: block; padding: 7px 12px; color: var(--muted); border-left: 2px solid var(--line); font-size: .84rem; line-height: 1.35; text-decoration: none; }
+.toc a:hover { color: var(--blue); border-color: var(--coral); }
+.prose { min-width: 0; }
+.prose > h2:first-child { margin-top: 0; }
+.prose h2 {
+  margin: 58px 0 18px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  letter-spacing: -.045em;
+  line-height: 1.12;
+}
+.prose h3 { margin: 36px 0 10px; font-size: 1.28rem; letter-spacing: -.02em; }
+.prose h4 { margin: 26px 0 8px; color: var(--blue); font-size: 1rem; }
+.prose p { margin: 0 0 16px; color: #2d475d; }
+.prose strong { color: var(--ink); }
+.prose ul, .prose ol { margin: 10px 0 22px; padding-left: 25px; color: #2d475d; }
+.prose li { margin: 6px 0; padding-left: 4px; }
+.prose blockquote {
+  margin: 26px 0;
+  padding: 22px 26px;
+  border-left: 5px solid var(--coral);
+  border-radius: 0 16px 16px 0;
+  background: #fff4ef;
+  color: var(--blue-deep);
+  font-size: 1.16rem;
+  font-weight: 750;
+}
+.prose blockquote p { color: var(--blue-deep); margin: 0; }
+.prose table { width: 100%; margin: 22px 0 28px; border-collapse: separate; border-spacing: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); box-shadow: 0 8px 24px rgba(16,42,67,.04); }
+.prose th, .prose td { padding: 13px 15px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.prose th { color: var(--blue-deep); background: #eaf6f6; font-size: .82rem; letter-spacing: .03em; }
+.prose tr:last-child td { border-bottom: 0; }
+.prose tr:nth-child(even) td { background: #fbfdfe; }
+.prose pre { margin: 22px 0 28px; padding: 20px; overflow-x: auto; border: 1px solid #193f5b; border-radius: 16px; background: #092c43; color: #d7f8f4; font: .88rem/1.65 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+.prose code { padding: 2px 6px; border-radius: 5px; background: #eaf1f5; color: var(--blue-deep); font: .9em ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+.prose pre code { padding: 0; background: transparent; color: inherit; }
+.prose figure { margin: 28px 0; }
+.prose figure img { display: block; width: 100%; border-radius: 18px; }
+.prose figcaption { margin-top: 8px; color: var(--muted); font-size: .84rem; }
+.footer {
+  padding: 34px 20px 48px;
+  color: #b9d1df;
+  background: var(--blue-deep);
+  text-align: center;
+  font-size: .84rem;
+}
+.footer a { color: #baf3ee; }
+@media (max-width: 850px) {
+  .hero { grid-template-columns: 1fr; margin-top: 24px; }
+  .hero-media { max-width: 700px; }
+  .content-shell { grid-template-columns: 1fr; gap: 0; }
+  .toc { position: static; padding: 0; }
+  .toc nav { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 18px; }
+  .toc a { min-width: max-content; border: 1px solid var(--line); border-radius: 999px; padding: 8px 12px; background: var(--surface); }
+}
+@media (max-width: 600px) {
+  .topbar, .hero, .metrics, .content-shell { width: min(100% - 24px, 1180px); }
+  .topbar-link { display: none; }
+  .hero { padding: 28px 22px; border-radius: 24px; }
+  .metrics { grid-template-columns: 1fr; }
+  .prose th, .prose td { padding: 10px; font-size: .9rem; }
+  .prose table { display: block; overflow-x: auto; white-space: normal; }
+}
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" href="SE Studio Program Outline.html">SE STUDIO<span>OPEN SOCIAL SOFTWARE</span></a>
+      <a class="topbar-link" href="CommonGround%20Project%20Outline.html">View the CommonGround example ↗</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Open social software · academic studio model</div>
+        <h1>SE Studio Program</h1>
+        <p class="hero-lede">A three-course Software Engineering program that moves junior developers from framing a meaningful problem to building, verifying, and stewarding a production-ready open-source system.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#1-program-purpose-and-worked-example">Explore the outline ↓</a>
+          <a class="button button-secondary" href="CommonGround%20Project%20Outline.html">View the CommonGround example ↗</a>
+        </div>
+      </div>
+      <figure class="hero-media">
+        <img src="SE%20Studio%20Recruitment%20Poster.png" alt="SE Studio recruitment poster showing students collaborating across the software engineering cycle">
+        <figcaption>The program connects purpose, professional practice, and service through one continuous engineering cycle.</figcaption>
+      </figure>
+    </section>
+    <section class="metrics" aria-label="At a glance"><div class="metric"><div class="metric-value">3 courses</div><div class="metric-label">CS 380 → CS 480 → CS 481</div></div><div class="metric"><div class="metric-value">50 students</div><div class="metric-label">Feature and cross-cutting teams</div></div><div class="metric"><div class="metric-value">1 shared mission</div><div class="metric-label">Build software that matters</div></div></section>
+    <div class="content-shell">
+      <aside class="toc">
+        <div class="toc-label">On this page</div>
+        <nav><a href="#1-program-purpose-and-worked-example">1. Program purpose and worked example</a>
+<a href="#2-organizational-principles">2. Organizational principles</a>
+<a href="#3-program-team-allocation-for-50-programmers">3. Program team allocation for 50 programmers</a>
+<a href="#4-organizational-structure">4. Organizational structure</a>
+<a href="#5-worked-example-commonground">5. Worked example: CommonGround</a>
+<a href="#6-cross-cutting-teams">6. Cross-cutting teams</a>
+<a href="#7-architecture-and-leadership-structure">7. Architecture and leadership structure</a>
+<a href="#8-academic-course-sequence">8. Academic course sequence</a>
+<a href="#9-team-operating-model">9. Team operating model</a></nav>
+      </aside>
+      <article class="prose" id="content"><h2 id="1-program-purpose-and-worked-example">1. Program purpose and worked example</h2>
+<p>This document defines a reusable three-course Software Engineering Studio program for a large team of junior university programmers. The program takes a socially valuable software concept from discovery through production while teaching professional software engineering, teamwork, design, quality, security, privacy, compliance, and responsible AI.</p>
+<p>The <a href="CommonGround%20Project%20Outline.html">CommonGround Project Outline</a> is the worked example for this program. It shows how one humanitarian application can be decomposed into feature teams, supported by cross-cutting teams, and advanced through the studio courses. A future studio cohort may substitute a different project without changing the overall program structure.</p>
+<p>The program favors applications that are local-first, usable with intermittent connectivity, multilingual, accessible, open source, and deployable by communities without requiring a large institution or centralized database.</p>
+<p><em>Illustrative program view: students move through a continuous engineering cycle while contributing through different technical, design, quality, security, data, AI, architecture, and community-research roles.</em></p>
+<h3 id="1-1-worked-example-commonground">1.1 Worked example: CommonGround</h3>
+<p>CommonGround is a privacy-preserving, open-source mutual-aid platform that helps people request, offer, coordinate, and verify community resources such as food, transportation, clothing, childcare, temporary housing, tools, skills, and volunteer assistance. Its purpose, value, potential impact, market hypothesis, feature-team decomposition, staffing example, and validation journeys are documented separately in the <a href="CommonGround%20Project%20Outline.html">CommonGround Project Outline</a>.</p>
+<h3 id="1-2-software-engineering-disciplinary-pattern">1.2 Software Engineering disciplinary pattern</h3>
+<p>The entire program follows the recurring disciplinary pattern used in Software Engineering:</p>
+<pre><code class="language-text">Frame → Research → Design → Build → Verify/Test → Evaluate
+   ↑                                                   ↓
+   └────────────── iterate and refine ────────────────┘</code></pre>
+<p>These activities are not only phases of a project. They are the program’s underlying way of thinking and working. Students should repeatedly practice the complete cycle at different scales: while selecting a project, designing a feature, implementing a component, preparing a release, and evaluating the social effect of the system.</p>
+<table><thead><tr><th>Pattern</th><th>Program meaning</th><th>Typical evidence</th></tr></thead><tbody><tr><td><strong>Frame</strong></td><td>Define the problem, beneficiaries, context, constraints, risks, and success criteria</td><td>Problem framing document, stakeholder map, goals, non-goals, and risk statement</td></tr><tr><td><strong>Research</strong></td><td>Investigate users, existing solutions, domain knowledge, technical resources, and evidence</td><td>Research report, interviews, literature/source review, competitive analysis, and requirements evidence</td></tr><tr><td><strong>Design</strong></td><td>Develop and compare solution options before committing to implementation</td><td>User journeys, prototypes, architecture, data model, threat model, and design decisions</td></tr><tr><td><strong>Build</strong></td><td>Implement an incremental solution using professional collaboration and responsible AI assistance</td><td>Working software, source code, documentation, pull requests, and integrated vertical slices</td></tr><tr><td><strong>Verify/Test</strong></td><td>Determine whether the system meets technical, security, privacy, accessibility, quality, and compliance requirements</td><td>Automated tests, QA reports, security reviews, usability checks, deployment evidence, and defect records</td></tr><tr><td><strong>Evaluate</strong></td><td>Judge usefulness, usability, safety, mission impact, limitations, and what should happen next</td><td>User feedback, metrics, retrospectives, release evaluations, impact assessment, and revised backlog</td></tr></tbody></table>
+<p>Every major milestone should identify which parts of this cycle were completed, what evidence supports the decision, and what will be revisited in the next iteration.</p>
+<h3 id="1-3-the-aims-of-a-byu-education">1.3 The Aims of a BYU Education</h3>
+<p>The program also treats the <a href="https://aims.byu.edu/aims-of-a-byu-education">Aims of a BYU Education</a> as underlying educational outcomes. BYU describes these aims as education that is <strong>spiritually strengthening, intellectually enlarging, character building, and leading to lifelong learning and service</strong>. The studio is designed to provide repeated, concrete opportunities to develop and demonstrate each aim through meaningful technical work and service-oriented project outcomes.</p>
+<table><thead><tr><th>BYU aim</th><th>How the program supports the aim</th><th>Examples of student evidence</th></tr></thead><tbody><tr><td><strong>Spiritually strengthening</strong></td><td>Connect technical work with human dignity, stewardship, truth, compassion, ethical responsibility, and service to others</td><td>Ethical design reflection, safeguarding decisions, service rationale, respectful user research, and discussion of how technology affects real people</td></tr><tr><td><strong>Intellectually enlarging</strong></td><td>Develop sound thinking, effective communication, quantitative reasoning, disciplinary depth, interdisciplinary breadth, and the ability to apply theory to practical problems</td><td>Research, architecture, data analysis, technical writing, presentations, prototypes, experiments, and evidence-based decisions</td></tr><tr><td><strong>Character building</strong></td><td>Practice integrity, accountability, humility, perseverance, courage, fairness, reliability, and respect in individual and team work</td><td>Honest reporting of results, responsible data handling, peer feedback, commitments kept, transparent limitations, incident response, and ethical tradeoff records</td></tr><tr><td><strong>Leading to lifelong learning and service</strong></td><td>Build the habits and desire to continue learning, mentor others, contribute to open source, and use technical capability to lift communities</td><td>Documentation, mentoring, open-source contribution guides, maintainership plans, community handoff, reflective learning plans, and demonstrated public benefit</td></tr></tbody></table>
+<p>The Aims are not treated as a separate religion, ethics, or service assignment. They are integrated into project framing, research, design, implementation, review, teamwork, mentoring, and release decisions. The program should preserve the distinction between technical evidence, personal reflection, and institutional or spiritual formation while giving students meaningful opportunities for all three.</p>
+<h3 id="1-4-program-wide-outcome-evidence">1.4 Program-wide outcome evidence</h3>
+<p>Students should leave the sequence able to:</p>
+<ul><li>Frame an ambiguous, socially meaningful problem and explain who is affected.</li><li>Research before building, including existing solutions, domain knowledge, resources, and risks.</li><li>Design solutions that balance usefulness, feasibility, security, privacy, accessibility, sustainability, and human values.</li><li>Build collaboratively with professional tools, AI assistance, code review, documentation, and open-source practices.</li><li>Verify and test claims about software rather than relying on demonstrations or intuition.</li><li>Evaluate whether a system is actually useful, safe, equitable, maintainable, and worthy of continued investment.</li><li>Communicate clearly with technical and nontechnical audiences.</li><li>Work with integrity, receive correction, keep commitments, and report limitations honestly.</li><li>Continue learning independently and use engineering skills in service of others.</li></ul>
+<p>Assessment should therefore include both the product and the process: decision records, research quality, design reasoning, code and tests, teamwork, communication, ethical judgment, reflection, mentoring, and the quality of the final handoff.</p>
+<h3 id="1-5-outcomes-across-the-course-sequence">1.5 Outcomes across the course sequence</h3>
+<table><thead><tr><th>Course</th><th>Primary disciplinary-pattern emphasis</th><th>Aims evidence emphasized</th></tr></thead><tbody><tr><td><strong>CS 380</strong></td><td>Frame, research, design, and evaluate a proposed direction</td><td>Intellectual enlargement, spiritual purpose, character through honest inquiry, and commitment to service</td></tr><tr><td><strong>CS 480</strong></td><td>Design, build, verify/test, and evaluate an MVP or beta</td><td>Intellectual enlargement through implementation, character through teamwork and integrity, and service through usable software</td></tr><tr><td><strong>CS 481</strong></td><td>Verify/test, evaluate, iterate, operate, and serve through production releases</td><td>Character through stewardship and reliability, lifelong learning through maintenance, and service through sustained community benefit</td></tr><tr><td><strong>CS 329, CS 452, CS 348</strong></td><td>Deepen the verify/test and build disciplines through QA/DevOps, data, and responsible AI</td><td>Intellectual depth, ethical judgment, truthful evaluation, and practical service to the project and its users</td></tr></tbody></table>
+<p>Faculty and mentors should explicitly reference this framework during reviews. A project milestone is complete only when students can explain not just what they built, but how they framed the need, what they learned, why they chose the design, how they verified it, what they discovered through evaluation, and whom the work is intended to serve.</p>
+<h2 id="2-organizational-principles">2. Organizational principles</h2>
+<ol><li><strong>Feature teams own outcomes.</strong> Each feature team owns a complete user capability from design through implementation, testing, documentation, and operational readiness.</li><li><strong>Cross-cutting teams protect the whole product.</strong> QA, Security/Privacy, HCI/UX, Compliance, and Architecture have authority to block releases when their acceptance criteria are not met.</li><li><strong>Privacy is the default.</strong> Store the minimum necessary information, keep personal data on the user’s device where possible, and make synchronization explicit and controllable.</li><li><strong>Junior developers work in bounded areas.</strong> Every team has a small scope, a written definition of done, a technical mentor or reviewer, and a clear escalation path.</li><li><strong>Decisions are documented.</strong> Significant design, security, privacy, policy, and dependency decisions are recorded in short, searchable decision records.</li><li><strong>Humanitarian safety takes priority over feature volume.</strong> The product must not expose vulnerable people, make legal/medical eligibility decisions, or encourage unsafe contact.</li></ol>
+<h2 id="3-program-team-allocation-for-50-programmers">3. Program team allocation for 50 programmers</h2>
+<table><thead><tr><th>Group</th><th>Teams</th><th>People</th><th>Primary responsibility</th></tr></thead><tbody><tr><td>Feature teams</td><td>8 teams of 4</td><td>32</td><td>User-facing capabilities and domain workflows for the selected project</td></tr><tr><td>App-level QA</td><td>1 team</td><td>5</td><td>System quality, release validation, and acceptance testing</td></tr><tr><td>Security/Privacy</td><td>1 team</td><td>4</td><td>Threat modeling, privacy engineering, secure development, incident readiness</td></tr><tr><td>HCI/UX</td><td>1 team</td><td>4</td><td>Research, interaction design, accessibility, usability, and design system</td></tr><tr><td>Compliance</td><td>1 team</td><td>3</td><td>Policy, licensing, safety, records, and regulatory readiness</td></tr><tr><td>Architecture and Integration</td><td>1 team</td><td>2</td><td>Reference architecture, interfaces, integration, and technical governance</td></tr><tr><td><strong>Total student programmers</strong></td><td><strong>13 teams</strong></td><td><strong>50</strong></td><td></td></tr></tbody></table>
+<p>The Architecture and Integration team is intentionally small. Its authority comes from a council that includes one technical representative from every other team, rather than from a large centralized architecture group.</p>
+<p>In addition to the 50 student programmers, the program has <strong>5 peer mentors</strong> and <strong>5 faculty members</strong>. The mentors and faculty are support and leadership resources; they are not included in the 50-programmer allocation.</p>
+<h2 id="4-organizational-structure">4. Organizational structure</h2>
+<pre><code class="language-text">SE Studio Program Leadership
+├── Architecture and Integration Team (2)
+│   └── Technical Design Council: architecture team + one representative per team
+├── Feature teams (scoped by CS 380 research)
+│   ├── Feature team 1
+│   ├── Feature team 2
+│   ├── Feature team 3
+│   ├── Feature team 4
+│   ├── Feature team 5
+│   ├── Feature team 6
+│   ├── Feature team 7
+│   └── Feature team 8
+└── Independent Quality and Governance
+    ├── App-level QA
+    ├── Security and Privacy
+    ├── HCI and UX
+    └── Compliance</code></pre>
+<p>Feature-team names and boundaries are selected after CS 380 research establishes the selected project's major user capabilities. The <a href="CommonGround%20Project%20Outline.html">CommonGround Project Outline</a> shows one worked decomposition.</p>
+<h2 id="5-worked-example-commonground">5. Worked example: CommonGround</h2>
+<p>The reusable structure becomes concrete through a project-specific decomposition. The <a href="CommonGround%20Project%20Outline.html">CommonGround Project Outline</a> defines eight example feature teams, their responsibilities, a concrete mentor assignment, and end-to-end validation journeys. Another studio project should replace those areas with capabilities appropriate to its own problem domain while retaining the same staffing, governance, QA, security/privacy, HCI/UX, compliance, architecture, and mentoring structure.</p>
+<h2 id="6-cross-cutting-teams">6. Cross-cutting teams</h2>
+<h3 id="6-1-app-level-qa-team-5-people">6.1 App-level QA Team — 5 people</h3>
+<p>The QA team is independent of feature delivery and validates the integrated application.</p>
+<p>Responsibilities:</p>
+<ul><li>Define the system-wide quality strategy and release gates</li><li>Maintain end-to-end, integration, regression, accessibility, offline, and recovery tests</li><li>Test representative low-connectivity and low-end-device scenarios</li><li>Maintain synthetic humanitarian datasets and test accounts</li><li>Coordinate exploratory testing and usability acceptance sessions</li><li>Verify that critical workflows work across feature boundaries</li><li>Produce release-readiness reports</li><li>Maintain defect taxonomy, severity definitions, and escape analysis</li></ul>
+<p>The QA team does not replace feature-team testing. Every feature team owns unit and component tests; QA owns cross-team behavior and release confidence.</p>
+<p>Required release gates include:</p>
+<ul><li>No unresolved critical security, privacy, safety, or data-loss defects</li><li>Critical user journeys pass on supported platforms</li><li>Offline and synchronization behavior is tested</li><li>Accessibility checks are complete</li><li>User-facing limitations and known risks are documented</li></ul>
+<h3 id="6-2-security-and-privacy-team-4-people">6.2 Security and Privacy Team — 4 people</h3>
+<p>Responsibilities:</p>
+<ul><li>Maintain the threat model and abuse-case catalog</li><li>Review identity, authentication, authorization, encryption, and key handling</li><li>Define data classification and retention rules</li><li>Conduct privacy impact reviews for every feature</li><li>Review third-party libraries, AI providers, and external services</li><li>Test account takeover, impersonation, stalking, scraping, spam, and data leakage scenarios</li><li>Maintain secure coding guidance and vulnerability triage</li><li>Prepare incident response, disclosure, and recovery procedures</li><li>Verify deletion, export, consent withdrawal, and synchronization revocation</li></ul>
+<p>The team can block a design or release where risk is unacceptable. It should not be expected to repair security at the end of the project; security reviews begin during requirements and architecture work.</p>
+<h3 id="6-3-hci-ux-team-4-people">6.3 HCI/UX Team — 4 people</h3>
+<p>Responsibilities:</p>
+<ul><li>Conduct interviews and participatory design with representative users</li><li>Maintain personas, journey maps, and task models</li><li>Define interaction patterns for trust, consent, privacy, and safety</li><li>Maintain the design system and content style guide</li><li>Test with low literacy, limited connectivity, assistive technology, and multilingual users</li><li>Own accessibility requirements and usability acceptance criteria</li><li>Review AI explanations, uncertainty displays, and error recovery</li><li>Coordinate usability testing with the QA team</li></ul>
+<p>The HCI/UX team should have authority to reject workflows that are technically functional but confusing, unsafe, stigmatizing, or inaccessible.</p>
+<h3 id="6-4-compliance-team-3-people">6.4 Compliance Team — 3 people</h3>
+<p>The student team should operate with faculty or professional legal supervision for actual legal interpretation.</p>
+<p>Responsibilities:</p>
+<ul><li>Maintain a compliance and policy inventory by deployment context</li><li>Track open-source, content, data, and dependency licenses</li><li>Define terms of use, community rules, consent language, and safety notices</li><li>Review age-related, accessibility, data-protection, and records-management concerns</li><li>Define requirements for organizational verification and responsible moderation</li><li>Maintain data-processing and retention documentation</li><li>Review AI transparency, attribution, evaluation, and human-oversight requirements</li><li>Produce deployment checklists for communities and partner organizations</li></ul>
+<p>Compliance provides requirements and evidence; it does not certify the application as legally compliant without qualified review.</p>
+<h2 id="7-architecture-and-leadership-structure">7. Architecture and leadership structure</h2>
+<h3 id="7-1-architecture-and-integration-team-2-people">7.1 Architecture and Integration Team — 2 people</h3>
+<p>Responsibilities:</p>
+<ul><li>Maintain the reference architecture and system context diagram</li><li>Define shared interfaces, event formats, data contracts, and versioning rules</li><li>Own cross-feature integration and build health</li><li>Maintain architecture decision records</li><li>Define approved platform patterns for local storage, synchronization, identity, notifications, and AI</li><li>Coordinate dependency and technology choices</li><li>Identify cross-team risks and integration milestones</li><li>Maintain the developer platform, local development environment, and contribution guide</li></ul>
+<h3 id="7-2-technical-design-council">7.2 Technical Design Council</h3>
+<p>The council includes:</p>
+<ul><li>Two Architecture and Integration members</li><li>One technical representative from each feature team</li><li>One representative each from QA, Security/Privacy, HCI/UX, and Compliance</li></ul>
+<p>The council meets weekly and decides on:</p>
+<ul><li>Shared interfaces and data contracts</li><li>Changes affecting more than one team</li><li>New external services or major dependencies</li><li>Changes to identity, privacy, synchronization, or AI architecture</li><li>Exceptions to engineering standards</li><li>Cross-team integration priorities</li></ul>
+<p>Decisions require a written proposal, affected-team review, documented risks, and an Architecture Decision Record. The council should seek consensus, but the Architecture and Integration team makes the final technical call when a decision is needed to unblock delivery. Security/Privacy and Compliance retain veto authority for unacceptable safety, privacy, or policy risk.</p>
+<h3 id="7-3-program-leadership-roles">7.3 Program leadership roles</h3>
+<p>These roles can be filled by instructors, staff, or rotating student representatives and need not consume the 50-programmer allocation:</p>
+<ul><li><strong>Product steward:</strong> maintains mission, scope, priorities, and stakeholder relationships</li><li><strong>Engineering lead:</strong> coordinates delivery, technical health, and escalation</li><li><strong>Safety lead:</strong> coordinates Security/Privacy, Compliance, moderation, and incident readiness</li><li><strong>Research and community lead:</strong> coordinates HCI/UX, user research, pilots, and feedback</li><li><strong>Release lead:</strong> coordinates QA, cutoffs, demonstrations, and release decisions</li></ul>
+<h3 id="7-4-peer-mentors-5-people">7.4 Peer mentors — 5 people</h3>
+<p>Peer mentors are students or recent participants who completed a previous SE Studio Project. They provide practical guidance based on experience with the program’s development process, collaboration tools, demonstrations, and delivery expectations.</p>
+<p>Peer mentors should coach rather than manage. They do not own feature backlogs, assign grades, approve releases, or make unilateral architectural decisions.</p>
+<h4 id="team-integration">Team integration</h4>
+<ul><li>Each peer mentor is the primary mentor for two or three teams.</li><li>Every team has one named primary mentor and one secondary mentor for coverage.</li><li>Mentors attend team planning, selected standups, design reviews, and retrospectives.</li><li>Mentors hold regular office hours and provide short, focused code-review or workflow support.</li><li>Mentors help teams prepare questions and proposals for faculty or the Technical Design Council.</li><li>Mentors may pair with junior developers on debugging, Git workflows, testing, documentation, and demonstrations.</li><li>Mentors identify risks early and escalate them; they do not quietly take over the work.</li></ul>
+<h4 id="worked-example-assignments">Worked-example assignments</h4>
+<p>Mentor assignments depend on the selected project's feature areas. The <a href="CommonGround%20Project%20Outline.html">CommonGround Project Outline</a> provides one concrete assignment of the five peer mentors to feature and cross-cutting teams. In another project, assignments should be made after CS 380 defines the feature areas and integration risks.</p>
+<h3 id="7-5-faculty-members-5-people">7.5 Faculty members — 5 people</h3>
+<p>Faculty provide subject instruction, mentoring, professional judgment, and program supervision. They should teach the concepts students need at the moment those concepts become relevant to the project.</p>
+<p>Faculty members are not expected to write the majority of the application. Their role is to help students make sound decisions, recognize risks, and learn professional engineering practices.</p>
+<h4 id="faculty-responsibility-areas">Faculty responsibility areas</h4>
+<table><thead><tr><th>Faculty role</th><th>Primary responsibility</th><th>Closely integrated teams</th></tr></thead><tbody><tr><td>Systems and Architecture Faculty</td><td>Distributed systems, APIs, data modeling, synchronization, integration</td><td>Architecture; Offline Sync; all technical representatives</td></tr><tr><td>Security, Privacy, and Compliance Faculty</td><td>Threat modeling, privacy engineering, secure development, policy, licensing, safety</td><td>Security/Privacy; Compliance; Moderation; Architecture</td></tr><tr><td>HCI and Accessibility Faculty</td><td>User research, inclusive design, usability evaluation, accessibility, content design</td><td>HCI/UX; all feature teams; QA</td></tr><tr><td>Humanitarian Domain Faculty</td><td>Mutual aid, resource distribution, community partnerships, safeguarding, ethical deployment</td><td>Needs and Offers; Inventory; Volunteer Coordination; Moderation</td></tr><tr><td>AI, Data, and Software Practice Faculty</td><td>Responsible AI, data quality, testing, open-source workflow, delivery practices</td><td>Matching; QA; AI components across teams; all team leads</td></tr></tbody></table>
+<h4 id="faculty-integration-with-teams">Faculty integration with teams</h4>
+<ul><li>Each faculty member sponsors one cross-cutting area and mentors two or three student teams directly.</li><li>Faculty provide scheduled topic instruction, design clinics, and review sessions.</li><li>Faculty attend milestone reviews and the weekly Technical Design Council when their subject area is affected.</li><li>Faculty review high-risk decisions involving vulnerable users, sensitive data, AI behavior, safety, or external deployment.</li><li>Faculty help students convert broad humanitarian goals into measurable requirements and acceptance criteria.</li><li>Faculty supervise user research, community interviews, pilot activities, and any work involving real personal data.</li><li>Faculty maintain continuity when peer mentors or student team leads are unavailable.</li></ul>
+<h4 id="faculty-authority">Faculty authority</h4>
+<p>Faculty should normally advise and teach, leaving implementation choices to the student teams. They may require a design revision or pause a feature when there is a serious safety, privacy, legal, ethical, or research-participant concern. Any such intervention should be documented and explained to the affected team.</p>
+<h3 id="7-6-mentoring-and-escalation-model">7.6 Mentoring and escalation model</h3>
+<p>The normal support path is:</p>
+<pre><code class="language-text">Student developer
+    ↓
+Team member, team lead, or technical representative
+    ↓
+Peer mentor
+    ↓
+Faculty sponsor or Architecture/Quality/Governance lead
+    ↓
+Program leadership or Technical Design Council</code></pre>
+<p>Issues should be escalated early when they involve:</p>
+<ul><li>Personal or sensitive data</li><li>Security vulnerabilities or suspected abuse</li><li>Legal, regulatory, licensing, or safeguarding questions</li><li>User research with vulnerable participants</li><li>A change affecting multiple teams</li><li>A blocked integration or release risk</li></ul>
+<p>Peer mentors and faculty should use a shared mentoring log containing the question, affected teams, decision or advice, owner, and follow-up date. The log prevents repeated confusion while avoiding unnecessary storage of personal student or user information.</p>
+<h2 id="8-academic-course-sequence">8. Academic course sequence</h2>
+<p>This template assumes approximately 15 instructional weeks per course. The exact calendar can be adapted to the institution’s academic schedule. Student teams should preserve continuity from CS 380 through CS 481, while allowing the team structure to mature into the feature and cross-cutting teams described above. CommonGround is the worked example used to illustrate the outputs.</p>
+<table><thead><tr><th>Course</th><th>Credits</th><th>Primary outcome</th><th>Program stage</th></tr></thead><tbody><tr><td><strong>SE Studio 1 — CS 380</strong></td><td>3</td><td>Project proposal, target framing, research, solution design, and rough sketch prototype</td><td>Discover and define</td></tr><tr><td><strong>SE Studio 2 — CS 480</strong></td><td>6</td><td>Implemented MVP/beta release with core workflows</td><td>Build and validate</td></tr><tr><td><strong>SE Studio 3 — CS 481</strong></td><td>6</td><td>Production deployment followed by multiple feature releases focused on scalability, security, and quality</td><td>Operate and improve</td></tr></tbody></table>
+<h3 id="8-1-se-studio-1-cs-380-3-credits">8.1 SE Studio 1 — CS 380 — 3 credits</h3>
+<h4 id="purpose">Purpose</h4>
+<p>Students propose potential projects, understand the target problem and users, examine existing solutions and available resources, identify pitfalls, design a feasible solution, and build a rough sketch prototype.</p>
+<h4 id="template-schedule">Template schedule</h4>
+<table><thead><tr><th>Weeks</th><th>Focus</th><th>Expected outputs</th></tr></thead><tbody><tr><td>1</td><td>Studio orientation and mission-driven problem spaces</td><td>Team agreements, project-selection criteria, initial problem inventory</td></tr><tr><td>2</td><td>Project proposals and mission framing</td><td>Two or more candidate project proposals per group</td></tr><tr><td>3</td><td>Target users and stakeholders</td><td>Target-user profiles, stakeholder map, research questions</td></tr><tr><td>4</td><td>Existing solutions and related projects</td><td>Competitive/open-source landscape, reuse opportunities, gaps</td></tr><tr><td>5</td><td>Resources, constraints, and feasibility</td><td>Technology/resource inventory, assumptions, dependency map</td></tr><tr><td>6</td><td>Risks and pitfalls</td><td>Privacy, security, ethical, legal, social, accessibility, and adoption risks</td></tr><tr><td>7</td><td>Requirements and scope</td><td>Problem statement, goals, non-goals, initial product requirements</td></tr><tr><td>8</td><td>User journeys and service design</td><td>Key scenarios, workflow diagrams, acceptance criteria</td></tr><tr><td>9</td><td>Solution architecture and data boundaries</td><td>Context diagram, major components, data ownership and synchronization plan</td></tr><tr><td>10</td><td>HCI/UX and interaction design</td><td>Wireframes, accessibility considerations, content and consent patterns</td></tr><tr><td>11</td><td>Rough sketch prototype</td><td>Clickable, paper, coded, or hybrid prototype of the core journey</td></tr><tr><td>12</td><td>Prototype evaluation</td><td>Structured feedback from peers, faculty, mentors, or representative users</td></tr><tr><td>13</td><td>Scope refinement and implementation planning</td><td>Revised design, MVP boundary, prioritized backlog, team structure proposal</td></tr><tr><td>14</td><td>Proposal and prototype review</td><td>Final proposal, prototype demonstration, risk and feasibility review</td></tr><tr><td>15</td><td>CS 480 handoff</td><td>Baseline requirements, architecture notes, backlog, repository, and transition presentation</td></tr></tbody></table>
+<h4 id="cs-380-completion-criteria">CS 380 completion criteria</h4>
+<ul><li>The target problem and intended beneficiaries are clearly described.</li><li>Existing solutions and reusable resources have been investigated.</li><li>Major technical, privacy, security, ethical, and adoption risks are identified.</li><li>The proposed MVP is small enough to implement and evaluate.</li><li>A rough prototype demonstrates at least one complete user journey.</li><li>The proposal identifies what will deliberately not be built.</li></ul>
+<h4 id="cs-380-support-model">CS 380 support model</h4>
+<ul><li>Faculty provide instruction in problem framing, research methods, HCI/UX, architecture, ethics, and feasibility.</li><li>Peer mentors help groups use studio tools, conduct critiques, document decisions, and avoid predictable planning mistakes.</li><li>Compliance and HCI/UX review project proposals before implementation is approved.</li><li>Architecture and Security/Privacy review proposed data boundaries and high-risk dependencies.</li></ul>
+<h3 id="8-2-se-studio-2-cs-480-6-credits">8.2 SE Studio 2 — CS 480 — 6 credits</h3>
+<h4 id="purpose">Purpose</h4>
+<p>Students implement the application to an MVP or beta release. The emphasis is on producing a coherent, usable, testable application rather than maximizing feature count.</p>
+<h4 id="template-schedule">Template schedule</h4>
+<table><thead><tr><th>Weeks</th><th>Focus</th><th>Expected outputs</th></tr></thead><tbody><tr><td>1</td><td>Kickoff and scope lock</td><td>MVP definition, team charters, release criteria, delivery plan</td></tr><tr><td>2</td><td>Technical foundation</td><td>Repository structure, development environment, local data model, CI, initial security baseline</td></tr><tr><td>3</td><td>Core workflow slice</td><td>First end-to-end user journey implemented with automated tests</td></tr><tr><td>4</td><td>Feature development</td><td>Needs/offers, identity, permissions, or equivalent core capabilities</td></tr><tr><td>5</td><td>Feature development</td><td>Matching, resource, volunteer, messaging, or equivalent supporting capabilities</td></tr><tr><td>6</td><td>Cross-feature integration</td><td>Shared interfaces, navigation, error handling, and data-contract validation</td></tr><tr><td>7</td><td>Alpha review</td><td>Integrated alpha, demo data, defect list, and scope adjustment</td></tr><tr><td>8</td><td>Offline, privacy, and accessibility</td><td>Local-first behavior, consent controls, accessibility fixes, and recovery paths</td></tr><tr><td>9</td><td>Beta feature completion</td><td>MVP feature set complete; no new major features without approval</td></tr><tr><td>10</td><td>Pilot and usability testing</td><td>Structured evaluation, feedback report, and prioritized corrections</td></tr><tr><td>11</td><td>Quality and security hardening</td><td>Regression suite, threat review, dependency review, and critical defect fixes</td></tr><tr><td>12</td><td>Deployment preparation</td><td>Beta deployment, backups, logs, support documentation, and rollback plan</td></tr><tr><td>13</td><td>Beta release</td><td>Usable beta with known limitations and release notes</td></tr><tr><td>14</td><td>Stabilization</td><td>Defect correction, accessibility verification, performance checks, and documentation</td></tr><tr><td>15</td><td>Production-readiness handoff</td><td>MVP assessment, technical debt register, production backlog, and CS 481 plan</td></tr></tbody></table>
+<h4 id="cs-480-completion-criteria">CS 480 completion criteria</h4>
+<ul><li>Core MVP journeys work end-to-end.</li><li>The application can be installed or deployed by someone outside the development team.</li><li>Automated unit, component, integration, and critical-path tests exist.</li><li>The beta has documented limitations and known risks.</li><li>Privacy, security, accessibility, and compliance reviews have been performed.</li><li>Data export, deletion, backup, and recovery behavior is documented and tested.</li><li>The next production-hardening backlog is prioritized.</li></ul>
+<h4 id="cs-480-support-model">CS 480 support model</h4>
+<ul><li>Peer mentors act as squad coaches, helping teams plan iterations, unblock implementation, review pull requests, and prepare demonstrations.</li><li>Faculty provide instruction in implementation practices, testing, secure development, local-first architecture, AI use, deployment, and teamwork.</li><li>QA owns integrated release validation while feature teams own unit and component quality.</li><li>Security/Privacy, HCI/UX, Compliance, and Architecture participate in design reviews before beta release.</li></ul>
+<h3 id="8-3-se-studio-3-cs-481-6-credits">8.3 SE Studio 3 — CS 481 — 6 credits</h3>
+<h4 id="purpose">Purpose</h4>
+<p>Students complete the MVP and move the system into production. They deliver multiple additional feature releases while focusing on scalability, security, reliability, maintainability, accessibility, and quality.</p>
+<h4 id="template-schedule">Template schedule</h4>
+<table><thead><tr><th>Weeks</th><th>Focus</th><th>Expected outputs</th></tr></thead><tbody><tr><td>1</td><td>Production-readiness audit</td><td>Gap assessment, operational risks, release roadmap, ownership map</td></tr><tr><td>2</td><td>Reliability and observability</td><td>Error reporting, health checks, logs, metrics, and support procedures</td></tr><tr><td>3</td><td>Security and privacy hardening</td><td>Threat-model update, security tests, dependency fixes, privacy review</td></tr><tr><td>4</td><td>Quality and test automation</td><td>Expanded regression suite, recovery testing, and defect-priority agreement</td></tr><tr><td>5</td><td>Production release 1</td><td>Completed MVP production release with release notes and rollback plan</td></tr><tr><td>6</td><td>User feedback and operational learning</td><td>Issue triage, support analysis, usage findings, and backlog revision</td></tr><tr><td>7</td><td>Feature release 2 development</td><td>High-value feature or workflow improvement</td></tr><tr><td>8</td><td>Scalability and data integrity</td><td>Load testing, synchronization testing, migration/backup testing, performance work</td></tr><tr><td>9</td><td>Feature release 2</td><td>Release, monitoring, documentation, and retrospective</td></tr><tr><td>10</td><td>Feature release 3 development</td><td>Additional capability selected from validated user needs</td></tr><tr><td>11</td><td>Accessibility, localization, and maintainability</td><td>Inclusive-design improvements, translations, refactoring, contributor documentation</td></tr><tr><td>12</td><td>Feature release 3</td><td>Release, monitoring, and user-impact assessment</td></tr><tr><td>13</td><td>Final hardening and governance</td><td>Incident exercise, security recheck, compliance evidence, operational runbook</td></tr><tr><td>14</td><td>Final production release or release candidate</td><td>Final release, migration validation, support handoff, and project report</td></tr><tr><td>15</td><td>Demonstration and long-term handoff</td><td>Public demo, retrospective, roadmap, maintainership plan, and open-source handoff</td></tr></tbody></table>
+<h4 id="cs-481-completion-criteria">CS 481 completion criteria</h4>
+<ul><li>The MVP operates in a production-like or real production environment.</li><li>Multiple additional releases have been completed and evaluated.</li><li>Scalability, reliability, security, privacy, accessibility, and quality work is demonstrated with evidence.</li><li>Monitoring, backups, incident response, rollback, and support procedures are documented.</li><li>The project has a maintainership and contribution plan suitable for an open-source community.</li><li>Remaining technical debt, risks, and future work are transparently recorded.</li></ul>
+<h4 id="cs-481-support-model">CS 481 support model</h4>
+<ul><li>Peer mentors act as release coaches and help teams coordinate operational work, retrospectives, and cross-team handoffs.</li><li>Faculty teach and review production operations, secure release practices, quality engineering, responsible AI, open-source governance, and sustainability.</li><li>QA owns release confidence and system-level evidence.</li><li>Security/Privacy and Compliance review production changes and incident readiness.</li><li>HCI/UX validates that later releases improve the experience rather than merely adding complexity.</li></ul>
+<h3 id="8-4-stage-gates-across-the-three-courses">8.4 Stage gates across the three courses</h3>
+<pre><code class="language-text">CS 380 approval gate
+    ↓  viable problem, target users, risks, rough prototype
+CS 480 MVP gate
+    ↓  usable beta, tested core journeys, documented limitations
+CS 481 production gate
+    ↓  operational system, release evidence, support and rollback readiness
+Open-source continuation</code></pre>
+<p>The gates are quality and learning checkpoints, not opportunities to add more scope. A project that is smaller but safe, usable, documented, and maintainable should pass ahead of a project with more unfinished features.</p>
+<h3 id="8-5-parallel-support-courses-during-cs-480">8.5 Parallel support courses during CS 480</h3>
+<p>The following support courses are taught concurrently with <strong>SE Studio 2 — CS 480</strong>. Each course uses the project proposed and prototyped in CS 380 as its applied target. Assignments should produce artifacts, experiments, or components that directly support the CS 480 MVP/beta effort.</p>
+<p>The support courses should coordinate through the selected project’s Architecture and Integration team, the Technical Design Council, and a shared faculty planning meeting. Each course may have its own instructional team and grading structure, but the project should use one shared set of requirements, synthetic data, repositories, interfaces, and release milestones.</p>
+<table><thead><tr><th>Course</th><th>Applied focus in the selected project</th><th>Primary project contribution</th></tr></thead><tbody><tr><td><strong>CS 329 — QA and DevOps</strong></td><td>Build, test, deploy, observe, and operate the application</td><td>CI/CD, test automation, environments, release evidence, observability, and recovery procedures</td></tr><tr><td><strong>CS 452 — Database</strong></td><td>Model, store, synchronize, protect, and recover project data</td><td>Data model, schemas, migrations, queries, local-first persistence, synchronization, backup, and deletion/export behavior</td></tr><tr><td><strong>CS 348 — Agent Engineering</strong></td><td>Design and evaluate responsible AI capabilities for the application</td><td>Agent use cases, tool contracts, retrieval, evaluation, human oversight, safety controls, and AI integration</td></tr></tbody></table>
+<h4 id="shared-integration-rules">Shared integration rules</h4>
+<ul><li>The CS 380 project proposal is the source of truth for the support-course project context.</li><li>Each support course begins by reviewing the CS 380 problem statement, target users, MVP boundary, architecture, risks, and acceptance criteria.</li><li>Work must use synthetic or explicitly authorized data; students must not introduce real sensitive user data for coursework.</li><li>Course-specific work is developed in a branch, package, service, or documented experiment that can be reviewed and integrated by CS 480.</li><li>Cross-course interfaces are proposed to and reviewed by the Technical Design Council.</li><li>Security/Privacy, HCI/UX, Compliance, and App-level QA review support-course work when it affects users, data, safety, accessibility, or release readiness.</li><li>A technically interesting assignment that cannot be safely integrated should remain a documented experiment rather than being forced into the MVP.</li></ul>
+<h3 id="8-6-cs-329-qa-and-devops">8.6 CS 329 — QA and DevOps</h3>
+<h4 id="purpose">Purpose</h4>
+<p>Students establish the engineering practices needed to build, test, release, monitor, and recover the selected application.</p>
+<h4 id="cs-329-integration-with-the-selected-project">CS 329 integration with the selected project</h4>
+<ul><li>The App-level QA team owns acceptance of system-level tests and release evidence.</li><li>Feature teams own unit and component tests for their code.</li><li>CS 329 students may work with QA and Architecture on the shared pipeline, but do not bypass feature-team ownership of quality.</li><li>The final artifacts should be usable by CS 480 and CS 481 teams after the course ends.</li></ul>
+<h3 id="8-7-cs-452-database">8.7 CS 452 — Database</h3>
+<h4 id="purpose">Purpose</h4>
+<p>Students design and implement the data foundations required by the CS 380 project, with special attention to privacy, local-first storage, synchronization, data portability, and recovery.</p>
+<h4 id="cs-452-integration-with-the-selected-project">CS 452 integration with the selected project</h4>
+<ul><li>The CS 452 data model must follow the Architecture and Security/Privacy teams’ data-boundary decisions.</li><li>The course should explicitly compare centralized, federated, peer-to-peer, and local-first storage choices for the CS 380 project.</li><li>Schema changes affecting multiple teams require a Technical Design Council review and an Architecture Decision Record.</li><li>Database work must demonstrate deletion, export, backup, recovery, and synchronization behavior rather than only successful reads and writes.</li></ul>
+<h3 id="8-8-cs-348-agent-engineering">8.8 CS 348 — Agent Engineering</h3>
+<h4 id="purpose">Purpose</h4>
+<p>Students design, implement, and evaluate responsible AI agents that support the project without replacing human judgment in humanitarian, legal, medical, safety, or eligibility decisions.</p>
+<h4 id="cs-348-integration-with-the-selected-project">CS 348 integration with the selected project</h4>
+<ul><li>Every agent must have a narrowly defined purpose, an owner, an evaluation set, and a documented failure policy.</li><li>Agents may assist with classification, translation, summarization, matching suggestions, resource discovery, or workflow support.</li><li>Agents must not independently approve aid eligibility, diagnose medical conditions, provide unreviewed legal conclusions, contact vulnerable people, or make irreversible changes.</li><li>Security/Privacy, HCI/UX, Compliance, and the affected feature team review each agent before it is integrated into the beta.</li><li>The project must provide a non-agent fallback for critical user workflows.</li></ul>
+<h3 id="8-9-support-course-coordination-and-handoffs">8.9 Support-course coordination and handoffs</h3>
+<p>During CS 480, the support courses should use a shared coordination rhythm:</p>
+<ul><li><strong>Week 1:</strong> Joint project and architecture briefing for all CS 480 and support-course students.</li><li><strong>Weekly:</strong> Technical Design Council review of cross-course interfaces, risks, and integration blockers.</li><li><strong>Every two weeks:</strong> Integrated demonstration showing the application plus QA/DevOps, database, and Agent Engineering contributions.</li><li><strong>Midterm:</strong> Shared alpha review with App-level QA, Security/Privacy, HCI/UX, Compliance, Architecture, mentors, and faculty.</li><li><strong>Before beta:</strong> All support-course artifacts pass the relevant quality, security, privacy, accessibility, and compliance reviews.</li><li><strong>Final week:</strong> A single coordinated handoff package is delivered to CS 480 and carried into CS 481.</li></ul>
+<p>The final CS 480 beta should therefore include not only application features, but also the supporting engineering evidence needed to operate and improve the application in CS 481.</p>
+<h2 id="9-team-operating-model">9. Team operating model</h2>
+<p>Each team should have:</p>
+<ul><li>One team lead or rotating facilitator</li><li>One technical representative</li><li>One quality owner</li><li>One documentation owner</li><li>A written team charter</li><li>A maintained backlog and definition of done</li><li>At least one partner team for design review and integration</li></ul>
+<p>Every feature should pass this sequence:</p>
+<ol><li>Problem statement and user-risk review</li><li>HCI/UX workflow and accessibility review</li><li>Architecture and data-contract review</li><li>Security/privacy and compliance review</li><li>Feature implementation with automated tests</li><li>Cross-team integration and QA validation</li><li>Pilot or structured usability evaluation</li><li>Release-readiness review and documentation</li></ol>
+<h2 id="10-three-month-delivery-phases">10. Three-month delivery phases</h2>
+<h3 id="weeks-1-2-alignment-and-foundations">Weeks 1–2: Alignment and foundations</h3>
+<ul><li>Confirm target users and initial community scenarios</li><li>Establish team charters and communication channels</li><li>Produce threat model, privacy principles, architecture baseline, and design system</li><li>Build shared development environment and synthetic data</li><li>Select two or three end-to-end demonstration journeys</li></ul>
+<h3 id="weeks-3-5-vertical-slices">Weeks 3–5: Vertical slices</h3>
+<ul><li>Each feature team delivers a thin, working slice</li><li>Local storage and synchronization patterns are proven early</li><li>QA creates the first integrated test suite</li><li>HCI/UX conducts initial usability testing</li><li>Security/Privacy validates identity, permissions, and data boundaries</li></ul>
+<h3 id="weeks-6-9-capability-expansion">Weeks 6–9: Capability expansion</h3>
+<ul><li>Expand the highest-value workflows</li><li>Integrate matching, messaging, maps, inventory, and moderation</li><li>Add offline recovery, export/import, accessibility, and localization</li><li>Run threat exercises and cross-team failure testing</li></ul>
+<h3 id="weeks-10-12-hardening-and-handoff">Weeks 10–12: Hardening and handoff</h3>
+<ul><li>Freeze major interfaces</li><li>Complete system testing and accessibility testing</li><li>Conduct privacy, safety, and compliance reviews</li><li>Fix critical defects and simplify risky features</li><li>Publish documentation, deployment guides, governance policies, and contribution instructions</li><li>Demonstrate realistic user journeys using synthetic data</li></ul>
+<h2 id="11-validation-journeys">11. Validation journeys</h2>
+<p>Each selected project should define three to five end-to-end validation journeys that prove the product's most important user outcomes. A journey should cross team boundaries and include realistic acceptance criteria for usability, accessibility, privacy, security, quality, and operational readiness.</p>
+<p>The <a href="CommonGround%20Project%20Outline.html">CommonGround Project Outline</a> provides four example journeys: a safe transportation request and handoff, offline food-inventory coordination, user-controlled identity and data, and privacy-preserving moderation. Other projects should define equivalent journeys for their own users and mission.</p>
+<h2 id="12-marketing-recruitment-and-participation-strategy">12. Marketing, recruitment, and participation strategy</h2>
+<p>The program should be marketed as a distinctive educational and service opportunity: students learn professional Software Engineering by building meaningful open-source systems; faculty teach and mentor through an integrated studio; the university demonstrates mission-aligned experiential learning; and external collaborators help shape useful projects without needing to fund or manage a full software team.</p>
+<p>CommonGround provides a concrete story for explaining the program, but the message should emphasize the reusable studio model rather than promising that one application will solve a social problem.</p>
+<h3 id="12-1-core-value-proposition">12.1 Core value proposition</h3>
+<blockquote><p><strong>Build something that matters, learn how professional software is actually made, and leave behind an open-source system that others can improve and use.</strong></p></blockquote>
+<p>The strongest program claims are:</p>
+<ul><li>Students work through the full Software Engineering cycle from problem framing to production releases.</li><li>Students learn in feature teams while practicing architecture, QA, security, privacy, HCI/UX, compliance, DevOps, databases, and responsible AI.</li><li>The work is organized around a real social or humanitarian need, not an artificial classroom exercise.</li><li>Students receive substantial experience with collaboration, technical communication, code review, testing, deployment, and open-source contribution.</li><li>The program produces visible artifacts: research, prototypes, working software, release notes, evaluations, documentation, and a maintainership plan.</li><li>Participation is structured so that students with different strengths can contribute meaningfully.</li></ul>
+<p>Marketing should describe the program as ambitious but honest. It should not guarantee that a student project will be adopted by a community, replace professional legal or medical services, or create immediate measurable social change.</p>
+<h3 id="12-2-stakeholder-specific-messages">12.2 Stakeholder-specific messages</h3>
+<table><thead><tr><th>Audience</th><th>Primary message</th><th>Proof or invitation</th></tr></thead><tbody><tr><td><strong>Students</strong></td><td>Build a substantial portfolio project with a real mission, modern tools, AI-assisted development, teamwork, and production experience.</td><td>Attend a demonstration, inspect the open repository, meet mentors, choose a role, or join a project team.</td></tr><tr><td><strong>CS faculty</strong></td><td>Teach core concepts in context while sharing one coordinated project across multiple courses and gaining reusable teaching artifacts.</td><td>Sponsor a topic, teach a support course, mentor a team, review a milestone, or use project evidence for assessment.</td></tr><tr><td><strong>University leadership</strong></td><td>Create a visible model of experiential learning, student development, public service, interdisciplinary collaboration, and open-source impact.</td><td>Provide course coordination, modest infrastructure, communications support, seed resources, and recognition.</td></tr><tr><td><strong>External collaborators</strong></td><td>Contribute domain knowledge and feedback to a carefully scoped open-source project without becoming the product owner or handling student work directly.</td><td>Offer a challenge statement, interview opportunity, usability feedback, subject-matter review, pilot setting, or future maintainership.</td></tr></tbody></table>
+<h3 id="12-3-student-recruitment-strategy">12.3 Student recruitment strategy</h3>
+<p>Recruitment should reach students before course registration and make the work concrete quickly.</p>
+<h4 id="awareness">Awareness</h4>
+<ul><li>Give short demonstrations in introductory and prerequisite courses.</li><li>Show a two- to five-minute CommonGround scenario rather than a slide deck of abstract features.</li><li>Publish a one-page description of the mission, team structure, course sequence, expected workload, and example roles.</li><li>Invite previous SE Studio participants to describe what they learned and what they built.</li><li>Use faculty, peer mentors, student clubs, service organizations, and department communications as distribution channels.</li></ul>
+<h4 id="interest">Interest</h4>
+<ul><li>Hold an information session that includes a live prototype, architecture overview, and candid discussion of challenges.</li><li>Publish a project catalog with the social problem, possible feature areas, technologies, risks, and expected learning.</li><li>Explain that students do not need to be experts in every area; the program is deliberately organized around team specialization and mentoring.</li><li>Offer a short pre-course activity in which students identify a problem, inspect an existing open-source project, or critique a sample user journey.</li></ul>
+<h4 id="commitment-and-placement">Commitment and placement</h4>
+<ul><li>Collect student interests, skills, learning goals, accessibility needs, and preferred roles.</li><li>Form balanced teams rather than allowing teams to self-select only by friendship or technology preference.</li><li>Explain the difference between feature teams and cross-cutting teams before placement.</li><li>Give students a written team charter and escalation path during the first week.</li><li>Make the contribution menu visible: research, HCI/UX, frontend, backend, database, AI, testing, DevOps, security, documentation, accessibility, and community coordination.</li></ul>
+<h4 id="retention">Retention</h4>
+<ul><li>Demonstrate working progress at regular milestones.</li><li>Celebrate learning and responsible decisions, not just flashy features.</li><li>Use peer mentors to reduce avoidable process friction.</li><li>Publicly acknowledge contributors through release notes, architecture records, documentation, and open-source credits.</li><li>Give students meaningful ownership while providing early help when a team is blocked.</li></ul>
+<h3 id="12-4-faculty-and-department-engagement">12.4 Faculty and department engagement</h3>
+<p>Faculty participation should be framed as a way to strengthen teaching rather than as an additional unbounded service obligation.</p>
+<ul><li>Provide a shared program calendar, common terminology, reusable rubrics, sample assignments, and project infrastructure.</li><li>Let faculty choose a focused sponsorship area aligned with their expertise.</li><li>Coordinate the support courses around one project so assignments reinforce one another instead of competing for unrelated deliverables.</li><li>Provide faculty with milestone evidence that can be used in course assessment: research reports, design records, test results, deployment evidence, and reflections.</li><li>Hold a short weekly coordination meeting and a longer milestone review rather than requiring faculty to attend every team meeting.</li><li>Use peer mentors for day-to-day coaching while faculty focus on instruction, high-risk decisions, and professional judgment.</li><li>Share successful assignments, reusable tooling, and lessons learned across the department.</li></ul>
+<h3 id="12-5-university-level-positioning">12.5 University-level positioning</h3>
+<p>University leaders are more likely to support the program when it is presented as an integrated institutional opportunity rather than as one large class project. The program can contribute to:</p>
+<ul><li>Experiential and project-based learning</li><li>Student retention, belonging, and professional identity</li><li>Open-source and public-interest technology</li><li>Community engagement and service</li><li>Interdisciplinary collaboration</li><li>Employer and alumni engagement</li><li>Demonstrable student learning outcomes</li><li>Positive, evidence-based public visibility</li></ul>
+<p>The university’s participation menu should be specific and modest: provide classroom and showcase space, support course coordination, assist with communications, offer small infrastructure or accessibility resources, connect the program to community organizations, and recognize student and faculty contributions.</p>
+<h3 id="12-6-external-collaborator-strategy">12.6 External collaborator strategy</h3>
+<p>External collaborators should be offered low-risk, clearly bounded ways to participate. The program should not depend on a collaborator becoming a product manager, funding the entire system, or sharing protected data.</p>
+<p>Possible contributions include:</p>
+<ul><li>A problem statement or community need</li><li>A domain briefing or guest lecture</li><li>Review of requirements, workflows, or safety assumptions</li><li>Interviews with practitioners or representative users</li><li>Feedback on a prototype</li><li>A controlled usability or accessibility evaluation</li><li>A test deployment using synthetic or explicitly authorized data</li><li>Open-source review, documentation feedback, or future maintainership</li><li>Donated services, hosting credits, devices, maps, datasets, or translation assistance</li></ul>
+<p>Before collaboration begins, the program should document scope, roles, privacy expectations, data ownership, licensing, participant consent, review timelines, and what the students may publicly share. External collaborators advise and validate; student teams remain responsible for implementation and learning.</p>
+<h3 id="12-7-outreach-assets">12.7 Outreach assets</h3>
+<p>The program should maintain a small set of reusable materials:</p>
+<ul><li>One-page program overview</li><li>One-page project brief for the selected application</li><li>Short student recruitment video or live demonstration</li><li>Program and course-sequence diagram</li><li>Team-structure and contribution-role map</li><li>Example architecture and release roadmap</li><li>Safety, privacy, and data-use statement</li><li>External collaborator participation menu</li><li>Public project repository with contribution instructions</li><li>End-of-term impact and learning report</li></ul>
+<p>The CommonGround example should be shown through a complete user journey, such as requesting transportation, matching with a volunteer, communicating safely, completing the handoff, and exporting or deleting personal data. This demonstrates both humanitarian purpose and engineering seriousness.</p>
+<h3 id="12-8-participation-funnel-and-success-measures">12.8 Participation funnel and success measures</h3>
+<pre><code class="language-text">Awareness → Interest → Commitment → Team placement → Milestone participation → Continued contribution</code></pre>
+<p>The program should measure whether its outreach is creating healthy participation, not just attention:</p>
+<ul><li>Student applications, enrollment, attendance, and retention</li><li>Balance of skills and backgrounds across teams</li><li>Faculty and mentor participation</li><li>Number and quality of external collaborators</li><li>Prototype evaluations and user-research participation</li><li>Milestone completion and release quality</li><li>Student learning and belonging surveys</li><li>Open-source contributors, documentation usage, and follow-on maintainership</li><li>Evidence of community usefulness, reported cautiously and with appropriate consent</li></ul>
+<h3 id="12-9-common-concerns-and-responses">12.9 Common concerns and responses</h3>
+<table><thead><tr><th>Concern</th><th>Program response</th></tr></thead><tbody><tr><td>“The project is too large for junior students.”</td><td>Use bounded feature teams, a deliberately narrow MVP, strong cross-cutting support, staged gates, and explicit non-goals.</td></tr><tr><td>“Students will build unsafe or inaccurate tools.”</td><td>Use Security/Privacy, HCI/UX, Compliance, QA, faculty review, synthetic data, human oversight, and release gates.</td></tr><tr><td>“Faculty workload will be excessive.”</td><td>Provide shared infrastructure, reusable materials, peer mentors, scheduled reviews, and focused faculty sponsorship.</td></tr><tr><td>“External partners will expect a finished commercial product.”</td><td>Set expectations that the program delivers learning, validated prototypes, open-source artifacts, and carefully scoped releases.</td></tr><tr><td>“The program will become publicity without substance.”</td><td>Publish evidence: research, decisions, tests, limitations, user feedback, releases, and what was learned.</td></tr></tbody></table>
+<p>The most credible marketing is a consistent experience: the program promises meaningful work, rigorous learning, careful stewardship, and service—and then demonstrates those qualities in its teams, artifacts, releases, and relationships.</p></article>
+    </div>
+  </main>
+  <footer class="footer">SE Studio · open-source software for human needs · <a href="CommonGround%20Project%20Outline.html">View the CommonGround example</a></footer>
+</body>
+</html>

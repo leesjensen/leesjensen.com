@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An open-source, privacy-preserving coordination platform that helps people turn local goodwill into practical help—without requiring one institution to own everyone’s data.">
+  <title>CommonGround · SE Studio</title>
+  <style>
+:root {
+  --ink: #102a43;
+  --muted: #5b7083;
+  --paper: #f7fafc;
+  --surface: #ffffff;
+  --line: #d9e2ec;
+  --blue: #0b6e99;
+  --blue-deep: #082f49;
+  --teal: #0e9f9a;
+  --coral: #ed6a5a;
+  --gold: #f2c94c;
+  --shadow: 0 18px 45px rgba(16, 42, 67, .10);
+  --radius: 22px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+a { color: var(--blue); }
+a:hover { color: var(--coral); }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(217, 226, 236, .9);
+  background: rgba(247, 250, 252, .90);
+  backdrop-filter: blur(18px);
+}
+.topbar {
+  width: min(1180px, calc(100% - 40px));
+  min-height: 68px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.brand {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: .84rem;
+  font-weight: 850;
+  letter-spacing: .12em;
+}
+.brand span {
+  display: block;
+  color: var(--teal);
+  font-size: .62rem;
+  letter-spacing: .18em;
+  line-height: 1.1;
+}
+.topbar-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: .86rem;
+  font-weight: 700;
+}
+.topbar-link:hover { color: var(--coral); }
+.hero {
+  position: relative;
+  overflow: hidden;
+  width: min(1180px, calc(100% - 40px));
+  margin: 48px auto 28px;
+  padding: clamp(28px, 5vw, 72px);
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: clamp(28px, 5vw, 72px);
+  border-radius: 32px;
+  background: linear-gradient(135deg, #082f49 0%, #0b6e99 55%, #0e9f9a 100%);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  right: -130px;
+  bottom: -180px;
+  border: 1px solid rgba(255,255,255,.30);
+  border-radius: 50%;
+  box-shadow: 0 0 0 28px rgba(255,255,255,.05), 0 0 0 58px rgba(255,255,255,.04);
+}
+.hero-copy, .hero-media { position: relative; z-index: 1; }
+.eyebrow {
+  margin-bottom: 12px;
+  color: #baf3ee;
+  font-size: .74rem;
+  font-weight: 850;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.hero h1 {
+  max-width: 720px;
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 5.7rem);
+  letter-spacing: -.065em;
+  line-height: .98;
+}
+.hero-lede {
+  max-width: 650px;
+  margin: 22px 0 0;
+  color: rgba(255,255,255,.87);
+  font-size: clamp(1rem, 1.7vw, 1.22rem);
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 17px;
+  border-radius: 999px;
+  font-size: .88rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+.button-primary { color: var(--blue-deep); background: #fff; }
+.button-secondary { color: #fff; border: 1px solid rgba(255,255,255,.35); }
+.hero-media { margin: 0; }
+.hero-media img {
+  display: block;
+  width: 100%;
+  max-height: 440px;
+  object-fit: cover;
+  border: 8px solid rgba(255,255,255,.16);
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.22);
+}
+.hero-media figcaption { margin-top: 10px; color: rgba(255,255,255,.72); font-size: .77rem; }
+.metrics {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto 42px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.metric {
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(16,42,67,.04);
+}
+.metric-value { color: var(--coral); font-size: 1.9rem; font-weight: 900; letter-spacing: -.04em; line-height: 1; }
+.metric-label { margin-top: 7px; color: var(--muted); font-size: .9rem; font-weight: 700; }
+.content-shell {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto 80px;
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  align-items: start;
+  gap: 42px;
+}
+.toc {
+  position: sticky;
+  top: 92px;
+  padding: 20px 0;
+}
+.toc-label { margin-bottom: 12px; color: var(--muted); font-size: .7rem; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+.toc a { display: block; padding: 7px 12px; color: var(--muted); border-left: 2px solid var(--line); font-size: .84rem; line-height: 1.35; text-decoration: none; }
+.toc a:hover { color: var(--blue); border-color: var(--coral); }
+.prose { min-width: 0; }
+.prose > h2:first-child { margin-top: 0; }
+.prose h2 {
+  margin: 58px 0 18px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  letter-spacing: -.045em;
+  line-height: 1.12;
+}
+.prose h3 { margin: 36px 0 10px; font-size: 1.28rem; letter-spacing: -.02em; }
+.prose h4 { margin: 26px 0 8px; color: var(--blue); font-size: 1rem; }
+.prose p { margin: 0 0 16px; color: #2d475d; }
+.prose strong { color: var(--ink); }
+.prose ul, .prose ol { margin: 10px 0 22px; padding-left: 25px; color: #2d475d; }
+.prose li { margin: 6px 0; padding-left: 4px; }
+.prose blockquote {
+  margin: 26px 0;
+  padding: 22px 26px;
+  border-left: 5px solid var(--coral);
+  border-radius: 0 16px 16px 0;
+  background: #fff4ef;
+  color: var(--blue-deep);
+  font-size: 1.16rem;
+  font-weight: 750;
+}
+.prose blockquote p { color: var(--blue-deep); margin: 0; }
+.prose table { width: 100%; margin: 22px 0 28px; border-collapse: separate; border-spacing: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); box-shadow: 0 8px 24px rgba(16,42,67,.04); }
+.prose th, .prose td { padding: 13px 15px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.prose th { color: var(--blue-deep); background: #eaf6f6; font-size: .82rem; letter-spacing: .03em; }
+.prose tr:last-child td { border-bottom: 0; }
+.prose tr:nth-child(even) td { background: #fbfdfe; }
+.prose pre { margin: 22px 0 28px; padding: 20px; overflow-x: auto; border: 1px solid #193f5b; border-radius: 16px; background: #092c43; color: #d7f8f4; font: .88rem/1.65 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+.prose code { padding: 2px 6px; border-radius: 5px; background: #eaf1f5; color: var(--blue-deep); font: .9em ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+.prose pre code { padding: 0; background: transparent; color: inherit; }
+.prose figure { margin: 28px 0; }
+.prose figure img { display: block; width: 100%; border-radius: 18px; }
+.prose figcaption { margin-top: 8px; color: var(--muted); font-size: .84rem; }
+.footer {
+  padding: 34px 20px 48px;
+  color: #b9d1df;
+  background: var(--blue-deep);
+  text-align: center;
+  font-size: .84rem;
+}
+.footer a { color: #baf3ee; }
+@media (max-width: 850px) {
+  .hero { grid-template-columns: 1fr; margin-top: 24px; }
+  .hero-media { max-width: 700px; }
+  .content-shell { grid-template-columns: 1fr; gap: 0; }
+  .toc { position: static; padding: 0; }
+  .toc nav { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 18px; }
+  .toc a { min-width: max-content; border: 1px solid var(--line); border-radius: 999px; padding: 8px 12px; background: var(--surface); }
+}
+@media (max-width: 600px) {
+  .topbar, .hero, .metrics, .content-shell { width: min(100% - 24px, 1180px); }
+  .topbar-link { display: none; }
+  .hero { padding: 28px 22px; border-radius: 24px; }
+  .metrics { grid-template-columns: 1fr; }
+  .prose th, .prose td { padding: 10px; font-size: .9rem; }
+  .prose table { display: block; overflow-x: auto; white-space: normal; }
+}
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" href="CommonGround Project Outline.html">SE STUDIO<span>OPEN SOCIAL SOFTWARE</span></a>
+      <a class="topbar-link" href="SE%20Studio%20Program%20Outline.html">View the SE Studio program ↗</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Worked example · community mutual aid</div>
+        <h1>CommonGround</h1>
+        <p class="hero-lede">An open-source, privacy-preserving coordination platform that helps people turn local goodwill into practical help—without requiring one institution to own everyone’s data.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#1-purpose-value-impact-and-potential-market">Explore the outline ↓</a>
+          <a class="button button-secondary" href="SE%20Studio%20Program%20Outline.html">View the SE Studio program ↗</a>
+        </div>
+      </div>
+      <figure class="hero-media">
+        <img src="CommonGround%20Poster.png" alt="CommonGround poster showing people requesting and providing help">
+        <figcaption>CommonGround connects people who need help with people and organizations able to provide it.</figcaption>
+      </figure>
+    </section>
+    <section class="metrics" aria-label="At a glance"><div class="metric"><div class="metric-value">8 feature teams</div><div class="metric-label">Complete user capabilities</div></div><div class="metric"><div class="metric-value">Privacy first</div><div class="metric-label">Local control and consent</div></div><div class="metric"><div class="metric-value">Human-centered</div><div class="metric-label">Safe, dignified handoffs</div></div></section>
+    <div class="content-shell">
+      <aside class="toc">
+        <div class="toc-label">On this page</div>
+        <nav><a href="#1-purpose-value-impact-and-potential-market">1. Purpose, value, impact, and potential market</a>
+<a href="#2-feature-team-decomposition">2. Feature-team decomposition</a>
+<a href="#3-commonground-staffing-and-mentoring">3. CommonGround staffing and mentoring</a>
+<a href="#4-example-validation-journeys">4. Example validation journeys</a>
+<a href="#5-scope-boundaries-and-safety">5. Scope boundaries and safety</a>
+<a href="#6-handoff-to-the-se-studio-course-sequence">6. Handoff to the SE Studio course sequence</a></nav>
+      </aside>
+      <article class="prose" id="content"><p>CommonGround is the worked example for the <a href="SE%20Studio%20Program%20Outline.html">SE Studio Program Outline</a>. It shows how the reusable program structure can be instantiated for a privacy-preserving, open-source humanitarian application. The program outline defines the academic sequence, staffing model, cross-cutting responsibilities, mentoring model, and delivery practices; this document defines the project-specific vision, feature areas, staffing example, and validation journeys.</p>
+<p><em>Illustrative project view: CommonGround connects people who need help with people and organizations able to provide resources, work, advice, or companionship while preserving local control and human dignity.</em></p>
+<h2 id="1-purpose-value-impact-and-potential-market">1. Purpose, value, impact, and potential market</h2>
+<h3 id="purpose">Purpose</h3>
+<p>CommonGround is a privacy-preserving, open-source mutual-aid coordination platform. It helps people request help, offer help, find relevant community resources, coordinate a safe handoff, and record what happened. The platform is designed for situations in which assistance already exists but is fragmented across text messages, spreadsheets, social media groups, paper lists, and disconnected organizational systems.</p>
+<p>The core pitch is:</p>
+<blockquote><p><strong>CommonGround helps communities turn local goodwill into coordinated help without requiring one institution to own everyone's data.</strong></p></blockquote>
+<p>CommonGround is intentionally bounded. It is not an emergency dispatch service, a benefits eligibility system, a replacement for trusted community organizations, or a source of unreviewed medical or legal advice. It supports human judgment and community relationships rather than making high-stakes decisions for people.</p>
+<h3 id="value">Value</h3>
+<table><thead><tr><th>Participant</th><th>Potential value</th></tr></thead><tbody><tr><td><strong>Residents and households</strong></td><td>Ask for help or offer help with pseudonymous identity, consent controls, clear next steps, and the ability to export or delete their information.</td></tr><tr><td><strong>Community organizations</strong></td><td>Coordinate existing food, transportation, housing, childcare, supplies, skills, and volunteer capacity without purchasing or administering a large centralized case-management platform.</td></tr><tr><td><strong>Volunteers and donors</strong></td><td>Find concrete ways to contribute time, skills, transportation, money, or supplies and understand whether a handoff was completed.</td></tr><tr><td><strong>Communities and maintainers</strong></td><td>Adapt an open-source system to local language, culture, accessibility needs, and connectivity constraints while avoiding vendor lock-in.</td></tr></tbody></table>
+<p>The value proposition depends on trust. Privacy-preserving defaults, explicit consent, transparent matching, accessible workflows, human confirmation, moderation, and clear safety boundaries are product value, not secondary implementation details.</p>
+<h3 id="potential-impact-and-evidence">Potential impact and evidence</h3>
+<p>The project should describe impact as a set of hypotheses to test, not as a promised outcome. Useful evidence may include:</p>
+<ul><li>Time from a request to a relevant response</li><li>Percentage of intended handoffs that are completed successfully and with consent</li><li>Reduction in duplicate, stale, or difficult-to-find resource information</li><li>Participation by people with limited connectivity, disabilities, language barriers, or safety concerns</li><li>User effort, trust, perceived dignity, and ability to control personal information</li><li>Safety, privacy, accessibility, and moderation incidents, including whether the system makes them easier to detect and address</li></ul>
+<p>CS 380 should define which outcomes matter to the selected community, what baseline or comparison is possible, and what evidence would count against the product hypothesis. Usage volume alone should not be treated as social impact.</p>
+<h3 id="potential-market-and-adoption-path">Potential market and adoption path</h3>
+<p>The initial market hypothesis is organizations that coordinate many local requests but lack a shared, low-cost, privacy-conscious coordination layer. Potential adopters include:</p>
+<ul><li>Mutual-aid groups and neighborhood networks</li><li>Campuses, libraries, community centers, and faith-based service organizations</li><li>Food pantries, shelters, housing cooperatives, and nonprofit service providers</li><li>Local resilience, disaster-response, and community health networks</li><li>Volunteer programs that coordinate transportation, supplies, skills, or check-ins</li></ul>
+<p>These groups already use substitutes such as messaging groups, spreadsheets, social platforms, volunteer-management tools, and case-management systems. CommonGround would need to demonstrate a meaningful advantage in privacy, local control, accessibility, interoperability, low operating cost, or cross-resource coordination before adoption is justified.</p>
+<p>Possible sustainability paths include an open-source core, community-hosted or federated deployments, grants, donated infrastructure, and optional paid support for setup, localization, accessibility, training, evaluation, or maintenance. These are possibilities to research rather than commitments. The program should validate the problem, existing alternatives, deployment constraints, willingness to adopt, and long-term stewardship plan before claiming product-market fit.</p>
+<h2 id="2-feature-team-decomposition">2. Feature-team decomposition</h2>
+<p>The following teams demonstrate how the program structure can be instantiated for one selected project. These names and responsibilities are examples, not requirements for every studio project. A different project would replace them with feature teams appropriate to its problem domain while retaining the same staffing, governance, QA, security/privacy, HCI/UX, compliance, and architecture structure.</p>
+<h3 id="2-1-needs-and-offers">2.1 Needs and Offers</h3>
+<p>Owns the basic exchange model.</p>
+<ul><li>Create, edit, pause, expire, and withdraw requests or offers</li><li>Categories, quantities, urgency, language, and accessibility needs</li><li>Pseudonymous identity and visibility controls</li><li>Consent and contact preferences</li><li>Local drafts and offline creation</li><li>Safe defaults for sensitive requests</li></ul>
+<h3 id="2-2-matching-and-recommendations">2.2 Matching and Recommendations</h3>
+<p>Owns discovery and matching without making high-stakes decisions for users.</p>
+<ul><li>Match needs with offers, skills, locations, timing, and capacity</li><li>User-controlled filters and priorities</li><li>Explainable match suggestions</li><li>Duplicate and stale-post detection</li><li>Human confirmation before commitments</li><li>Fairness and bias evaluation</li></ul>
+<h3 id="2-3-resource-and-inventory">2.3 Resource and Inventory</h3>
+<p>Owns the tracking of physical and digital resources.</p>
+<ul><li>Community pantry, clothing, tool, and supply inventories</li><li>Quantity, condition, expiration, and availability</li><li>Reservations and handoff status</li><li>Donation intake and distribution workflows</li><li>Low-bandwidth and printable inventory views</li><li>Audit history without unnecessary personal data</li></ul>
+<h3 id="2-4-volunteer-coordination">2.4 Volunteer Coordination</h3>
+<p>Owns people-powered work and logistics.</p>
+<ul><li>Volunteer profiles based on skills and availability</li><li>Shifts, tasks, routes, and capacity limits</li><li>Check-in and completion workflows</li><li>Accessibility and transportation requirements</li><li>Safety acknowledgements and emergency contacts</li><li>Recognition without coercive public scoring</li></ul>
+<h3 id="2-5-community-messaging">2.5 Community Messaging</h3>
+<p>Owns communication between participants and groups.</p>
+<ul><li>Direct and group messaging</li><li>Consent-based contact exchange</li><li>Moderation and reporting hooks</li><li>Message expiration and attachment controls</li><li>Notification preferences</li><li>Integration with an open/federated messaging layer where appropriate</li></ul>
+<h3 id="2-6-maps-and-local-discovery">2.6 Maps and Local Discovery</h3>
+<p>Owns location-aware discovery while minimizing location exposure.</p>
+<ul><li>Community resources, pickup points, and service areas</li><li>Approximate rather than exact locations by default</li><li>Offline maps and low-bandwidth operation</li><li>Accessibility information for locations</li><li>Safe routing and travel constraints</li><li>Import/export of open geographic data</li></ul>
+<h3 id="2-7-offline-sync-and-data-portability">2.7 Offline Sync and Data Portability</h3>
+<p>Owns the local-first technical foundation used by all other feature teams.</p>
+<ul><li>Encrypted local storage</li><li>Explicit synchronization controls</li><li>Conflict handling and eventual consistency</li><li>Import/export and backup formats</li><li>Device migration and recovery</li><li>Peer, relay, or federated synchronization adapters</li><li>Data deletion and revocation behavior</li></ul>
+<h3 id="2-8-moderation-trust-and-safety">2.8 Moderation, Trust, and Safety</h3>
+<p>Owns community health and abuse-resistance mechanisms.</p>
+<ul><li>Reports, appeals, blocks, and moderation queues</li><li>Anti-spam and anti-scam tools</li><li>Verification workflows for organizations and resources</li><li>Reputation signals that do not become punitive social scores</li><li>Harassment and unsafe-contact protections</li><li>Crisis escalation guidance and emergency disclaimers</li></ul>
+<h2 id="3-commonground-staffing-and-mentoring">3. CommonGround staffing and mentoring</h2>
+<p>CommonGround uses the program allocation of 50 student programmers: eight feature teams of four students each, an app-level QA team of five, a Security/Privacy team of four, an HCI/UX team of four, a Compliance team of three, and an Architecture and Integration team of two. Five peer mentors and five faculty members support and teach the teams as described in the <a href="SE%20Studio%20Program%20Outline.html">SE Studio Program Outline</a>.</p>
+<h3 id="3-1-peer-mentor-assignment">3.1 Peer-mentor assignment</h3>
+<table><thead><tr><th>Mentor</th><th>Primary teams</th></tr></thead><tbody><tr><td>Mentor 1</td><td>Needs and Offers; Matching and Recommendations</td></tr><tr><td>Mentor 2</td><td>Resource and Inventory; Volunteer Coordination</td></tr><tr><td>Mentor 3</td><td>Community Messaging; Moderation, Trust, and Safety</td></tr><tr><td>Mentor 4</td><td>Maps and Local Discovery; Offline Sync and Data Portability</td></tr><tr><td>Mentor 5</td><td>App-level QA; Security/Privacy; HCI/UX; Compliance support</td></tr></tbody></table>
+<p>The fifth assignment is intentionally cross-cutting. It gives the quality and governance teams a peer advocate while the other mentors remain close to the feature teams. Mentors should rotate secondary coverage during the project so knowledge is not concentrated in one person.</p>
+<h3 id="3-2-cross-cutting-integration-for-commonground">3.2 Cross-cutting integration for CommonGround</h3>
+<table><thead><tr><th>Program team</th><th>CommonGround focus</th></tr></thead><tbody><tr><td><strong>App-level QA</strong></td><td>Validate integrated user journeys, release gates, regression coverage, accessibility checks, and realistic synthetic-data scenarios.</td></tr><tr><td><strong>Security/Privacy</strong></td><td>Review data minimization, consent, safe contact, identity controls, local storage, synchronization, abuse resistance, and incident readiness.</td></tr><tr><td><strong>HCI/UX</strong></td><td>Test trust, dignity, accessibility, low-connectivity workflows, multilingual content, understandable matching, and safe handoff interactions.</td></tr><tr><td><strong>Compliance</strong></td><td>Review open-source licensing, safeguarding, moderation policy, records, terms, deployment responsibilities, and boundaries around medical or legal advice.</td></tr><tr><td><strong>Architecture and Integration</strong></td><td>Own local-first interfaces, data contracts, synchronization behavior, integration decisions, and cross-team technical coherence.</td></tr></tbody></table>
+<h2 id="4-example-validation-journeys">4. Example validation journeys</h2>
+<p>The first release of CommonGround should prove a small number of complete scenarios. A different selected project should define equivalent end-to-end journeys for its own users and mission:</p>
+<ol><li>A person posts a request for transportation, receives a match, communicates safely, and records completion.</li><li>A community group posts available food supplies, volunteers reserve pickup tasks, and inventory is updated offline and later synchronized.</li><li>A user creates a pseudonymous profile, chooses what information to share, blocks a contact, exports their data, and deletes their account data.</li><li>A moderator receives a report, reviews evidence, takes an action, and supports an appeal without exposing unnecessary personal information.</li></ol>
+<p>These journeys force the teams to integrate the most important concerns: usability, privacy, safety, synchronization, moderation, and release quality.</p>
+<h2 id="5-scope-boundaries-and-safety">5. Scope boundaries and safety</h2>
+<p>CommonGround is not an emergency dispatch service, a benefits eligibility system, a replacement for trusted community organizations, or a source of unreviewed medical or legal advice. It supports human judgment and community relationships rather than making high-stakes decisions for people.</p>
+<p>The project should prioritize privacy-preserving defaults, explicit consent, transparent matching, accessible workflows, human confirmation, moderation, and clear safety boundaries. These are core product requirements, not secondary implementation details.</p>
+<h2 id="6-handoff-to-the-se-studio-course-sequence">6. Handoff to the SE Studio course sequence</h2>
+<ul><li><strong>CS 380 — SE Studio 1:</strong> Research the mutual-aid problem, users, existing alternatives, risks, and adoption constraints; frame the CommonGround opportunity; design the solution; and build a rough sketch prototype.</li><li><strong>CS 480 — SE Studio 2:</strong> Implement a focused MVP or beta that proves the highest-value CommonGround validation journeys. CS 329, CS 452, and CS 348 use the same project as their target for QA/DevOps, database, and Agent Engineering work.</li><li><strong>CS 481 — SE Studio 3:</strong> Complete the MVP, harden the system for production, and deliver additional releases with emphasis on scalability, security, privacy, quality, accessibility, maintainability, and community handoff.</li></ul>
+<p>The release scope should remain evidence-driven: a smaller safe and understandable system is preferable to a broad system that exposes vulnerable users or cannot be maintained.</p></article>
+    </div>
+  </main>
+  <footer class="footer">SE Studio · open-source software for human needs · <a href="SE%20Studio%20Program%20Outline.html">View the SE Studio program</a></footer>
+</body>
+</html>
