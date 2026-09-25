@@ -204,6 +204,9 @@
       });
     }
     window.addEventListener('resize', fitActiveSlide);
+    const frameResizeObserver = new ResizeObserver(() => requestAnimationFrame(fitActiveSlide));
+    frameResizeObserver.observe(frame);
+    window.visualViewport?.addEventListener('resize', fitActiveSlide);
     async function toggleFullscreen() {
       if (document.fullscreenElement) await document.exitFullscreen();
       else await document.documentElement.requestFullscreen?.();
