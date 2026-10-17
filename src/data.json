@@ -1,6 +1,6 @@
 [
   {
-    "name": "Learning",
+    "name": "SE Studio",
     "entries": [
       {
         "link": "sestudio/SE Studio Program Outline.html",
@@ -8,10 +8,20 @@
         "tags": ["Learning"]
       },
       {
+        "link": "sestudio/CS380-Course-Design.html",
+        "title": "SE Studio 1 - CS380",
+        "tags": ["Learning"]
+      },
+      {
         "link": "sestudio/SE Studio Program Introduction Slideshow.html",
         "title": "SE Studio - Pitch",
         "tags": ["Learning"]
-      },
+      }
+    ]
+  },
+  {
+    "name": "Learning",
+    "entries": [
       {
         "link": "learning/manifesto.html",
         "title": "A New Dawn of Learning",
